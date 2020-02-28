@@ -1,0 +1,14 @@
+<div style="display: none;" id="@@id" class="popup-form@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ popup-form_`+mods[i]+`}}">
+	<div class="popup-form__layout">
+		@@if(context.title){<div class="popup-form__title">@@title</div>}
+		@@if(context.subTitle){<div class="popup-form__sub-title">@@subTitle</div>}
+		@@if(context.subTitle){<div class="popup-form__text">@@text</div>}
+		<form action="#" method="post">
+			<div class="popup-form__content">
+				@@fields
+			</div>
+			<div class="popup-form__buttons">@@include("../button/button-submit.html", {"text": "@@btnText", "mods": ["small", "full-width"]})</div>
+			@@if(context.note){<div class="popup-form__note">@@note</div>}
+		</form>
+	</div>
+</div>

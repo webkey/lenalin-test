@@ -1,0 +1,12 @@
+<div class="section-default@@if(context.mod){@@for (var i = 0; i < mod.length; i++){ section_`+mod[i]+`}}@@if(context.class){ @@class}">
+	<div class="section-default__heading@@if(context.titleHide){ hide}">
+		<div class="layout-page">
+			<div class="layout-content">
+				<h2 class="section-default__heading-title">@@if(context.href){<a href="@@href">}@@title@@if(context.href){</a>}</h2>
+			</div>
+		</div>
+	</div>
+	<div class="section-default__content">
+		@@contents
+	</div>
+</div>

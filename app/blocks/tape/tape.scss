@@ -1,0 +1,32 @@
+.tape {
+	overflow: hidden;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	&__item {
+		$width: 16.66%;
+
+		flex: 1 0 $width;
+		max-width: $width;
+		position: relative;
+
+		@include below($lg) {
+			$width: 33.33%;
+
+			flex: 1 0 $width;
+			max-width: $width;
+		}
+
+		@include below($sm) {
+			$width: 50%;
+
+			flex: 1 0 $width;
+			max-width: $width;
+		}
+	}
+}

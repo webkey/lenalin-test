@@ -1,0 +1,115 @@
+.quick-offer {
+	$container: &;
+
+	display: block;
+	position: relative;
+	background-color: rgba(#f8f6f3, 0.85);
+
+	&_fit {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__layout {
+		padding: 1rem 4.4rem;
+		text-align: center;
+		width: 34.4rem;
+		max-width: 100%;
+	}
+
+	&__entry {
+		margin-bottom: 1.8rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		$lh: 2.2rem;
+		$count: 2;
+
+		font-weight: normal;
+		font-size: 1.8rem;
+		line-height: $lh;
+		text-align: center;
+		color: inherit;
+		max-height: $lh * $count;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $count;
+		transition: opacity $animation-speed;
+		margin: 0 0 0.8rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__size {
+		font-weight: bold;
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+		margin-bottom: 0.7rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__colors {
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+		margin-bottom: 1.4rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__price {
+		$space-h: 0.6rem;
+		$space-v: 0.3rem;
+
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		margin-bottom: 2.1rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&-els {
+			margin: -#{$space-v} -#{$space-h};
+		}
+
+		&-el {
+			display: inline-block;
+			padding: #{$space-v} #{$space-h};
+
+			&_old {
+				text-decoration: line-through;
+			}
+
+			&_new {
+				font-weight: bold;
+			}
+		}
+	}
+
+	&__favorites {
+		position: absolute;
+		right: 0;
+		top: 0;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+	}
+}

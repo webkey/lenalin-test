@@ -1,0 +1,74 @@
+.colors {
+	$space-h: 0.6rem;
+	$space-v: 0.6rem;
+
+	&__list {
+		margin: -#{$space-v} -#{$space-h};
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__item {
+		flex: 0 0 auto;
+		padding: #{$space-v} #{$space-h};
+	}
+
+	&__el {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		font-size: inherit;
+		line-height: inherit;
+		color: inherit;
+		user-select: none;
+		-webkit-tap-highlight-color: transparent;
+
+		input[type="radio"],
+		input[type="checkbox"] {
+			position: absolute;
+			height: 16px;
+			width: 16px;
+			padding: 0;
+			margin: 0;
+			display: none;
+
+			& ~ span {
+				$size: 2rem;
+
+				position: relative;
+				display: block;
+				height: $size;
+				width: $size;
+				font-size: 0;
+				line-height: 0;
+				border-radius: $size;
+				cursor: pointer;
+
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					left: -0.3rem;
+					top: -0.3rem;
+					height: $size + 0.6;
+					width: $size + 0.6;
+					border-radius: $size + 0.6;
+					transition: border $animation-speed;
+					border: 0.1rem solid #c7c7c7;
+					box-sizing: border-box;
+				}
+			}
+
+			// Checked
+			&:checked {
+				& ~ span {
+					&::before {
+						border-color: #000;
+					}
+				}
+			}
+		}
+	}
+}

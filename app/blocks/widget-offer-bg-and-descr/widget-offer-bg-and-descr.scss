@@ -1,0 +1,179 @@
+.widget-offer-bg-and-descr {
+	$widget: &;
+
+	display: block;
+	position: relative;
+	text-decoration: none;
+	color: inherit;
+	-webkit-tap-highlight-color: transparent;
+
+	&::before {
+		content: "";
+		display: block;
+
+		@include ratio(1, 1);
+	}
+
+	&_fit {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+
+		&::before {
+			content: none;
+		}
+	}
+
+	&__btn-flip {
+		$size: 4.2rem;
+
+		position: absolute;
+		right: 1rem;
+		bottom: 1rem;
+		height: $size;
+		width: $size;
+		font-size: 0;
+		line-height: 0;
+		border-radius: $size;
+		background-color: rgba(white, 0.8);
+		box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.15);
+		cursor: pointer;
+		z-index: 2;
+		user-select: none;
+		display: none;
+
+		.touchevents & {
+			display: block;
+		}
+
+		&::before,
+		&::after {
+			$size: 2.4rem;
+
+			content: "";
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: $size;
+			width: $size;
+			margin: -#{round-float($size / 2, 1)} -#{round-float($size / 2, 1)};
+			background: no-repeat center;
+			background-size: contain;
+			transition: opacity $animation-speed;
+		}
+
+		&::before {
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTMuMzMzMyAxNC42NjY2SDIuNjY2NjdDMi40ODk4NiAxNC42NjY2IDIuMzIwMjkgMTQuNTk2MyAyLjE5NTI2IDE0LjQ3MTNDMi4wNzAyNCAxNC4zNDYzIDIgMTQuMTc2NyAyIDEzLjk5OTlWMS45OTk5MkMyIDEuODIzMTEgMi4wNzAyNCAxLjY1MzU0IDIuMTk1MjYgMS41Mjg1MUMyLjMyMDI5IDEuNDAzNDkgMi40ODk4NiAxLjMzMzI1IDIuNjY2NjcgMS4zMzMyNUgxMy4zMzMzQzEzLjUxMDEgMS4zMzMyNSAxMy42Nzk3IDEuNDAzNDkgMTMuODA0NyAxLjUyODUxQzEzLjkyOTggMS42NTM1NCAxNCAxLjgyMzExIDE0IDEuOTk5OTJWMTMuOTk5OUMxNCAxNC4xNzY3IDEzLjkyOTggMTQuMzQ2MyAxMy44MDQ3IDE0LjQ3MTNDMTMuNjc5NyAxNC41OTYzIDEzLjUxMDEgMTQuNjY2NiAxMy4zMzMzIDE0LjY2NjZaTTYgMy45OTk5Mkg0LjY2NjY3VjUuMzMzMjVDNC42NjY2NyA2LjIxNzMxIDUuMDE3ODYgNy4wNjUxNSA1LjY0Mjk4IDcuNjkwMjdDNi4yNjgxIDguMzE1NCA3LjExNTk1IDguNjY2NTkgOCA4LjY2NjU5QzguODg0MDYgOC42NjY1OSA5LjczMTkgOC4zMTU0IDEwLjM1NyA3LjY5MDI3QzEwLjk4MjEgNy4wNjUxNSAxMS4zMzMzIDYuMjE3MzEgMTEuMzMzMyA1LjMzMzI1VjMuOTk5OTJIMTBWNS4zMzMyNUMxMCA1Ljg2MzY5IDkuNzg5MjkgNi4zNzIzOSA5LjQxNDIxIDYuNzQ3NDdDOS4wMzkxNCA3LjEyMjU0IDguNTMwNDMgNy4zMzMyNSA4IDcuMzMzMjVDNy40Njk1NyA3LjMzMzI1IDYuOTYwODYgNy4xMjI1NCA2LjU4NTc5IDYuNzQ3NDdDNi4yMTA3MSA2LjM3MjM5IDYgNS44NjM2OSA2IDUuMzMzMjVWMy45OTk5MloiLz48L3N2Zz4=);
+		}
+
+		&::after {
+			opacity: 0;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSI0LjQxNDE4IiB5PSIzIiB3aWR0aD0iMjQiIGhlaWdodD0iMiIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNC40MTQxOCAzKSIgZmlsbD0iYmxhY2siLz48cmVjdCB4PSIzIiB5PSIyMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjIiIHRyYW5zZm9ybT0icm90YXRlKC00NSAzIDIwKSIgZmlsbD0iYmxhY2siLz48L3N2Zz4=);
+		}
+
+		&.flip-active {
+			&::before {
+				opacity: 0;
+			}
+
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__back,
+	&__front {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		transition: opacity $animation-speed;
+	}
+
+	&__back {
+		opacity: 0;
+		pointer-events: none;
+
+		@at-root {
+			.no-touchevents #{$widget}:hover &,
+			.touchevents #{$widget}.flip-active & {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	&__front {
+		opacity: 1;
+		pointer-events: auto;
+
+		@at-root {
+			.no-touchevents #{$widget}:hover &,
+			.touchevents #{$widget}.flip-active & {
+				pointer-events: none;
+			}
+		}
+	}
+
+	&__figure {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__mask {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		$gradient-color: black;
+
+		@include linear-gradient(to top, rgba($gradient-color, 0.51) 0%, rgba($gradient-color, 0.34) 19%, rgba($gradient-color, 0) 42%, rgba($gradient-color, 0) 100%);
+	}
+
+	&__content {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 2rem;
+	}
+
+	&__title {
+		$lh: 2.8rem;
+		$count: 4;
+
+		font-weight: bold;
+		font-size: 2.2rem;
+		line-height: $lh;
+		color: white;
+		text-align: center;
+		max-height: $lh * $count;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $count;
+		margin: 0 0 1.7rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

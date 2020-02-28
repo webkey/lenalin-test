@@ -1,0 +1,55 @@
+.size {
+	$space-h: 1rem;
+	$space-v: 0.6rem;
+
+	&__list {
+		margin: -#{$space-v} -#{$space-h};
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__item {
+		flex: 0 0 auto;
+		padding: #{$space-v} #{$space-h};
+	}
+
+	&__el {
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		margin: 0;
+		font-size: inherit;
+		line-height: inherit;
+		color: inherit;
+		user-select: none;
+		-webkit-tap-highlight-color: transparent;
+		transition: opacity $animation-speed;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			position: absolute;
+			height: 16px;
+			width: 16px;
+			padding: 0;
+			margin: 0;
+			display: none;
+
+			& ~ span {
+				cursor: pointer;
+				transition: box-shadow $animation-speed;
+			}
+
+			&:checked {
+				& ~ span {
+					box-shadow: 0 2px 0 currentColor;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.header-options {
+	$space: 2.8rem;
+	$space-xxxl: 2rem;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		line-height: 1.8rem;
+		margin: 0 -#{round-float($space / 2, 1)};
+
+		@include below($xxxl) {
+			margin: 0 -#{round-float($space-xxxl / 2, 1)};
+		}
+
+		@include below($lg) {
+			display: block;
+		}
+	}
+
+	&__item {
+		padding: 0 #{round-float($space / 2, 1)};
+
+		@include below($xxxl) {
+			padding: 0 #{round-float($space-xxxl / 2, 1)};
+		}
+
+		@include below($lg) {
+			margin-bottom: 2rem;
+		}
+
+		&_action {
+			@include below($lg) {
+				display: none;
+			}
+		}
+	}
+}

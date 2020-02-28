@@ -1,0 +1,38 @@
+.form-unit {
+	position: relative;
+	margin-bottom: 2.6rem;
+
+	&_space_small {
+		margin-bottom: 1.6rem;
+	}
+
+	&__label {
+		margin-bottom: 0.5rem;
+	}
+
+	&__input {
+		position: relative;
+	}
+
+	&__feedback {
+		position: relative;
+	}
+
+	&__note {
+		position: relative;
+		padding-top: 0.7rem;
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		color: #4f4f4f;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			transition: color $animation-speed;
+
+			&:hover {
+				color: $link-color;
+			}
+		}
+	}
+}

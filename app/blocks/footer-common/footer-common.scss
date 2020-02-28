@@ -1,0 +1,135 @@
+.footer-common {
+	$space: 1.5rem;
+
+	&__boxes {
+		display: flex;
+		margin: 0 -#{$space};
+
+		@include below($lg) {
+			display: block;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	&__box {
+		$width-first: 29.4rem;
+
+		padding: 0 #{$space};
+
+		&_logo {
+			$width: $width-first;
+
+			flex: 1 0 $width;
+			max-width: $width;
+
+			@include below($lg) {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		&_assets {
+			flex: 1 1 auto;
+		}
+
+		@include below($lg) {
+			max-width: none;
+			padding: 0;
+			margin: 0 0 3.1rem;
+		}
+
+		&:last-child {
+			@include below($lg) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__logo {
+		position: relative;
+		display: block;
+		width: 20rem;
+		margin: -2.7rem 0 2rem;
+		flex-shrink: 0;
+		background: url(../images/logo_white.svg) no-repeat;
+		background-size: contain;
+
+		@include below($lg) {
+			$width: 20rem;
+
+			flex: 1 0 $width;
+			max-width: $width;
+			margin: 0 3rem 0 0;
+		}
+
+		@include below($md) {
+			$width: 16rem;
+
+			flex-basis: $width;
+			max-width: $width;
+		}
+
+		@include below($sm) {
+			$width: 8.5rem;
+
+			flex-basis: $width;
+			max-width: $width;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			pointer-events: none;
+
+			@include ratio(200, 96);
+		}
+
+		&-inner {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			overflow: hidden;
+			text-indent: -9999px;
+			height: 100%;
+			width: 100%;
+			user-select: none;
+			-webkit-tap-highlight-color: transparent;
+		}
+	}
+
+	&__description {
+		width: 20rem;
+		max-width: 100%;
+		font-size: 1.4rem;
+		line-height: 2rem;
+
+		@include below($md) {
+			width: 30rem;
+		}
+
+		@include below($sm) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			transition: opacity $animation-speed;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__row {
+		margin-bottom: 3.8rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

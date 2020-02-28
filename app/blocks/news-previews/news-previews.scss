@@ -1,0 +1,33 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.news-previews {
+	$space-h: 3rem;
+	$space-v: 7.7rem;
+	$space-v--sm: 4rem;
+
+	overflow: hidden;
+
+	&__list {
+		margin: 0 -#{round-float($space-h / 2, 1)} -#{$space-v};
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		@include below($lg) {
+			display: block;
+			margin: 0 0 -#{round-float($space-v--sm / 2, 1)};
+		}
+	}
+
+	&__item {
+		flex: 1 0 33.33%;
+		max-width: 33.33%;
+		padding: 0 #{round-float($space-h / 2, 1)} #{$space-v};
+
+		@include below($lg) {
+			max-width: none;
+			padding: 0 0 #{$space-v--sm};
+		}
+	}
+}

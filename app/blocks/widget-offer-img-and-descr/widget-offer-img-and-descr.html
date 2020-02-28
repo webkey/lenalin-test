@@ -1,0 +1,13 @@
+<div class="widget-offer-img-and-descr@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ widget-offer-img-and-descr_`+mods[i]+`}}">
+	<div class="widget-offer-img-and-descr__flip js-container-flip js-flip-prevent-hide">
+		<a href="#" class="widget-offer-img-and-descr__btn-flip js-btn-flip">Купить</a>
+		<div class="widget-offer-img-and-descr__flip-front">
+			@@if(context.image){<div class="widget-offer-img-and-descr__figure lazy-load" data-bg="url(assets/images/temp/@@image)"></div>}
+		</div>
+
+		<div class="widget-offer-img-and-descr__flip-back">
+			@@include('../quick-offer/quick-offer.html', {"title": "@@title"})
+		</div>
+	</div>
+	<div class="widget-offer-img-and-descr__title"><a href="@@href">@@title</a></div>
+</div>

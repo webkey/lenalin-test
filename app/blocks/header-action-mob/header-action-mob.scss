@@ -1,0 +1,16 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.header-action-mob {
+	$space: 3rem;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		margin: 0 -#{round-float($space / 2, 1)};
+	}
+
+	&__item {
+		padding: 0 #{round-float($space / 2, 1)};
+	}
+}

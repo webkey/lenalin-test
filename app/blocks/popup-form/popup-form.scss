@@ -1,0 +1,117 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.popup-form {
+	$popup: &;
+
+	width: 46.5rem;
+	max-width: 100%;
+	padding: 6.4rem 3rem 8rem;
+
+	@include below($sm) {
+		padding: 4.5rem #{$layout-page-space_sm} 6rem;
+	}
+
+	&__layout {
+		width: 26.5rem;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	&__title {
+		display: block;
+		font-weight: bold;
+		font-size: 2.8rem;
+		line-height: 3.4rem;
+		color: $title-color;
+		margin: 0 0 1.9rem;
+
+		@include below($lg) {
+			font-size: 2rem;
+			line-height: 2.8rem;
+		}
+	}
+
+	&__sub-title {
+		display: block;
+		font-weight: bold;
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+		color: $title-color;
+		margin: 0 0 1rem;
+	}
+
+	&__text {
+		font-size: 1.2rem;
+		line-height: 2rem;
+		margin: 0 0 1.5rem;
+
+		p {
+			margin-bottom: 15px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__content {
+		margin-bottom: 2.8rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__buttons {
+		margin-bottom: 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__note {
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+		color: #4f4f4f;
+		text-align: center;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			transition: box-shadow $animation-speed;
+			box-shadow: 0 0.1rem 0 currentColor;
+
+			&:hover {
+				box-shadow: 0 0.1rem 0 transparent;
+			}
+		}
+	}
+}
+
+.fancybox-popup-form {
+	.fancybox-bg {
+		background-color: black;
+	}
+
+	&.fancybox-is-open .fancybox-bg {
+		opacity: 0.2;
+	}
+
+	.fancybox-close-small {
+		color: $text-color-light;
+		opacity: 1;
+		transition: color $animation-speed;
+
+		svg {
+			path {
+				fill: currentColor;
+			}
+		}
+
+		&:hover {
+			color: $link-color;
+		}
+	}
+}

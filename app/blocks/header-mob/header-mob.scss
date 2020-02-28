@@ -1,0 +1,175 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.header-mob {
+	position: relative;
+	min-width: $layout-page-min-width;
+	background-color: white;
+	transition: box-shadow $animation-speed;
+	z-index: 21;
+
+	@include below($lg) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		box-shadow: 0 0 2rem transparent;
+	}
+
+	&.active {
+		@include below($lg) {
+			box-shadow: 0 0 2rem rgba(0, 0, 0, 0.35);
+		}
+	}
+
+	&__container {
+		position: relative;
+		height: 0;
+
+		@include below($lg) {
+			height: $header-height_sm;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-left: 3.6rem;
+		}
+	}
+
+	&__search {
+		position: absolute;
+		left: 16.6rem;
+		top: 4rem;
+
+		@include below($xxxl) {
+			left: 12rem;
+		}
+
+		@include below($xxl) {
+			left: 10rem;
+		}
+
+		@include below($lg) {
+			position: relative;
+			left: auto;
+			top: auto;
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		top: 2rem;
+		width: 12rem;
+		max-width: 100%;
+		flex-shrink: 0;
+		background: url(../images/logo.svg) no-repeat;
+		background-size: contain;
+
+		@include below($xxxl) {
+			top: 2.6rem;
+			width: 10rem;
+		}
+
+		@include below($xxl) {
+			top: 2.8rem;
+			width: 9rem;
+		}
+
+		@include below($lg) {
+			position: relative;
+			top: auto;
+			width: 7.8rem;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			pointer-events: none;
+
+			@include ratio(120, 58);
+		}
+
+		&-inner {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			overflow: hidden;
+			text-indent: -9999px;
+			height: 100%;
+			width: 100%;
+			user-select: none;
+			-webkit-tap-highlight-color: transparent;
+		}
+	}
+
+	&__action {
+		position: relative;
+		display: none;
+
+		@include below($lg) {
+			display: block;
+		}
+	}
+
+	&__mob-menu-control {
+		height: $header-height_sm;
+		width: 5.6rem;
+		position: absolute;
+		left: -#{$layout-page-space_md};
+		top: 0;
+		font-size: 0;
+		line-height: 0;
+		cursor: pointer;
+		z-index: 20;
+		display: none;
+
+		@include below($lg) {
+			display: block;
+		}
+
+		@include below($md) {
+			left: -#{$layout-page-space_sm};
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 2.4rem;
+			width: 2.4rem;
+			transform: translate(-50%, -50%);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB5PSIzIiB3aWR0aD0iMjQiIGhlaWdodD0iMiIgZmlsbD0iYmxhY2siLz48cmVjdCB5PSIxMSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjIiIGZpbGw9ImJsYWNrIi8+PHJlY3QgeT0iMTkiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyIiBmaWxsPSJibGFjayIvPjwvc3ZnPg==);
+			background-size: contain;
+		}
+	}
+}
+
+.menu-overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(black, 0.3);
+	z-index: 21;
+	will-change: opacity;
+	transition: opacity $animation-speed, visibility $animation-speed;
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+
+	@include below($lg) {
+		display: block;
+	}
+
+	&.mob-menu-is-open {
+		@include below($lg) {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

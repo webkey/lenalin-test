@@ -1,0 +1,90 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.footer-subscribe {
+	$search-form-height: 4rem;
+
+	width: 55.8rem;
+	max-width: 100%;
+
+	&__form {
+		display: block;
+	}
+
+	&__field {
+		display: flex;
+		align-items: center;
+	}
+
+	&__label {
+		margin-bottom: 0.8rem;
+
+		@include below($sm) {
+			margin-bottom: 1rem;
+		}
+
+		&-inner {
+			font-weight: bold;
+			font-size: 1.7rem;
+			line-height: 2.4rem;
+			color: inherit;
+		}
+	}
+
+	&__entry {
+		flex: 1 0 auto;
+		margin-right: 2.3rem;
+	}
+
+	&__input {
+		$input: &;
+		$font-size: 1.4rem;
+		$line-height: 2rem;
+		$ident-v: #{round-float(($search-form-height - $line-height) / 2, 1)};
+
+		display: block;
+		padding: #{$ident-v} 1.9rem;
+		height: $search-form-height;
+		width: 100%;
+		margin: 0;
+		color: white;
+		cursor: text;
+		background: rgba(white, 0.05);
+		box-shadow: none;
+		border: none;
+		border-radius: 0;
+		font-family: inherit;
+		font-size: $font-size;
+		line-height: $line-height;
+
+		@at-root {
+			#{$input},
+			input#{$input} {
+				border-radius: 0;
+			}
+		}
+
+		@include input-placeholder {
+			color: rgba(white, 0.6);
+			transition: opacity $animation-speed, color $animation-speed;
+		}
+
+		@include input-placeholder-focus {
+			opacity: 0;
+		}
+	}
+
+	&__submit {
+		flex-shrink: 0;
+	}
+
+	&__note {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		padding: 0.5rem 0;
+		font-weight: bold;
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+	}
+}

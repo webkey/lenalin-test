@@ -1,0 +1,84 @@
+.footer-assets {
+	$space-h: 1.5rem;
+	$space-v_md: 3.3rem;
+
+	&__boxes {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin: 0 -#{$space-h} 0 0;
+
+		@include below($md) {
+			margin-bottom: -#{$space-v_md};
+		}
+	}
+
+	&__box {
+		padding: 0 #{$space-h} 0 0;
+
+		@include below($md) {
+			$width: 50%;
+
+			flex: 1 0 $width;
+			max-width: $width;
+			padding-bottom: $space-v_md;
+		}
+
+		&_sm {
+			@include below($sm) {
+				&_full-width {
+					$width: 100%;
+
+					flex-basis: auto;
+					max-width: none;
+					width: calc(100% - #{$space-h});
+					margin-right: #{$space-h};
+					padding-right: 0;
+				}
+
+				&_divider {
+					border-top: 1px solid #606060;
+					padding-top: 2.7rem;
+				}
+			}
+		}
+
+		&-heading {
+			font-weight: bold;
+			font-size: 1.7rem;
+			line-height: 2.4rem;
+			margin-bottom: 1.9rem;
+
+			@include below($md) {
+				margin-bottom: 2.7rem;
+			}
+
+			a {
+				text-decoration: none;
+				color: white;
+				transition: color $animation-speed;
+
+				&:hover {
+					color: rgba(white, 0.7);
+				}
+			}
+		}
+
+		&-content {
+			display: block;
+
+			&-item {
+				margin-bottom: 4.4rem;
+
+				@include below($sm) {
+					margin-bottom: 3.8rem;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.news-slider {
+	position: relative;
+
+	html:not(.no-js) &:not(.is-loaded) {
+		opacity: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
+
+	&__slide {
+		position: relative;
+	}
+
+	&__controls {
+		position: absolute;
+		top: 15.6rem;
+		height: 0;
+		width: 100%;
+		z-index: 5;
+
+		&_by-layout-content {
+			@include below($lg) {
+				top: 12.2vw;
+			}
+
+			@include below($md) {
+				top: 19.7vw;
+			}
+
+			@include below($sm) {
+				top: 40vw;
+			}
+		}
+
+		&-holder {
+			position: relative;
+			height: 0;
+			padding: 0 2rem;
+		}
+	}
+
+	&__button {
+		$size: 4.8rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: $size;
+		width: $size;
+		margin-top: -#{round-float($size / 2, 1)};
+		color: black;
+		border-radius: $size;
+		background-color: white;
+		transition: background-color $animation-speed, box-shadow $animation-speed, color $animation-speed;
+		cursor: pointer;
+		box-shadow: 0 0.4rem 2rem rgba(black, 0.15);
+
+		svg {
+			$size: 1.6rem;
+
+			display: block;
+			height: $size;
+			width: $size;
+		}
+
+		path {
+			fill: currentColor;
+		}
+
+		&_prev {
+			float: left;
+		}
+
+		&_next {
+			float: right;
+		}
+
+		// :hover
+		&:hover {
+			background-color: $highlight-color--hover;
+			color: white;
+			box-shadow: 0 4px 20px rgba($highlight-color--hover, 0.15);
+		}
+
+		// :active
+		&:active {
+			transition-duration: 0s;
+			background-color: $highlight-color--active;
+			color: white;
+			box-shadow: 0 4px 20px rgba($highlight-color--active, 0.15);
+		}
+	}
+
+	&__fraction {
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		color: black;
+		display: none;
+	}
+}

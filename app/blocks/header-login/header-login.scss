@@ -1,0 +1,85 @@
+.header-login {
+	$space-h: 1.4rem;
+
+	&__holder {
+		display: flex;
+		align-items: center;
+		margin: 0 -#{round-float($space-h / 2, 1)};
+	}
+
+	&__in,
+	&__out {
+		position: relative;
+		display: block;
+		color: white;
+		margin: 0 #{round-float($space-h / 2, 1)};
+		text-decoration: none;
+		transition: opacity $animation-speed;
+
+		&::before {
+			$size: 3.2rem;
+
+			content: "";
+			display: none;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: $size;
+			width: $size;
+			margin: -#{round-float($size / 2, 1)};
+			background-color: rgba(white, 0);
+
+			@include below($lg) {
+				display: block;
+			}
+		}
+
+		&-figure {
+			$size: 1.6rem;
+
+			overflow: hidden;
+			border-radius: 0.4rem;
+			height: $size;
+			width: $size;
+
+			@include below($lg) {
+				$size: 1.8rem;
+
+				height: $size;
+				width: $size;
+			}
+		}
+
+		&-icon {
+			$size: 1.6rem;
+
+			height: $size;
+			width: $size;
+
+			@include below($lg) {
+				$size: 1.8rem;
+
+				height: $size;
+				width: $size;
+			}
+		}
+
+		&-img {
+			$size: 1.6rem;
+
+			height: $size;
+			width: $size;
+
+			@include below($lg) {
+				$size: 1.8rem;
+
+				height: $size;
+				width: $size;
+			}
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

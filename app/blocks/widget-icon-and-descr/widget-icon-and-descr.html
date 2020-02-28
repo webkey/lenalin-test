@@ -1,0 +1,13 @@
+<div class="widget-icon-and-descr@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ widget-icon-and-descr_`+mods[i]+`}}">
+	@@if(context.image){
+	<div class="widget-icon-and-descr__icon">
+		<div class="widget-icon-and-descr__icon-figure">
+			<img class="widget-icon-and-descr__icon-img lazy-load" data-src="assets/images/@@image" src="assets/images/empty.png" alt="@@title">
+		</div>
+	</div>}
+	@@if(context.title || context.text){
+	<div class="widget-icon-and-descr__content">
+		@@if(context.title){<div class="widget-icon-and-descr__title">@@title</div>}
+		@@if(context.text){<div class="widget-icon-and-descr__text">@@text</div>}
+	</div>}
+</div>

@@ -1,0 +1,157 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.header {
+	position: relative;
+	color: #000;
+	background-color: #f8f6f3;
+	z-index: 20;
+
+	// mobile menu
+	@include below($lg) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 28.3rem;
+		max-width: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		background-color: rgba($base-color-alt, 0.98);
+		box-shadow: 0 0 2rem transparent;
+		z-index: 22;
+		will-change: transform, opacity;
+		transition: all $animation-speed;
+		opacity: 0.8;
+		$translate: -100%, 0;
+
+		transform: translate($translate);
+		transform: translate3d($translate, 0);
+	}
+
+	&.mob-menu-is-open {
+		// mobile menu
+		@include below($lg) {
+			opacity: 1;
+			box-shadow: 0 0 2rem rgba(black, 0.35);
+			$translate: 0, 0;
+
+			transform: translate($translate);
+			transform: translate3d($translate, 0);
+		}
+	}
+
+	&__holder {
+		position: relative;
+	}
+
+	&__frame {
+		// mobile menu
+		@include below($lg) {
+			overflow: hidden;
+			padding: #{$header-height_sm} #{$layout-page-space_md} 2rem;
+		}
+
+		@include below($md) {
+			overflow: hidden;
+			padding: #{$header-height_sm} #{$layout-page-space_sm} 2rem;
+		}
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: $layout-page-max-width;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: $layout-page-space;
+		padding-right: $layout-page-space;
+
+		@include below($xxl) {
+			padding-left: $layout-page-space_md;
+			padding-right: $layout-page-space_md;
+		}
+
+		@include below($lg) {
+			display: block;
+			padding: 0;
+		}
+
+		&-assets,
+		&-options {
+			$space: 1.5rem;
+
+			flex-shrink: 0;
+			position: relative;
+			z-index: 5;
+			padding: 4.1rem #{$space} 3.5rem;
+		}
+
+		&-assets {
+			padding-left: 22.3rem;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+
+			@include below($xxxl) {
+				padding-left: 17rem;
+			}
+
+			@include below($xxl) {
+				padding-left: 15rem;
+			}
+
+			@include below($lg) {
+				padding: 0;
+				display: block;
+			}
+		}
+
+		&-options {
+			padding-right: 0.3rem;
+
+			@include below($lg) {
+				padding: 0;
+				display: block;
+			}
+		}
+	}
+
+	&__mob-menu-close {
+		height: $header-height_sm;
+		width: 7rem;
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 0;
+		line-height: 0;
+		cursor: pointer;
+		z-index: 20;
+		display: none;
+
+		@include below($lg) {
+			display: block;
+		}
+
+		@include below($md) {
+			width: 5.4rem;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 2.4rem;
+			width: 2.4rem;
+			transform: translate(-50%, -50%);
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSI0LjQxNDE4IiB5PSIzIiB3aWR0aD0iMjQiIGhlaWdodD0iMiIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNC40MTQxOCAzKSIgZmlsbD0iYmxhY2siLz48cmVjdCB4PSIzIiB5PSIyMCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjIiIHRyYW5zZm9ybT0icm90YXRlKC00NSAzIDIwKSIgZmlsbD0iYmxhY2siLz48L3N2Zz4=);
+			background-size: contain;
+		}
+	}
+}

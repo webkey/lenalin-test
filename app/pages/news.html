@@ -1,0 +1,15 @@
+@@include("../blocks/head/head.html", {"title": "Новости - Lenalin"})
+@@include("../blocks/header/header.html", {"currentItem": "Новости"})
+<div class="main">
+	<div class="home-page">
+		<section class="home-page__section home-page__section_news-previews">
+			@@include("../blocks/section-default/section-default.html", {
+			"title": "Новости",
+			"href": "news.html",
+			"contents": "<div class=\"layout-page\"><div class=\"layout-content\">@@include('../news-previews/news-previews.html')</div></div>"
+			})
+		</section>
+	</div>
+</div>
+@@include("../blocks/footer/footer.html", {"currentItem": "Новости"})
+@@include("../blocks/link/link.html")

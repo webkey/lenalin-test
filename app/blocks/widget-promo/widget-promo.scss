@@ -1,0 +1,98 @@
+.widget-promo {
+	display: block;
+	position: relative;
+	text-decoration: none;
+	color: inherit;
+	-webkit-tap-highlight-color: transparent;
+	font-size: 1rem; // Size inside this block calculate in em
+
+	@include below($xxxl) {
+		font-size: 0.8rem;
+	}
+
+	@include below($sm) {
+		font-size: 10px; // Return to initial size
+	}
+
+	&_fit {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__content {
+		position: relative;
+		padding: 5.5em 5.1em;
+
+		@include below($md) {
+			padding: 3em #{$layout-page-space_sm};
+		}
+	}
+
+	&__title {
+		$fz: 2em;
+		$lh: 1.2;
+		$count: 2;
+
+		font-weight: bold;
+		font-size: $fz;
+		line-height: $lh;
+		color: inherit;
+		max-height: $fz * $lh * $count;
+		width: 15em;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $count;
+		margin: 0 0 0.75em;
+	}
+
+	&__logotype {
+		width: 22.6em;
+		max-width: 100%;
+		margin-bottom: 1.8em;
+
+		@include below($md) {
+			width: 12em;
+		}
+	}
+
+	&__text {
+		$fz: 1.6em;
+		$lh: 1.5;
+		$count: 4;
+
+		font-size: 1.6em;
+		line-height: $lh;
+		color: inherit;
+		max-height: $fz * $lh * $count;
+		width: 18.5em;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $count;
+		margin-bottom: 1.2em;
+	}
+
+	&__footer {
+		width: 30em;
+		max-width: 100%;
+	}
+}

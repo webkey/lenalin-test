@@ -1,0 +1,106 @@
+.popular-categories {
+	$space-v: 1.4rem;
+	$space-h: 1.4rem;
+	$space-v_lg: 2rem;
+	$space-h_lg: 2rem;
+
+	overflow: hidden;
+
+	&__list {
+		margin: -#{round-float($space-v / 2, 1)} -#{round-float($space-h / 2, 1)};
+
+		@include below($lg) {
+			margin: -#{round-float($space-v_lg / 2, 1)} -#{round-float($space-h_lg / 2, 1)};
+		}
+
+		@include clearfix;
+	}
+
+	&__item {
+		position: relative;
+		float: left;
+		width: 16.67%;
+
+		&::before {
+			content: "";
+			display: block;
+
+			@include ratio(1, 1);
+		}
+
+		&_large {
+			width: 33.32%;
+		}
+
+		&_wide {
+			width: 33.32%;
+
+			&::before {
+				@include ratio(2, 1);
+			}
+		}
+
+		&_lg {
+			@include below($lg) {
+				width: 33.33%;
+			}
+
+			&::before {
+				@include below($lg) {
+					@include ratio(1, 1);
+				}
+			}
+
+			&_wide {
+				@include below($lg) {
+					width: 66.66%;
+				}
+
+				&::before {
+					@include below($lg) {
+						@include ratio(2, 1);
+					}
+				}
+			}
+		}
+
+		&_md {
+			@include below($md) {
+				width: 50%;
+			}
+
+			&::before {
+				@include below($md) {
+					@include ratio(1, 1);
+				}
+			}
+		}
+
+		&_sm {
+			@include below($sm) {
+				width: 100%;
+			}
+
+			&::before {
+				@include below($sm) {
+					@include ratio(4, 3);
+				}
+			}
+		}
+	}
+
+	&__in {
+		position: absolute;
+		left: round-float($space-h / 2, 1);
+		top: round-float($space-v / 2, 1);
+		height: calc(100% - #{$space-v});
+		width: calc(100% - #{$space-h});
+
+		@include below($lg) {
+			left: round-float($space-h_lg / 2, 1);
+			top: round-float($space-v_lg / 2, 1);
+			height: calc(100% - #{$space-v_lg});
+			width: calc(100% - #{$space-h_lg});
+		}
+	}
+}

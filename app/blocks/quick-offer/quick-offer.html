@@ -1,0 +1,39 @@
+<form action="#" method="POST" class="quick-offer quick-offer_fit">
+	<div class="quick-offer__layout">
+		<div class="quick-offer__entry">
+			<div class="quick-offer__title">@@title</div>
+			<div class="quick-offer__size">
+				@@include("../size/size.html", {
+				"items": [
+				{"label": "2-спл", "input": "<input type=\"radio\" name=\"quick-offer-size\" checked/>"},
+				{"label": "1.5-спл", "input": "<input type=\"radio\" name=\"quick-offer-size\"/>"},
+				{"label": "Евро", "input": "<input type=\"radio\" name=\"quick-offer-size\"/>"}
+				]
+				})
+			</div>
+			<div class="quick-offer__colors">
+				@@include("../colors/colors.html", {
+				"items": [
+				{"color": "#7798ab", "input": "<input type=\"radio\" name=\"quick-offer-color\" />"},
+				{"color": "#757575", "input": "<input type=\"radio\" name=\"quick-offer-color\" checked/>"},
+				{"color": "#ffffff", "input": "<input type=\"radio\" name=\"quick-offer-color\" />"},
+				{"color": "#cab3b1", "input": "<input type=\"radio\" name=\"quick-offer-color\" />"},
+				{"color": "#000000", "input": "<input type=\"radio\" name=\"quick-offer-color\" />"}
+				]
+				})
+			</div>
+		</div>
+		<div class="quick-offer__price">
+			<div class="quick-offer__price-els">
+				<div class="quick-offer__price-el quick-offer__price-el_old">200 руб.</div>
+				<div class="quick-offer__price-el quick-offer__price-el_new">180 руб.</div>
+			</div>
+		</div>
+		<div class="quick-offer__favorites">
+			@@include("../btn-favorites/btn-favorites.html", {"active": ""})
+		</div>
+		<div class="quick-offer__button">
+			@@include("../button/button-submit.html", {"mods": ["small"], "text": "Заказать"})
+		</div>
+	</div>
+</form>

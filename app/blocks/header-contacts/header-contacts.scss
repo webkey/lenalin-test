@@ -1,0 +1,101 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.header-contacts {
+	$space: 3.8rem;
+	$space-xxxl: 2rem;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		margin: 0 -#{round-float($space / 2, 1)};
+
+		@include below($xxxl) {
+			margin: 0 -#{round-float($space-xxxl / 2, 1)};
+		}
+
+		@include below($lg) {
+			margin: 0;
+			display: block;
+		}
+	}
+
+	&__item {
+		padding: 0 #{round-float($space / 2, 1)};
+
+		@include below($xxxl) {
+			padding: 0 #{round-float($space-xxxl / 2, 1)};
+		}
+
+		@include below($lg) {
+			padding: 0;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__row {
+		margin-bottom: 1rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.header-contacts-el {
+	display: flex;
+	align-items: flex-start;
+
+	&__icon {
+		margin: 0 0.3rem 0.1rem 0;
+		font-size: 1.6rem;
+		line-height: 1;
+	}
+
+	&__content {
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+	}
+
+	&__title {
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+		margin-bottom: 0.2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&-row {
+			margin-bottom: 0.2rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 1.2rem;
+		line-height: 1.4;
+		font-weight: 700;
+
+		&-row {
+			margin-bottom: 0.2rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+		transition: opacity $animation-speed;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}

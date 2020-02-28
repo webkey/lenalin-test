@@ -1,0 +1,105 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.header-phones {
+	position: relative;
+
+	.header-main & {
+		@include below($lg) {
+			display: none;
+		}
+	}
+
+	&__control {
+		display: block;
+		position: relative;
+		padding: 0 1.4rem 0 0;
+		min-height: 1.8rem;
+		//max-width: 12rem;
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+		color: inherit;
+		text-decoration: none;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		transition: opacity $animation-speed;
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&-arrow {
+			$size: 1.6rem;
+
+			position: absolute;
+			right: 0;
+			top: 50%;
+			height: $size;
+			width: $size;
+			margin: -0.8rem -0.3rem;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTEuOTk5OCAxMy4xNzIyTDE2Ljk0OTggOC4yMjIxN0wxOC4zNjM4IDkuNjM2MTdMMTEuOTk5OCAxNi4wMDAyTDUuNjM1NzcgOS42MzYxN0w3LjA0OTc3IDguMjIyMTdMMTEuOTk5OCAxMy4xNzIyWiIvPjwvc3ZnPg==);
+
+			&.drop-is-open {
+				transform: rotate(0.5turn);
+			}
+		}
+	}
+
+	&__drop {
+		padding: 0.6rem 0 0;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		opacity: 0;
+		pointer-events: none;
+		transform: translate3d(0, -1rem, 0);
+		transition: opacity $animation-speed, transform $animation-speed;
+
+		&.drop-is-open {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translate3d(0, 0, 0);
+		}
+
+		&-list {
+			box-shadow: 0 0.4rem 1.4rem rgba(#293548, 0.4);
+			padding: 0.8rem 1.6rem;
+			font-size: 1.6rem;
+			line-height: 1.8rem;
+			color: $link-color;
+			border-radius: 0.4rem;
+			background-color: white;
+
+			@include below($lg) {
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+				padding: 1rem 1.8rem 0.6rem;
+			}
+		}
+
+		&-item {
+			padding: 0.5rem 0;
+			white-space: nowrap;
+
+			a,
+			span {
+				padding-top: 0.5em;
+			}
+
+			a {
+				color: $text-color;
+				text-decoration: none;
+				transition: opacity $animation-speed;
+				-webkit-tap-highlight-color: transparent;
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}

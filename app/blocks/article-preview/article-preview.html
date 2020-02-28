@@ -1,0 +1,12 @@
+<div class="article-preview@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ article-preview_`+mods[i]+`}}">
+	<div class="article-preview__figure">
+		<img class="article-preview__figure-img lazy-load" src="assets/images/empty.png" data-src="assets/images/temp/@@image" alt="@@title" />
+	</div>
+	<div class="article-preview__content">
+		<h2 class="article-preview__title">@@title</h2>
+		<div class="article-preview__text">@@text</div>
+		<div class="article-preview__footer">
+			@@include("../button/button.html", {"href": "@@btnHref", "mods": ["sm", "sm_full-width"], "text": "@@btnText"})
+		</div>
+	</div>
+</div>

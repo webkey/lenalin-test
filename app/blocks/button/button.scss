@@ -1,0 +1,189 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.btn-default {
+	$btn: &;
+
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	cursor: pointer;
+	min-width: 20rem;
+	margin: 0;
+	padding: 1.4rem 2rem 1rem;
+	font-family: inherit;
+	font-weight: normal;
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	border: 0.1rem solid black;
+	border-radius: 0;
+	background-color: black;
+	box-shadow: none;
+	transition: background-color $animation-speed, border-color $animation-speed, color $animation-speed, opacity $animation-speed;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+
+	@at-root {
+		#{$btn},
+		input#{$btn} {
+			border-radius: 0;
+		}
+	}
+
+	&_sm {
+		@include below($sm) {
+			&_full-width {
+				display: block;
+				width: 100%;
+			}
+
+			&_no-min-width {
+				min-width: 0;
+			}
+		}
+	}
+
+	&_small {
+		padding-top: 0.9rem;
+		padding-bottom: 0.5rem;
+		min-width: 16rem;
+
+		&_sm {
+			@include below($sm) {
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+
+				&_full-width {
+					display: block;
+					width: 100%;
+				}
+
+				&_no-min-width {
+					min-width: 0;
+				}
+			}
+		}
+	}
+
+	&_full-width {
+		display: block;
+		min-width: 0;
+		width: 100%;
+	}
+
+	span {
+		display: block;
+		position: relative;
+	}
+
+	&:hover {
+		color: black;
+		background-color: white;
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
+}
+
+.btn-default-alt {
+	$btn: &;
+
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	cursor: pointer;
+	min-width: 21.7rem;
+	margin: 0;
+	padding: 1.4rem 2rem 1rem;
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	border: 0.1rem solid $highlight-color;
+	background-color: $highlight-color;
+	box-shadow: none;
+	transition: background-color $animation-speed, border-color $animation-speed, color $animation-speed, opacity $animation-speed;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+
+	@at-root {
+		#{$btn},
+		input#{$btn} {
+			border-radius: 0;
+		}
+	}
+
+	&_sm {
+		@include below($sm) {
+			&_full-width {
+				display: block;
+				width: 100%;
+			}
+
+			&_no-min-width {
+				min-width: 0;
+			}
+		}
+	}
+
+	&_small {
+		padding-top: 0.9rem;
+		padding-bottom: 0.9rem;
+		min-width: 16.6rem;
+		font-size: 1.4rem;
+		line-height: 2rem;
+
+		&_sm {
+			@include below($sm) {
+				padding-left: 1rem;
+				padding-right: 1rem;
+
+				&_full-width {
+					display: block;
+					width: 100%;
+				}
+
+				&_no-min-width {
+					min-width: 0;
+				}
+			}
+		}
+	}
+
+	&_full-width {
+		display: block;
+		min-width: 0;
+		width: 100%;
+	}
+
+	@at-root {
+		#{$btn},
+		input#{$btn} {
+			border-radius: 0;
+		}
+	}
+
+	span {
+		display: block;
+		position: relative;
+	}
+
+	&:hover {
+		background-color: $highlight-color--hover;
+		border-color: $highlight-color--hover;
+	}
+
+	&:active {
+		background-color: $highlight-color--active;
+		border-color: $highlight-color--active;
+	}
+}

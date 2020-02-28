@@ -1,0 +1,97 @@
+.visual-preview {
+	overflow: hidden;
+	position: relative;
+	display: block;
+	text-decoration: none;
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #ccc;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__mask {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0.28;
+		$gradient-color: #fff;
+
+		@include linear-gradient(to right, rgba($gradient-color, 0.74) 0%, rgba($gradient-color, 0) 67%, rgba($gradient-color, 0) 100%);
+	}
+
+	&__main {
+		position: relative;
+	}
+
+	&__holder {
+		display: flex;
+	}
+
+	&__frame {
+		min-height: 40rem;
+		padding: 5rem 0 2.6rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+
+		@include below($lg) {
+			min-height: 32rem;
+			padding: 3rem 0;
+		}
+
+		@include below($lg) {
+			min-height: 24rem;
+		}
+	}
+
+	&__align {
+		position: relative;
+		max-width: 100%; // For flex
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 4.2rem;
+		line-height: 4.8rem;
+		color: black;
+		margin-bottom: 1.8rem;
+
+		@include below($lg) {
+			font-size: 2.8rem;
+			line-height: 3.6rem;
+			margin-bottom: 2rem;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		color: #000;
+		width: 33rem;
+		max-width: 100%;
+		margin-bottom: 2.7rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__footer {
+		width: 30rem;
+		max-width: 100%;
+	}
+}

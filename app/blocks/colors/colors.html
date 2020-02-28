@@ -1,0 +1,12 @@
+<div class="colors">
+	<div class="colors__list">
+		@@for(var i = 0; i < items.length; i++){
+		<div class="colors__item">
+			<label class="colors__el">
+				`+items[i].input+`
+				<span style="background-color: `+items[i].color+`">`+items[i].color+`</span>
+			</label>
+		</div>
+		}
+	</div>
+</div>

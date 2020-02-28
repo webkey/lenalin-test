@@ -1,0 +1,59 @@
+.widget-icon-and-descr {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	-webkit-tap-highlight-color: transparent;
+
+	&__icon {
+		$size: 6.4rem;
+
+		position: relative;
+		height: $size;
+		width: $size;
+		margin: 0 auto 2.2rem;
+
+		@include below($lg) {
+			margin-bottom: 2rem;
+		}
+
+		&-figure {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+		}
+
+		&-img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__content {
+		display: block;
+		text-align: center;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		color: inherit;
+		margin: 0 0 1.3rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		margin: 0 0 1.4rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

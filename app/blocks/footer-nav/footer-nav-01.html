@@ -1,0 +1,18 @@
+<div class="footer-nav">
+	<div class="footer-nav__list">
+		@@if(context.currentItem != 'Home'){<div class="footer-nav__item"><a href="home.html" class="footer-nav__el">Главная</a></div>}
+		@@if(context.currentItem == 'Home'){<div class="footer-nav__item current"><span class="footer-nav__el">Главная</span></div>}
+
+		@@if(context.currentItem != 'Catalog'){<div class="footer-nav__item"><a href="catalog.html" class="footer-nav__el">Каталог</a></div>}
+		@@if(context.currentItem == 'Catalog'){<div class="footer-nav__item current"><span class="footer-nav__el">Каталог</span></div>}
+
+		@@if(context.currentItem != 'News'){<div class="footer-nav__item"><a href="news.html" class="footer-nav__el">Новости</a></div>}
+		@@if(context.currentItem == 'News'){<div class="footer-nav__item current"><span class="footer-nav__el">Новости</span></div>}
+
+		@@if(context.currentItem != 'About'){<div class="footer-nav__item"><a href="about.html" class="footer-nav__el">О нас</a></div>}
+		@@if(context.currentItem == 'About'){<div class="footer-nav__item current"><span class="footer-nav__el">О нас</span></div>}
+
+		@@if(context.currentItem != 'Contacts'){<div class="footer-nav__item"><a href="contacts.html" class="footer-nav__el">Контакты</a></div>}
+		@@if(context.currentItem == 'Contacts'){<div class="footer-nav__item current"><span class="footer-nav__el">Контакты</span></div>}
+	</div>
+</div>

@@ -1,0 +1,40 @@
+.footer {
+	position: relative;
+	display: block;
+	color: white;
+
+	&__container {
+		position: relative;
+	}
+
+	&__common {
+		padding: 5.5rem 0 2.9rem;
+		background-color: #000;
+
+		@include below($lg) {
+			padding: 4rem 0 3rem;
+		}
+
+		@include below($sm) {
+			padding: 1.3rem 0 2.5rem;
+		}
+	}
+
+	&__add {
+		padding: 0 0 4.4rem;
+		background-color: #000;
+
+		@include below($lg) {
+			padding-bottom: 3.8rem;
+		}
+	}
+
+	&__bottom {
+		padding: 1rem 0;
+		background-color: #1c1c1c;
+
+		@include below($lg) {
+			padding: 1.4rem 0;
+		}
+	}
+}

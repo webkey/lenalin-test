@@ -1,0 +1,195 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/fonts';
+@import 'helpers/optimize';
+
+html {
+	font-size: 62.5%;
+	height: 100%; // Footer at bottom
+
+	@include below($xxl) {
+		font-size: 50%;
+	}
+
+	@include below($xxl) {
+		font-size: 50%;
+	}
+
+	@include below($md) {
+		font-size: 62.5%;
+	}
+
+	@include below(375px) {
+		font-size: 53.3%;
+	}
+
+	// Блокировать скролла
+	&.css-scroll-fixed:not(.open-only-mob) {
+		@include scroll-blocked;
+	}
+
+	// Не блокировать скролл, если есть класс open-only-mob
+	&.css-scroll-fixed.open-only-mob {
+		@include below($lg) {
+			@include scroll-blocked;
+		}
+	}
+}
+
+body {
+	min-width: $layout-page-min-width;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-size: 1.8rem;
+	line-height: 2.8rem;
+	color: #000;
+	background: url(../images/empty.png) no-repeat fixed;
+	height: 100%; // Footer at bottom
+	display: flex; // Footer at bottom
+	flex-direction: column; // Footer at bottom
+
+	@include below($sm) {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+	}
+}
+
+.header {
+	// Footer at bottom
+	flex-shrink: 0;
+}
+
+.main {
+	// Footer at bottom
+	flex: 1 0 auto;
+
+	@include below($lg) {
+		padding-top: $header-height_sm;
+	}
+}
+
+.footer {
+	// Footer at bottom
+	flex-shrink: 0;
+	margin-top: auto;
+}
+
+p,
+.p {
+	margin-bottom: 3.2rem;
+}
+
+a {
+	color: $link-color;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+b i,
+strong i,
+b em,
+strong em,
+i b,
+i strong,
+em b,
+em strong {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.nobr {
+	white-space: nowrap;
+}
+
+.hide {
+	display: none;
+}
+
+.hide-important {
+	display: none !important;
+}
+
+.line-through {
+	text-decoration: line-through;
+}
+
+.layout-page {
+	max-width: $layout-page-max-width;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $layout-page-space;
+	padding-right: $layout-page-space;
+
+	@include below($xxl) {
+		padding-left: $layout-page-space_md;
+		padding-right: $layout-page-space_md;
+	}
+
+	@include below($md) {
+		padding-left: $layout-page-space_sm;
+		padding-right: $layout-page-space_sm;
+	}
+}
+
+.layout-max-wrap {
+	max-width: $layout-max-wrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.layout-content {
+	max-width: $layout-content-max-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.layout-form {
+	max-width: $layout-form-max-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img {
+	border: none;
+	vertical-align: top;
+	max-width: 100%;
+
+	table & {
+		max-width: none;
+	}
+}
+
+.fancybox-bg {
+	background-color: white;
+}
+
+.lenalin-logo-color {
+	position: relative;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	background: url(../images/logo-color.svg) no-repeat;
+	background-size: contain;
+
+	&::before {
+		content: "";
+		display: block;
+		pointer-events: none;
+
+		@include ratio(226, 110);
+	}
+}
+
+@import '../blocks/**/*';

@@ -1,0 +1,166 @@
+.news-preview {
+	$el: &;
+
+	color: inherit;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+
+	&__figure {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 3.6rem;
+
+		&::before {
+			content: "";
+			display: block;
+
+			@include ratio(362, 304);
+		}
+	}
+
+	&__content {
+		margin-bottom: 3rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		$lh: 2.4rem;
+		$count: 2;
+
+		font-weight: bold;
+		font-size: 2rem;
+		line-height: $lh;
+		color: $title-color-alt;
+		height: $lh * $count;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $count;
+		margin: 0 0 1.5rem;
+		transition: color $animation-speed;
+
+		@at-root {
+			a#{$el}:hover & {
+				color: $link-color;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		$lh: 2.4rem;
+		$count: 3;
+
+		font-weight: 300;
+		font-size: 1.8rem;
+		line-height: $lh;
+		color: $text-color;
+		height: $lh * $count;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $count;
+		margin-bottom: 0.8rem;
+		transition: color $animation-speed;
+
+		@at-root {
+			a#{$el}:hover & {
+				color: $link-color;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__meta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		line-height: 1;
+
+		&-date {
+			display: block;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+			color: inherit;
+			transition: color $animation-speed;
+
+			@at-root {
+				a#{$el}:hover & {
+					color: $link-color;
+				}
+			}
+		}
+
+		&-more {
+			display: block;
+			position: relative;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+			color: inherit;
+			padding-right: 2.4rem;
+			margin-left: 2rem;
+			transition: color $animation-speed;
+
+			@at-root {
+				a#{$el}:hover & {
+					color: $link-color;
+				}
+			}
+
+			&::before,
+			&::after {
+				$size: 1.6rem;
+
+				content: "";
+				display: block;
+				position: absolute;
+				right: 0.1rem;
+				top: 0.1rem;
+				height: $size;
+				width: $size;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				transition: opacity $animation-speed;
+			}
+
+			&::before {
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC43ODE0NCA4LjAwMDAxTDUuNDgxNDQgNC43MDAwMUw2LjQyNDExIDMuNzU3MzRMMTAuNjY2OCA4LjAwMDAxTDYuNDI0MTEgMTIuMjQyN0w1LjQ4MTQ1IDExLjNMOC43ODE0NCA4LjAwMDAxWiIgZmlsbD0iYmxhY2siLz48L3N2Zz4=);
+				opacity: 1;
+
+				@at-root {
+					a#{$el}:hover & {
+						opacity: 0;
+					}
+				}
+			}
+
+			&::after {
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC43ODE0NCA4LjAwMDAxTDUuNDgxNDQgNC43MDAwMUw2LjQyNDExIDMuNzU3MzRMMTAuNjY2OCA4LjAwMDAxTDYuNDI0MTEgMTIuMjQyN0w1LjQ4MTQ1IDExLjNMOC43ODE0NCA4LjAwMDAxWiIgZmlsbD0iI2NhYjNiMSIvPjwvc3ZnPg==);
+				opacity: 0;
+
+				@at-root {
+					a#{$el}:hover & {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+<div class="footer-common">
+	<div class="footer-common__boxes">
+		<div class="footer-common__box footer-common__box_logo">
+			<div class="footer-common__logo">
+				@@if(context.currentItem == "index"){<span class="footer-common__logo-inner">Lenalin</span>}
+				@@if(context.currentItem != "index"){<a href="home.html" class="footer-common__logo-inner" title="Lenalin">Lenalin</a>}
+			</div>
+			<div class="footer-common__description">Здесь собрано все, чтобы подчеркнуть тепло и радушие вашего жилища. </div>
+		</div>
+		<div class="footer-common__box footer-common__box_assets">
+			<div class="footer-common__row">
+				@@include("../footer-assets/footer-assets.html", {"currentItem": "@@currentItem"})
+			</div>
+		</div>
+	</div>
+</div>

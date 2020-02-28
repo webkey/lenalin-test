@@ -1,0 +1,30 @@
+.footer-payments {
+	$space-h: 3rem;
+	$space-v: 0.5rem;
+
+	overflow: hidden;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+
+	&_sm {
+		@include below($sm) {
+			&_inline {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		margin: -#{$space-v} -#{round-float($space-h / 2, 1)};
+	}
+
+	&__item {
+		flex-shrink: 0;
+		padding: #{$space-v} #{round-float($space-h / 2, 1)};
+	}
+}

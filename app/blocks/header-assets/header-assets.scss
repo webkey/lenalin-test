@@ -1,0 +1,26 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.header-assets {
+	display: flex;
+	align-items: center;
+
+	@include below($lg) {
+		display: block;
+		margin-bottom: 2rem;
+	}
+
+	&__nav {
+		padding-right: 6.9rem;
+
+		@include below($xxxl) {
+			padding-right: 3rem;
+		}
+
+		@include below($lg) {
+			padding: 0 0 2rem;
+			margin-bottom: 2rem;
+			border-bottom: 1px solid #000;
+		}
+	}
+}

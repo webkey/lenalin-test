@@ -1,0 +1,30 @@
+@@include("../blocks/head/head.html", {"title": "Site map - Lenalin"})
+@@include("../blocks/header/header.html", {"currentItem": "Site map"})
+<div class="single">
+	<section class="single-section edit-content">
+		<div class="layout-page">
+			<div class="layout-content">
+				<ul class="list-of-pages">
+					<li><a href="home.html">Home - Главная</a></li>
+					<!--<li><a href="inner.html">Inner - Внутренняя текстовая</a></li>
+					<li><a href="about.html">About - О компании</a></li>-->
+					<li><a href="news.html">News - Список новостей</a></li>
+					<!--<li><a href="news-one.html">News One - Внутренняя новостная</a></li>
+					<li><a href="contacts.html">Contacts - Контакты</a></li>
+					<li><a href="catalog.html">Catalog - Каталог</a></li>
+					<li><a href="product-card.html">Product card - Карточка продукта</a></li>
+					<li><a href="cart.html">Cart - Корзина</a></li>
+					<li><a href="order.html">Order - Оформление заказа</a></li>
+					<li><a href="404.html">404 - Страница ошибки 404</a></li>-->
+				</ul>
+				<style>
+					.list-of-pages li a::after {
+						content: ' (' attr(href) ')';
+					}
+				</style>
+			</div>
+		</div>
+	</section>
+</div>
+@@include("../blocks/footer/footer.html", {"currentItem": "Site map"})
+@@include("../blocks/link/link.html")

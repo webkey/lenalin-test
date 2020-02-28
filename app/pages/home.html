@@ -1,0 +1,75 @@
+@@include("../blocks/head/head.html", {"title": "Главная - Lenalin"})
+@@include("../blocks/header/header.html", {"currentItem": "Home"})
+<div class="main">
+	<div class="home-page">
+		<section class="home-page__section home-page__section_promo">
+			<div class="layout-max-wrap">
+				<h2 class="hide-important">Популярные товары</h2>
+				@@include("../blocks/promo/promo.html")
+			</div>
+		</section>
+		<section class="home-page__section home-page__section_popular-categories">
+			@@include("../blocks/section-default/section-default.html", {
+			"title": "Популярные категории",
+			"contents": "<div class=\"layout-page\">@@include('../popular-categories/popular-categories.html')</div>"
+			})
+		</section>
+		<section class="home-page__section home-page__section_services">
+			<div class="layout-page">
+				<div class="layout-content">
+					<h2 class="hide-important">Сервисы</h2>
+					@@include("../blocks/services/services.html")
+				</div>
+			</div>
+		</section>
+		<section class="home-page__section home-page__section_best-offers">
+			@@include("../blocks/section-default/section-default.html", {
+			"title": "Лучшие предложения",
+			"contents": "<div class=\"layout-page\"><div class=\"layout-content\">@@include('../best-offers/best-offers.html')</div></div>"
+			})
+		</section>
+		<section class="home-page__section home-page__section_visual-preview">
+			<div class="layout-max-wrap">
+				@@include("../blocks/visual-preview/visual-preview.html", {
+					"image": "img-visual-preview-01.jpg",
+					"title": "Оформите заказ на изделие из льна",
+					"text": "Весь ноябрь действуют скидки 25% на постельное белью из льна",
+					"btnText": "В каталог",
+					"btnHref": "catalog.html"
+				})
+			</div>
+		</section>
+		<section class="home-page__section home-page__section_article-preview">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("../blocks/article-preview/article-preview.html", {
+						"mods": ["indented"],
+						"image": "img-article-preview-01.jpg",
+						"title": "О нас",
+						"text": "Мы располагаем собственными производственными мощностями по пошиву текстильных изделий любой сложности. мы любим лен, мы знаем о нем все и уверены, что это лучший материал для создания комфортного и красивого личного пространства.",
+						"btnText": "Подробнее",
+						"btnHref": "about.html"
+					})
+				</div>
+			</div>
+		</section>
+		<section class="home-page__section home-page__section_news-slider">
+			@@include("../blocks/section-default/section-default.html", {
+			"title": "Новости",
+			"href": "news.html",
+			"contents": "<div class=\"layout-page\"><div class=\"layout-content\">@@include('../news-slider/news-slider.html')</div></div>"
+			})
+		</section>
+		<section class="home-page__section home-page__section_tape">
+			<div class="layout-max-wrap">
+				<h2 class="hide-important">Мы в соцсетях</h2>
+				@@include("../blocks/tape/tape.html")
+			</div>
+		</section>
+	</div>
+</div>
+@@include("../blocks/footer/footer.html", {"currentItem": "Home"})
+@@include("../blocks/popup-form/login.html")
+@@include("../blocks/popup-form/sing-up.html")
+@@include("../blocks/popup-form/recovery-password.html")
+@@include("../blocks/link/link.html")

@@ -1,0 +1,118 @@
+.promo {
+	overflow: hidden;
+
+	&__list {
+		@include clearfix;
+	}
+
+	&__item {
+		position: relative;
+		float: left;
+		width: 29.2%;
+
+		&::before {
+			content: "";
+			display: block;
+		}
+
+		&_large {
+			width: 41.6%;
+
+			@include below($lg) {
+				width: 50%;
+			}
+
+			&::before {
+				@include ratio(1, 1);
+
+				@include below($xxl) {
+					@include ratio(10, 12);
+				}
+			}
+		}
+
+		&_middle {
+			&::before {
+				@include ratio(56, 48);
+			}
+		}
+
+		&_small {
+			&::before {
+				@include ratio(56, 32);
+
+				@include below($xxl) {
+					@include ratio(56, 48);
+				}
+			}
+		}
+
+		&_lg {
+			@include below($lg) {
+				width: 33.33%;
+			}
+
+			&::before {
+				@include below($lg) {
+					@include ratio(1, 1);
+				}
+			}
+
+			&_wide {
+				@include below($lg) {
+					width: 66.66%;
+				}
+
+				&::before {
+					@include below($lg) {
+						@include ratio(2, 1);
+					}
+				}
+			}
+		}
+
+		&_md {
+			@include below($md) {
+				width: 50%;
+			}
+
+			&::before {
+				@include below($md) {
+					@include ratio(1, 1);
+				}
+			}
+
+			&_wide {
+				@include below($md) {
+					width: 100%;
+				}
+
+				&::before {
+					@include below($md) {
+						@include ratio(2, 1);
+					}
+				}
+			}
+		}
+
+		&_sm {
+			@include below($sm) {
+				width: 100%;
+			}
+
+			&::before {
+				@include below($sm) {
+					@include ratio(1, 1);
+				}
+			}
+		}
+	}
+
+	&__in {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+}

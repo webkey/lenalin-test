@@ -1,0 +1,16 @@
+<div class="footer-subscribe">
+	<form action="#" method="post" class="footer-subscribe__form">
+		<div class="footer-subscribe__label">
+			<label class="footer-subscribe__label-inner" for="subscribe">Подписаться на рассылку:</label>
+		</div>
+		<div class="footer-subscribe__field">
+			<div class="footer-subscribe__entry">
+				<input id="subscribe" class="footer-subscribe__input" placeholder="Ваш e-mail" name="subscribe" type="email" required>
+			</div>
+			<div class="footer-subscribe__submit">
+				@@include("../button/button-submit-alt.html", {"mods": ["small", "small_sm", "small_sm_no-min-width"], "text": "Отправить"})
+			</div>
+		</div>
+		<span class="footer-subscribe__note" style="display: none;">Вы подписаны</span>
+	</form>
+</div>

@@ -1,0 +1,123 @@
+.widget-bg-and-descr {
+	$widget: &;
+
+	display: block;
+	overflow: hidden;
+	position: relative;
+	text-decoration: none;
+	color: inherit;
+	-webkit-tap-highlight-color: transparent;
+
+	&::before {
+		content: "";
+		display: block;
+
+		@include ratio(1, 1);
+	}
+
+	&_fit {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+
+		&::before {
+			content: none;
+		}
+	}
+
+	&__figure {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: transform 5s;
+
+		@at-root {
+			#{$widget}:hover & {
+				transform: scale3d(1.2, 1.2, 0);
+				transition-duration: 15s;
+			}
+		}
+	}
+
+	&__mask {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: transform $animation-speed;
+		transform: scale3d(1, 1.2, 1);
+		transform-origin: top center;
+
+		$gradient-color: black;
+
+		@include linear-gradient(to top, rgba($gradient-color, 0.51) 0%, rgba($gradient-color, 0.34) 29%, rgba($gradient-color, 0) 52%, rgba($gradient-color, 0) 100%);
+
+		@at-root {
+			#{$widget}:hover & {
+				transform: scale3d(1, 1, 1);
+			}
+		}
+	}
+
+	&__content {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 2rem;
+	}
+
+	&__title {
+		$lh: 2.8rem;
+		$count: 4;
+
+		font-weight: bold;
+		font-size: 2.2rem;
+		line-height: $lh;
+		color: white;
+		text-align: center;
+		max-height: $lh * $count;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $count;
+		margin: 0 0 1.7rem;
+
+		@include below($xl) {
+			$lh: 2.4rem;
+			$count: 4;
+
+			font-size: 1.8rem;
+			line-height: $lh;
+			max-height: $lh * $count;
+			-webkit-line-clamp: $count;
+		}
+
+		@include below($lg) {
+			$lh: 2.8rem;
+			$count: 4;
+
+			font-size: 2.2rem;
+			line-height: $lh;
+			max-height: $lh * $count;
+			-webkit-line-clamp: $count;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

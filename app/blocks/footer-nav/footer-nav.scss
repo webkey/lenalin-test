@@ -1,0 +1,40 @@
+.footer-nav {
+	$item-space-bottom: 0.8rem;
+	$item-space-bottom_md: 2.6rem;
+
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	overflow: hidden;
+
+	&__list {
+		margin-bottom: -#{$item-space-bottom};
+
+		@include below($md) {
+			margin-bottom: -#{$item-space-bottom_md};
+		}
+	}
+
+	&__item {
+		margin-bottom: #{$item-space-bottom};
+
+		@include below($md) {
+			margin-bottom: #{$item-space-bottom_md};
+		}
+	}
+
+	&__el {
+		$el: &;
+
+		@at-root {
+			a#{$el} {
+				text-decoration: none;
+				color: white;
+				transition: color $animation-speed;
+
+				&:hover {
+					color: rgba(white, 0.7);
+				}
+			}
+		}
+	}
+}

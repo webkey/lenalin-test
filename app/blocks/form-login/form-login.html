@@ -1,0 +1,39 @@
+<div class="form-unit form-unit_space_small">
+	<div class="form-unit__label">
+		@@include("../form-element/form-label.html", {
+		"label": "E-mail:",
+		"id": "login-email"
+		})
+	</div>
+	<div class="form-unit__input">
+		@@include("../form-element/form-input.html", {
+		"id": "login-email",
+		"placeholder": "Ваш e-mail",
+		"type": "email",
+		"required": "true"
+		})
+	</div>
+</div>
+<div class="form-unit form-unit_space_small">
+	<div class="form-unit__label">
+		@@include("../form-element/form-label.html", {
+		"label": "Пароль:",
+		"id": "login-password"
+		})
+	</div>
+	<div class="form-unit__input">
+		<a href="#" class="form-def-show-pass js-show-pass">
+			<span class="form-def-show-pass__icon"></span>
+		</a>
+		@@include("../form-element/form-input.html", {
+		"id": "login-password",
+		"placeholder": "Ваш пароль",
+		"type": "password",
+		"required": "true"
+		})
+	</div>
+	<div class="form-unit__note">
+		<a href="javascript:;" class="js-popup-form-opener" data-src="#popup-recovery-password">Забыли пароль?</a>
+	</div>
+</div>
+

@@ -1,0 +1,76 @@
+.footer-contacts {
+	$space-v: 1.5rem;
+	$space-v_md: 2.5rem;
+	$space-h_sm: 1.5rem;
+
+	overflow: hidden;
+	font-size: 1.4rem;
+	line-height: 2.2rem;
+	color: white;
+
+	&__list {
+		margin-bottom: -#{$space-v};
+
+		@include below($md) {
+			margin-bottom: -#{$space-v_md};
+			margin-right: -#{$space-h_sm};
+		}
+
+		@include below($sm) {
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+
+	&__item {
+		margin-bottom: #{$space-v};
+
+		@include below($md) {
+			margin-bottom: #{$space-v_md};
+		}
+
+		@include below($sm) {
+			$width: 50%;
+
+			flex: 1 0 $width;
+			max-width: $width;
+			padding-right: #{$space-h_sm};
+		}
+	}
+
+	&__title {
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		margin: 0 0 0.8rem;
+
+		@include below($md) {
+			font-size: 1.4rem;
+			line-height: 1.7rem;
+			margin-bottom: 1.9rem;
+		}
+	}
+
+	&__text {
+		&-item {
+			margin-bottom: 0.8rem;
+
+			@include below($md) {
+				margin-bottom: 1.8rem;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: rgba(white, 0.6);
+		transition: color $animation-speed;
+
+		&:hover {
+			color: white;
+		}
+	}
+}
