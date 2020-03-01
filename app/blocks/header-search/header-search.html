@@ -2,7 +2,8 @@
 	<div class="header-search__panel js-header-search-panel js-header-search-prevent-hide">
 		<form class="header-search__form" action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
 			<div class="header-search__field">
-				<input type="text" placeholder="Введите поисковый запрос" class="header-search__input js-header-search-input" data-swc-prevent-remove />
+				<label for="search" class="header-search__label">Найти</label>
+				<input id="search" type="text" placeholder="Введите поисковый запрос" class="header-search__input js-header-search-input" data-swc-prevent-remove />
 				<a href="#" class="header-search__close js-header-search-close">
 					<div class="header-search__close-icon">
 						@@include("../../svg/icon-search.svg")

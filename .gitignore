@@ -42,3 +42,7 @@ bower_components
 node_modules
 npm-debug.log
 .happypack/
+
+# Lock
+yarn.lock
+package-lock.json

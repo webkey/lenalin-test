@@ -44,10 +44,6 @@
 		color: inherit;
 		max-height: $lh * $count;
 		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: $count;
 		word-break: break-word;
 		margin-bottom: 2.2rem;
 
