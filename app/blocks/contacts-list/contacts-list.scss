@@ -1,0 +1,40 @@
+.contacts-list {
+	&__item {
+		margin-bottom: 1.5rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+		font-weight: bold;
+		margin-bottom: 0.8rem;
+	}
+
+	&__descr {
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+		font-weight: 300;
+
+		&-item {
+			margin-bottom: 0.5rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			transition: color $animation-speed;
+
+			&:hover {
+				color: $link-color;
+			}
+		}
+	}
+}

@@ -7,6 +7,7 @@ app.headerLocation.init();
 app.headerPhones.init();
 app.headerSearch.init();
 app.newsSlider.init();
+app.popularSlider.init();
 app.formElement.togglePassword();
 app.headerMob.init();
 app.flipOfferBgDescr.init();

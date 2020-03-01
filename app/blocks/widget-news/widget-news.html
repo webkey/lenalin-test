@@ -1,0 +1,11 @@
+<a href="news-one.html" class="widget-news">
+	@@if(context.image){<div class="widget-news__figure lazy-load" data-bg="url(assets/images/temp/@@image)"></div>}
+	<div class="widget-news__content">
+		<div class="widget-news__title">@@title</div>
+		<div class="widget-news__text">@@text</div>
+	</div>
+	<div class="widget-news__meta">
+		<time class="widget-news__meta-date" datetime="@@dateTime">@@date</time>
+		<span class="widget-news__meta-more">Подробнее</span>
+	</div>
+</a>

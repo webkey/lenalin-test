@@ -9,5 +9,14 @@
 			@@include('../quick-offer/quick-offer.html', {"title": "@@title"})
 		</div>
 	</div>
-	<div class="widget-offer-img-and-descr__title"><a href="@@href">@@title</a></div>
+	<div class="widget-offer-img-and-descr__content">
+		<div class="widget-offer-img-and-descr__title"><a href="@@href">@@title</a></div>
+		@@if(context.price) {
+		<div class="widget-offer-img-and-descr__price">
+			<div class="widget-offer-img-and-descr__price-els">
+				@@if(context.price.old) {<div class="widget-offer-img-and-descr__price-el widget-offer-img-and-descr__price-el_old">@@price.old</div>}
+				@@if(context.price.new) {<div class="widget-offer-img-and-descr__price-el widget-offer-img-and-descr__price-el_new">@@price.new</div>}
+			</div>
+		</div>}
+	</div>
 </div>

@@ -1,4 +1,4 @@
-.news-preview {
+.widget-news-short {
 	$el: &;
 
 	color: inherit;
@@ -9,7 +9,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		margin-bottom: 3.6rem;
+		margin-bottom: 2rem;
 
 		&::before {
 			content: "";
@@ -28,19 +28,10 @@
 	}
 
 	&__title {
-		$lh: 2.4rem;
-		$count: 2;
-
 		font-weight: bold;
 		font-size: 2rem;
-		line-height: $lh;
+		line-height: 2.4rem;
 		color: $title-color-alt;
-		height: $lh * $count;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: $count;
 		margin: 0 0 1.5rem;
 		transition: color $animation-speed;
 
@@ -56,19 +47,10 @@
 	}
 
 	&__text {
-		$lh: 2.4rem;
-		$count: 3;
-
 		font-weight: 300;
 		font-size: 1.8rem;
-		line-height: $lh;
+		line-height: 2.4rem;
 		color: $text-color;
-		height: $lh * $count;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: $count;
 		margin-bottom: 0.8rem;
 		transition: color $animation-speed;
 

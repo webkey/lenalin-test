@@ -1,0 +1,44 @@
+.page-error {
+	&__title {
+		font-weight: bold;
+		font-size: 4.8rem;
+		line-height: 5rem;
+		margin-bottom: 2.8rem;
+	}
+
+	&__text {
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+		margin-bottom: 5.3rem;
+	}
+
+	&__layout {
+		display: flex;
+		align-items: center;
+
+		&-text {
+			$width: 50%;
+
+			flex: 1 0 $width;
+		}
+
+		&-figure {
+			$width: 50%;
+
+			flex: 1 0 $width;
+		}
+	}
+
+	&__figure {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		&::before {
+			content: "";
+			display: block;
+
+			@include ratio(783, 707);
+		}
+	}
+}

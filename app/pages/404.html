@@ -1,0 +1,24 @@
+@@include("../blocks/head/head.html", {"title": "Lenalin - 404"})
+@@include("../blocks/header/header.html")
+<div class="main">
+	<div class="page-error">
+		<div class="layout-page">
+			<div class="layout-content">
+				<div class="page-error__layout">
+					<div class="page-error__layout-text edit-content">
+						<h1 class="page-error__title">Страница не найдена</h1>
+						<div class="page-error__text">URL- адрес указан неверно, или такой страницы не существует.</div>
+						<div class="page-error__meta">
+							@@include("../blocks/button/button.html", {"href": "home.html", "text": "Вернуться на главную"})
+						</div>
+					</div>
+					<div class="page-error__layout-figure">
+						<div class="page-error__figure lazy-load" data-bg="url(assets/images/404.png)"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@@include("../blocks/footer/footer.html")
+@@include("../blocks/link/link.html")

@@ -1,4 +1,4 @@
-.news-slider {
+.popular-slider {
 	position: relative;
 
 	html:not(.no-js) &:not(.is-loaded) {
@@ -13,22 +13,22 @@
 
 	&__controls {
 		position: absolute;
-		top: 15.6rem;
+		top: 18.4rem;
 		height: 0;
 		width: 100%;
 		z-index: 5;
 
-		&_vertical-middle {
+		&_by-layout-content {
 			@include below($lg) {
-				top: 12.2vw;
+				top: 15vw;
 			}
 
 			@include below($md) {
-				top: 19.7vw;
+				top: 22.5vw;
 			}
 
 			@include below($sm) {
-				top: 40vw;
+				top: 42.8vw;
 			}
 		}
 

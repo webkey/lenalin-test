@@ -1,0 +1,48 @@
+@@include("../blocks/head/head.html", {"title": "Lenalin - Контакты"})
+@@include("../blocks/header/header.html", {"currentItem": "Контакты"})
+<div class="main">
+	<div class="page-contacts">
+		<div class="layout-page">
+			<div class="layout-content">
+				<div class="page-contacts__content">
+					<div class="page-contacts__breadcrumbs">
+						@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": ["Главная"], "current": "Контакты" })
+					</div>
+
+					<div class="page-contacts__heading">
+						<h1 class="page-contacts__title">Контакты</h1>
+					</div>
+
+					<p>Magna eu nisi nulla velit amet aliquip sunt enim et proident dolor. Aliquip quis magna duis elit incididunt. Fugiat do incididunt in reprehenderit consectetur nulla. Fugiat eu sit magna ipsum. Sint ex excepteur aliqua sit cupidatat aliquip adipisicing ipsum nisi culpa nostrud.</p>
+
+					<div class="page-contacts__section">
+						<div class="contacts-list">
+							<div class="contacts-list__item">
+								<div class="contacts-list__title">Телефоны:</div>
+								<div class="contacts-list__descr">
+									<div class="contacts-list__descr-item"><a href="tel:+74952129900">+7 (495) 212-99-00</a></div>
+									<div class="contacts-list__descr-item"><a href="tel:+74952145666">+7 (495) 214-56-66</a></div>
+								</div>
+							</div>
+							<div class="contacts-list__item">
+								<div class="contacts-list__title">E-mail:</div>
+								<div class="contacts-list__descr">
+									<div class="contacts-list__descr-item"><a href="mailto:lenalin.se@mail.ru">lenalin.se@mail.ru</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-contacts__section">
+						@@include("../blocks/button/button.html", {"class": "js-popup-form-opener", "mods": ["sm", "sm_full-width"], "dataSrc": "#popup-callback", "text": "Обратная связь"})
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-contacts__map">
+			<div class="contacts-map" style="background: url(assets/images/temp/map.jpg) no-repeat center; background-size: cover; height: 100%; width: 100%;"></div>
+		</div>
+	</div>
+</div>
+@@include("../blocks/footer/footer.html", {"currentItem": "Контакты"})
+@@include("../blocks/link/link.html")

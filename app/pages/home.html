@@ -1,20 +1,20 @@
-@@include("../blocks/head/head.html", {"title": "Главная - Lenalin"})
+@@include("../blocks/head/head.html", {"title": "Lenalin - Главная"})
 @@include("../blocks/header/header.html", {"currentItem": "Home"})
 <div class="main">
-	<div class="home-page">
-		<section class="home-page__section home-page__section_promo">
+	<div class="page-home">
+		<section class="page-home__section page-home__section_promo">
 			<div class="layout-max-wrap">
 				<h2 class="hide-important">Популярные товары</h2>
 				@@include("../blocks/promo/promo.html")
 			</div>
 		</section>
-		<section class="home-page__section home-page__section_popular-categories">
+		<section class="page-home__section page-home__section_popular-categories">
 			@@include("../blocks/section-default/section-default.html", {
 			"title": "Популярные категории",
 			"contents": "<div class=\"layout-page\">@@include('../popular-categories/popular-categories.html')</div>"
 			})
 		</section>
-		<section class="home-page__section home-page__section_services">
+		<section class="page-home__section page-home__section_services">
 			<div class="layout-page">
 				<div class="layout-content">
 					<h2 class="hide-important">Сервисы</h2>
@@ -22,13 +22,13 @@
 				</div>
 			</div>
 		</section>
-		<section class="home-page__section home-page__section_best-offers">
+		<section class="page-home__section page-home__section_best-offers">
 			@@include("../blocks/section-default/section-default.html", {
 			"title": "Лучшие предложения",
 			"contents": "<div class=\"layout-page\"><div class=\"layout-content\">@@include('../best-offers/best-offers.html')</div></div>"
 			})
 		</section>
-		<section class="home-page__section home-page__section_visual-preview">
+		<section class="page-home__section page-home__section_visual-preview">
 			<div class="layout-max-wrap">
 				@@include("../blocks/visual-preview/visual-preview.html", {
 					"image": "img-visual-preview-01.jpg",
@@ -39,7 +39,7 @@
 				})
 			</div>
 		</section>
-		<section class="home-page__section home-page__section_article-preview">
+		<section class="page-home__section page-home__section_article-preview">
 			<div class="layout-page">
 				<div class="layout-content">
 					@@include("../blocks/article-preview/article-preview.html", {
@@ -53,14 +53,14 @@
 				</div>
 			</div>
 		</section>
-		<section class="home-page__section home-page__section_news-slider">
+		<section class="page-home__section page-home__section_news-slider">
 			@@include("../blocks/section-default/section-default.html", {
 			"title": "Новости",
 			"href": "news.html",
 			"contents": "<div class=\"layout-page\"><div class=\"layout-content\">@@include('../news-slider/news-slider.html')</div></div>"
 			})
 		</section>
-		<section class="home-page__section home-page__section_tape">
+		<section class="page-home__section page-home__section_tape">
 			<div class="layout-max-wrap">
 				<h2 class="hide-important">Мы в соцсетях</h2>
 				@@include("../blocks/tape/tape.html")

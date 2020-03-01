@@ -1,6 +1,3 @@
-@import '../../styles/helpers/variables';
-@import '../../styles/helpers/mixins';
-
 .news-previews {
 	$space-h: 3rem;
 	$space-v: 7.7rem;
@@ -16,7 +13,7 @@
 
 		@include below($lg) {
 			display: block;
-			margin: 0 0 -#{round-float($space-v--sm / 2, 1)};
+			margin: 0 0 -#{$space-v--sm};
 		}
 	}
 

@@ -1,0 +1,20 @@
+.news-previews-short {
+	$space-h: 3rem;
+	$space-v: 2rem;
+
+	overflow: hidden;
+
+	&__list {
+		margin-bottom: -#{$space-v};
+	}
+
+	&__item {
+		padding-bottom: #{$space-v};
+		margin-bottom: #{$space-v};
+		border-bottom: 1px solid #c4c4c4;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

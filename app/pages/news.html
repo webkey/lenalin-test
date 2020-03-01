@@ -1,14 +1,41 @@
-@@include("../blocks/head/head.html", {"title": "Новости - Lenalin"})
+@@include("../blocks/head/head.html", {"title": "Lenalin - Новости"})
 @@include("../blocks/header/header.html", {"currentItem": "Новости"})
 <div class="main">
-	<div class="home-page">
-		<section class="home-page__section home-page__section_news-previews">
-			@@include("../blocks/section-default/section-default.html", {
-			"title": "Новости",
-			"href": "news.html",
-			"contents": "<div class=\"layout-page\"><div class=\"layout-content\">@@include('../news-previews/news-previews.html')</div></div>"
-			})
-		</section>
+	<div class="page-news">
+		<div class="layout-page">
+			<div class="layout-content">
+				<div class="page-news__breadcrumbs">
+					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": ["Главная"], "current": "Новости" })
+				</div>
+				<div class="page-news__heading">
+					<h1 class="page-news__title">Новости</h1>
+				</div>
+				<div class="page-news__thumbs">
+					<div class="page-news__sorting">
+						<label for="sorting"></label>
+						<select name="sorting" id="sorting">
+							<option value="">Сортировать по</option>
+							<option value="1">Сортировать по дате</option>
+							<option value="1">Сортировать по релевантности</option>
+						</select>
+					</div>
+					<div class="page-news__show">
+						<label for="show"></label>
+						<select name="show" id="show">
+							<option value="">Показывать по: 9</option>
+							<option value="1">Показывать по: 12</option>
+							<option value="1">Показывать по: 25</option>
+						</select>
+					</div>
+				</div>
+				<div class="page-news__content">
+					@@include('../blocks/news-previews/news-previews.html')
+				</div>
+				<div class="page-news__pagination page-news__pagination_center">
+					@@include('../blocks/pagination/pagination.html')
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 @@include("../blocks/footer/footer.html", {"currentItem": "Новости"})

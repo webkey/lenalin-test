@@ -39,16 +39,6 @@ app.newsSlider = {
 		watchSlidesVisibility: true,
 		lazy: true,
 
-		pagination: {
-			type: 'fraction',
-			el: '.js-news-slider__pagination',
-			currentClass: 'news-slider__fraction-current',
-			totalClass: 'news-slider__fraction-total',
-			renderBullet(index, className) {
-				return '<div class="' + className + '"><span></span></div>';
-			}
-		},
-
 		navigation: {
 			nextEl: '.js-news-slider__button-next',
 			prevEl: '.js-news-slider__button-prev'

@@ -1,0 +1,51 @@
+.breadcrumbs {
+	color: $text-color-muted;
+	margin-bottom: $bottom-space;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		cursor: default;
+		font: inherit;
+	}
+
+	&__li {
+		display: inline;
+		padding-right: 4rem;
+		margin: 0;
+		color: $link-color;
+
+		&::after {
+			display: inline-block;
+			content: "";
+			height: 0.9rem;
+			width: 0.6rem;
+			margin-left: 4.4rem;
+			background: url(../images/icon-bcr-arrow.svg) no-repeat;
+			background-size: contain;
+		}
+
+		&:last-child {
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	&__el {
+		$el: &;
+
+		text-decoration: none;
+		color: $text-color;
+		transition: color $animation-speed;
+
+		&:hover {
+			color: $link-color;
+		}
+	}
+}
