@@ -1,0 +1,52 @@
+.btn-special {
+	$btn: &;
+
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	cursor: pointer;
+	min-width: 20rem;
+	margin: 0;
+	padding: 1.4rem 2rem 1rem;
+	font-family: inherit;
+	font-weight: normal;
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+	border: 0.1rem solid #86bc94;
+	background-color: #86bc94;
+	box-shadow: none;
+	transition: background-color $animation-speed, border-color $animation-speed, color $animation-speed, opacity $animation-speed;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+
+	@at-root {
+		#{$btn},
+		input#{$btn} {
+			border-radius: 0;
+		}
+	}
+
+	&_full-width {
+		display: block;
+		min-width: 0;
+		width: 100%;
+	}
+
+	span {
+		display: block;
+		position: relative;
+	}
+
+	&:hover {
+		color: #60986f;
+		background-color: white;
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
+}

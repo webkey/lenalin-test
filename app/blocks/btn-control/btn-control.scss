@@ -1,0 +1,90 @@
+.btn-control {
+	$btn: &;
+
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 2.4rem;
+	line-height: 3.2rem;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+	border: none;
+	background: none;
+	box-shadow: none;
+	transition: color $animation-speed;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+
+	&_arrow-left {
+		$arrow-size: 1.6rem;
+
+		padding-left: 2.3rem;
+
+		&::before,
+		&::after {
+			$size: $arrow-size;
+
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			height: $size;
+			width: $size;
+			margin-top: -#{round-float($size / 2, 1)};
+			transition: opacity $animation-speed;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		&::before {
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNy4yMTg1NSA3Ljk5OTk5TDEwLjUxODYgMTEuM0w5LjU3NTg5IDEyLjI0MjdMNS4zMzMyMiA3Ljk5OTk5TDkuNTc1ODkgMy43NTczMkwxMC41MTg2IDQuNjk5OTlMNy4yMTg1NSA3Ljk5OTk5WiIgZmlsbD0iYmxhY2siPjwvcGF0aD48L3N2Zz4=);
+		}
+
+		&::after {
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNy4yMTg1NSA3Ljk5OTk5TDEwLjUxODYgMTEuM0w5LjU3NTg5IDEyLjI0MjdMNS4zMzMyMiA3Ljk5OTk5TDkuNTc1ODkgMy43NTczMkwxMC41MTg2IDQuNjk5OTlMNy4yMTg1NSA3Ljk5OTk5WiIgZmlsbD0iI2NhYjNiMSI+PC9wYXRoPjwvc3ZnPg==);
+			opacity: 0;
+		}
+
+		@at-root {
+			#{$btn}:hover {
+				&::before {
+					opacity: 0;
+				}
+
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	@at-root {
+		#{$btn},
+		input#{$btn} {
+			border-radius: 0;
+		}
+	}
+
+	span {
+		display: block;
+		position: relative;
+	}
+
+	&:hover {
+		color: $highlight-color;
+		background-color: white;
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
+}

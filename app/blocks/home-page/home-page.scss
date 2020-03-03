@@ -1,0 +1,28 @@
+.home-page {
+	&__section {
+		margin-bottom: 8rem;
+
+		@include below($lg) {
+			margin-bottom: 4.5rem;
+		}
+
+		&_promo,
+		&_popular-categories {
+			margin-bottom: 6rem;
+
+			@include below($lg) {
+				margin-bottom: 4rem;
+			}
+		}
+
+		&_article-preview {
+			overflow: hidden;
+		}
+
+		&_tape {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

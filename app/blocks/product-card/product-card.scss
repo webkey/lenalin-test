@@ -1,0 +1,29 @@
+.product-card {
+	$width-main: 50%;
+	$space-h: 9.8rem;
+
+	@include clearfix;
+
+	&__main {
+		float: left;
+		clear: left;
+		width: $width-main;
+		min-height: 1rem;
+	}
+
+	&__heading {
+		float: right;
+		clear: right;
+		width: calc(100% - #{$width-main});
+		padding-left: $space-h;
+		min-height: 1rem;
+	}
+
+	&__aside {
+		float: right;
+		clear: right;
+		width: calc(100% - #{$width-main});
+		padding-left: $space-h;
+		min-height: 1rem;
+	}
+}
