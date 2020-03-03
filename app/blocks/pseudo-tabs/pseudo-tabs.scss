@@ -1,0 +1,47 @@
+.pseudo-tabs {
+	&__list {
+		display: flex;
+		align-items: flex-start;
+		font-size: 2rem;
+		line-height: 2.6rem;
+	}
+
+	&__li {
+		$li: &;
+
+		&-el {
+			$el: &;
+
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			padding: 2.7rem 5.5rem;
+			background-color: #f1eeec;
+			transition: background-color $animation-speed;
+
+			@at-root {
+				#{$li}.current & {
+					background-color: #dac5b3;
+					cursor: default;
+				}
+			}
+
+			&-in {
+				box-shadow: 0 0.2rem 0 transparent;
+				transition: box-shadow $animation-speed;
+
+				@at-root {
+					#{$el}:hover & {
+						box-shadow: 0 0.2rem 0 #111;
+					}
+				}
+
+				@at-root {
+					#{$li}.current & {
+						box-shadow: 0 0.2rem 0 transparent;
+					}
+				}
+			}
+		}
+	}
+}
