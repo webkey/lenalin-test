@@ -1,0 +1,62 @@
+.personal-data-photo {
+	&__photo {
+		$size: 14.8rem;
+
+		display: block;
+		overflow: hidden;
+		text-decoration: none;
+		color: inherit;
+		height: $size;
+		width: $size;
+		border-radius: 1rem;
+		margin: 0 auto 1.2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&-img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	&__controls {
+		font-size: 1.6rem;
+		line-height: 2rem;
+		text-align: center;
+
+		@include below($sm) {
+			text-align: left;
+		}
+	}
+
+	&__btn-upload {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 0 0 3.3rem;
+		text-decoration: none;
+		color: inherit;
+		transition: color $animation-speed;
+
+		&:hover {
+			color: $highlight-color--hover;
+		}
+
+		&::before {
+			$size: 2.4rem;
+
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			height: $size;
+			width: $size;
+			margin: -#{floor-float($size / 2, 1)} 0 0;
+			background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNCAxOUgyMFYxMkgyMlYyMEMyMiAyMC4yNjUyIDIxLjg5NDYgMjAuNTE5NiAyMS43MDcxIDIwLjcwNzFDMjEuNTE5NiAyMC44OTQ2IDIxLjI2NTIgMjEgMjEgMjFIM0MyLjczNDc4IDIxIDIuNDgwNDMgMjAuODk0NiAyLjI5Mjg5IDIwLjcwNzFDMi4xMDUzNiAyMC41MTk2IDIgMjAuMjY1MiAyIDIwVjEySDRWMTlaTTE0IDlIMTlMMTIgMTZMNSA5SDEwVjNIMTRWOVoiIGZpbGw9ImJsYWNrIj48L3BhdGg+PC9zdmc+) no-repeat center;
+			background-size: contain;
+		}
+	}
+}

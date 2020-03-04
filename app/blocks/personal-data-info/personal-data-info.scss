@@ -1,0 +1,73 @@
+.personal-data-info {
+	&__name {
+		display: block;
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+		color: $title-color;
+		margin-bottom: 2rem;
+	}
+
+	&__list {
+		margin: 0;
+		font-size: 1.8rem;
+		line-height: 2.2rem;
+	}
+
+	&__item {
+		margin: 0 0 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__unit {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		line-height: 0;
+		min-width: 28rem;
+
+		&_edit {
+			padding-right: 4.3rem;
+		}
+
+		&-label {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			font-weight: normal;
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+			color: inherit;
+		}
+
+		&-text {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+			color: inherit;
+			word-break: break-word;
+
+			@include clearfix;
+		}
+
+		&-pass {
+			float: left;
+			position: relative;
+			font-size: 2.4rem;
+			line-height: 2.4rem;
+			color: $form-def-placeholder-color;
+			margin: 0.7rem 0 -1rem;
+		}
+
+		&-edit {
+			position: absolute;
+			top: 50%;
+			right: -0.5rem;
+			transform: translate(0, -50%);
+		}
+	}
+}

@@ -1,0 +1,36 @@
+<div class="personal-data-info">
+	<div class="personal-data-info__name">Павел Бенушин</div>
+	<div class="personal-data-info__list">
+		<div class="personal-data-info__item">
+			<div class="personal-data-info__unit personal-data-info__unit_edit">
+				<div class="personal-data-info__unit-label">E-mail:</div>
+				<div class="personal-data-info__unit-text">PolBen12@mail.ru</div>
+				<div class="personal-data-info__unit-edit">
+					@@include("../btn-edit/btn-edit.html", {"href": "#", "class": "js-popup-form-opener", "title": "Редактировать данные", "text": "Редактировать", "dataSrc": "#popup-change-data"})
+					@@include("../popup-form/change-data.html")
+				</div>
+			</div>
+		</div>
+		<div class="personal-data-info__item">
+			<div class="personal-data-info__unit personal-data-info__unit_edit">
+				<div class="personal-data-info__unit-label">Phone:</div>
+				<div class="personal-data-info__unit-text">+375(33) 668-77-76</div>
+				<div class="personal-data-info__unit-edit">
+					@@include("../btn-edit/btn-edit.html", {"href": "#", "class": "js-popup-form-opener", "title": "Редактировать данные", "text": "Редактировать", "dataSrc": "#popup-change-data"})
+				</div>
+			</div>
+		</div>
+		<div class="personal-data-info__item">
+			<div class="personal-data-info__unit personal-data-info__unit_edit">
+				<div class="personal-data-info__unit-label">Пароль:</div>
+				<div class="personal-data-info__unit-text">
+					<span class="personal-data-info__unit-pass">* * * * * * *</span>
+				</div>
+				<div class="personal-data-info__unit-edit">
+					@@include("../btn-edit/btn-edit.html", {"href": "#", "class": "js-popup-form-opener", "title": "Редактировать данные", "text": "Редактировать", "dataSrc": "#popup-change-password"})
+				</div>
+				@@include("../popup-form/change-password.html")
+			</div>
+		</div>
+	</div>
+</div>

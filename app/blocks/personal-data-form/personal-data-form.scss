@@ -1,0 +1,90 @@
+.personal-data-form {
+	$space-h: 9.8rem;
+	$space-grid-h: 2.2rem;
+
+	margin-bottom: 4.6rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&__heading {
+		margin-bottom: 1.6rem;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		color: $title-color;
+		margin: 0;
+	}
+
+	&__body {
+		margin-bottom: 4.4rem;
+		overflow: hidden; // Cut indents
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		margin: 0 -#{round-float($space-h / 2, 1)} 2.6rem;
+
+		@include below($sm) {
+			display: block;
+			margin: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__col {
+		$width: 50%;
+
+		flex: 1 0 $width;
+		max-width: $width;
+		padding: 0 #{round-float(($space-h - $space-grid-h) / 2, 1)};
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+
+		@include below($sm) {
+			max-width: none;
+			padding: 0;
+			margin: 0 0 2rem;
+		}
+
+		.form-unit:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__field {
+		position: relative;
+		margin-bottom: 2.6rem;
+		padding: 0 #{round-float($space-grid-h / 2, 1)};
+		max-width: 100%;
+		flex: 1 0 100%;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&_grid {
+			@for $i from 1 through 12 {
+				&-#{$i} {
+					$width: floor-float(100% / 12 * $i, 2);
+
+					flex-basis: $width;
+					max-width: $width;
+				}
+			}
+		}
+	}
+}

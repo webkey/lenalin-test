@@ -1,0 +1,148 @@
+<div class="personal-data__form">
+	<form action="#" class="personal-data-form__form">
+		<div class="personal-data-form__heading">
+			<div class="personal-data-form__title">Адрес</div>
+		</div>
+		<div class="personal-data-form__body">
+			<div class="personal-data-form__row">
+				<div class="personal-data-form__col">
+					<div class="personal-data-form__field">
+						<div class="form-unit">
+							<div class="form-unit__label">
+								@@include("../form-element/form-label.html", {
+								"label": "Страна:",
+								"id": "personal-data-country"
+								})
+							</div>
+							<div class="form-unit__input">
+								<div class="form-unit__input-icon form-unit__input-icon_no-events">
+									<i class="icon icon_edit"></i>
+								</div>
+								@@include("../form-element/form-input.html", {
+								"id": "personal-data-country",
+								"mods": ["icon-right"],
+								"placeholder": "Ваш ответ",
+								"type": "text",
+								"required": "true"
+								})
+							</div>
+						</div>
+					</div>
+					<div class="personal-data-form__field">
+						<div class="form-unit">
+							<div class="form-unit__label">
+								@@include("../form-element/form-label.html", {
+								"label": "Город:",
+								"id": "personal-data-city"
+								})
+							</div>
+							<div class="form-unit__input">
+								<div class="form-unit__input-icon form-unit__input-icon_no-events">
+									<i class="icon icon_edit"></i>
+								</div>
+								@@include("../form-element/form-input.html", {
+								"id": "personal-data-city",
+								"placeholder": "Ваш ответ",
+								"type": "text",
+								"required": "true"
+								})
+							</div>
+						</div>
+					</div>
+					<div class="personal-data-form__field">
+						<div class="form-unit">
+							<div class="form-unit__label">
+								@@include("../form-element/form-label.html", {
+								"label": "Улица, дом:",
+								"id": "personal-data-street"
+								})
+							</div>
+							<div class="form-unit__input">
+								<div class="form-unit__input-icon form-unit__input-icon_no-events">
+									<i class="icon icon_edit"></i>
+								</div>
+								@@include("../form-element/form-input.html", {
+								"id": "personal-data-street",
+								"placeholder": "Ваш ответ",
+								"type": "text",
+								"required": "true"
+								})
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="personal-data-form__col">
+					<div class="personal-data-form__field personal-data-form__field_grid-6">
+						<div class="form-unit">
+							<div class="form-unit__label">
+								@@include("../form-element/form-label.html", {
+								"label": "Код домофона:",
+								"id": "personal-data-door-code"
+								})
+							</div>
+							<div class="form-unit__input">
+								<div class="form-unit__input-icon form-unit__input-icon_no-events">
+									<i class="icon icon_edit"></i>
+								</div>
+								@@include("../form-element/form-input.html", {
+								"id": "personal-data-door-code",
+								"mods": ["icon-right"],
+								"placeholder": "Ваш ответ",
+								"type": "text",
+								"required": ""
+								})
+							</div>
+						</div>
+					</div>
+					<div class="personal-data-form__field personal-data-form__field_grid-6">
+						<div class="form-unit">
+							<div class="form-unit__label">
+								@@include("../form-element/form-label.html", {
+								"label": "Этаж:",
+								"id": "personal-data-floor"
+								})
+							</div>
+							<div class="form-unit__input">
+								<div class="form-unit__input-icon form-unit__input-icon_no-events">
+									<i class="icon icon_edit"></i>
+								</div>
+								@@include("../form-element/form-input.html", {
+								"id": "personal-data-floor",
+								"mods": ["icon-right"],
+								"placeholder": "Ваш ответ",
+								"type": "text",
+								"required": ""
+								})
+							</div>
+						</div>
+					</div>
+					<div class="personal-data-form__field">
+						<div class="form-unit">
+							<div class="form-unit__label">
+								@@include("../form-element/form-label.html", {
+								"label": "Номер квартиры:",
+								"id": "personal-data-card"
+								})
+							</div>
+							<div class="form-unit__input">
+								<div class="form-unit__input-icon form-unit__input-icon_no-events">
+									<i class="icon icon_edit"></i>
+								</div>
+								@@include("../form-element/form-input.html", {
+								"id": "personal-data-card",
+								"mods": ["icon-right"],
+								"placeholder": "____-____-____-____",
+								"type": "text",
+								"required": ""
+								})
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="personal-data-form__footer">
+			@@include("../btn-def/btn-def_button-submit.html", {"text": "Сохранить", "mods": ["small", "sm", "sm_full-width"]})
+		</div>
+	</form>
+</div>

@@ -1,10 +1,10 @@
 @@include("../blocks/head/head.html", {"title": "Lenalin - Site map"})
 @@include("../blocks/header/header.html", {"currentItem": "Site map"})
-<div class="single">
-	<section class="single-section edit-content">
+<div class="main">
+	<div class="edit-content">
 		<div class="layout-page">
 			<div class="layout-content">
-				<ul class="list-of-pages">
+				<ol class="list-of-pages">
 					<li><a href="home.html">Home - Главная</a></li>
 					<!--<li><a href="inner.html">Inner - Внутренняя текстовая</a></li>-->
 					<li><a href="about.html">About - О компании</a></li>
@@ -16,8 +16,11 @@
 					<!--<li><a href="cart.html">Cart - Корзина</a></li>-->
 					<!--<li><a href="order.html">Order - Оформление заказа</a></li>-->
 					<!--<li><a href="404.html">404 - Страница ошибки 404</a></li>-->
+					<li><a href="cabinet-profile.html">Cabinet. Profile - Личный кабинет. Профиль</a></li>
+					<li><a href="cabinet-favourites.html">Cabinet. Favourites - Личный кабинет. Избранное</a></li>
+					<li><a href="cabinet-history.html">Cabinet. History - Личный кабинет. История заказов</a></li>
 					<li><a href="404.html">404 - Страница не найдена</a></li>
-				</ul>
+				</ol>
 				<style>
 					.list-of-pages li a::after {
 						content: ' (' attr(href) ')';
@@ -25,7 +28,10 @@
 				</style>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
 @@include("../blocks/footer/footer.html", {"currentItem": "Site map"})
+@@include("../blocks/popup-form/login.html")
+@@include("../blocks/popup-form/sing-up.html")
+@@include("../blocks/popup-form/recovery-password.html")
 @@include("../blocks/link/link.html")

@@ -153,12 +153,30 @@ em strong {
 	max-width: $layout-content-max-width;
 	margin-left: auto;
 	margin-right: auto;
+
+	&_align-left {
+		margin-left: initial;
+		margin-right: initial;
+	}
+
+	&_align-right {
+		margin-right: initial;
+	}
 }
 
 .layout-form {
 	max-width: $layout-form-max-width;
 	margin-left: auto;
 	margin-right: auto;
+
+	&_align-left {
+		margin-left: initial;
+		margin-right: initial;
+	}
+
+	&_align-right {
+		margin-right: initial;
+	}
 }
 
 img {

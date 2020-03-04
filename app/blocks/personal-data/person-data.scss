@@ -1,0 +1,25 @@
+.personal-data {
+	$grid-space: $grid-space;
+
+	display: flex;
+	align-items: flex-start;
+
+	&__photo {
+		$width: 20.6rem;
+
+		padding-right: 5.7rem;
+		flex-shrink: 1;
+		flex-basis: $width;
+		max-width: $width;
+
+		@include below($sm) {
+			max-width: none;
+			padding: 0;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__info {
+		flex-grow: 1;
+	}
+}

@@ -19,48 +19,22 @@
 						]
 					})
 				</div>
-				<div class="page-cabinet__content">
-					<div><img src="assets/images/no-photo.jpg" alt="Павел Бенушин"></div>
-					<div>[\] Загрузить фото</div>
-					<div>Павел Бенушин</div>
-					<div>E-mail: <a href="mailto:PolBen12@mail.ru">PolBen12@mail.ru</a></div>
-					<div>Phone: <a href="tel:+375336687776">+375(33) 668-77-76</a></div>
-					<div>Пароль: * * * * * * *</div>
-
-					<div>Адрес</div>
-					<form action="">
-						<div>
-							<label for="">Страна</label>
-							<input type="text" name="" id="" value="Беларусь">
-						</div>
-						<div>
-							<label for="">Город</label>
-							<input type="text" name="" id="">
-						</div>
-						<div>
-							<label for="">Улица, дом</label>
-							<input type="text" name="" id="">
-						</div>
-						<div>
-							<label for="">Код домофона</label>
-							<input type="text" name="" id="">
-						</div>
-						<div>
-							<label for="">Этаж</label>
-							<input type="text" name="" id="">
-						</div>
-						<div>
-							<label for="">Номер квартиры</label>
-							<input type="text" name="" id="">
-						</div>
-						<div>
-							@@include("../blocks/btn-def/btn-def_button-submit.html", {"mods": ["small", "sm", "sm_full-width"], "text": "Сохранить"})
-						</div>
-					</form>
+				<div class="page-cabinet__section">
+					<div class="layout-form layout-form_align-left">
+						@@include("../blocks/personal-data/personal-data.html")
+					</div>
+				</div>
+				<div class="page-cabinet__section">
+					<div class="layout-form layout-form_align-left">
+						@@include("../blocks/personal-data-form/personal-data-form.html")
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 @@include("../blocks/footer/footer.html", {"currentItem": "Cabinet"})
+@@include("../blocks/popup-form/login.html")
+@@include("../blocks/popup-form/sing-up.html")
+@@include("../blocks/popup-form/recovery-password.html")
 @@include("../blocks/link/link.html")

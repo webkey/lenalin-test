@@ -43,6 +43,10 @@
 		display: none;
 	}
 
+	&_icon-right {
+		padding-right: 4.6rem;
+	}
+
 	// В optimize.scss на input-елементах обнулены закругления через составной селектор
 	@at-root {
 		#{$form-def},

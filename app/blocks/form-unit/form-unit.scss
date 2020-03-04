@@ -1,17 +1,30 @@
 .form-unit {
-	position: relative;
-	margin-bottom: 2.6rem;
-
-	&_space_small {
-		margin-bottom: 1.6rem;
-	}
-
 	&__label {
 		margin-bottom: 0.5rem;
 	}
 
 	&__input {
+		$input: &;
+
 		position: relative;
+
+		&-icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 4rem;
+			width: 4rem;
+			text-decoration: none;
+			color: $text-color-light;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 5;
+
+			&_no-events {
+				pointer-events: none;
+			}
+		}
 	}
 
 	&__feedback {

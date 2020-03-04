@@ -265,6 +265,13 @@
 	@return $value;
 }
 
+@function floor-float($number, $n) {
+	$float: pow(10, $n);
+	$value: floor($number * $float) / $float;
+
+	@return $value;
+}
+
 // Set ratio
 @mixin ratio($x: 1, $y: 1) {
 	$padding: round-float($y / $x * 100%, 2);
