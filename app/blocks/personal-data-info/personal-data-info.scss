@@ -50,8 +50,6 @@
 			line-height: 2.2rem;
 			color: inherit;
 			word-break: break-word;
-
-			@include clearfix;
 		}
 
 		&-pass {
@@ -61,6 +59,7 @@
 			line-height: 2.4rem;
 			color: $form-def-placeholder-color;
 			margin: 0.7rem 0 -1rem;
+			padding-left: 0.5rem;
 		}
 
 		&-edit {

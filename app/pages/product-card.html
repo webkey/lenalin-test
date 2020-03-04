@@ -5,7 +5,7 @@
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-product-card__breadcrumbs">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": ["Главная", "Каталог"], "current": "Постельное белье" })
+					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "catalog.html", "text": "Каталог"}], "current": "Постельное белье" })
 				</div>
 				<div class="page-product-card__control-panel">
 					@@include("../blocks/btn-control/btn-control.html", { "mods": ["arrow-left"], "href": "javascript:;", "attr": "onclick='window.history.go(-1); return false;'", "text": "Вернуться назад" })

@@ -1,11 +1,12 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - Личный кабинет. Профиль"})
+@@include("../blocks/head/head.html", {"title": "Lenalin - Личный кабинет. История заказов"})
 @@include("../blocks/header/header.html", {"currentItem": "Cabinet"})
 <div class="main">
 	<div class="page-cabinet">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-cabinet__breadcrumbs">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "cabinet-profile.html", "text": "Личный кабинет"}], "current": "Профиль" })
+					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "cabinet-profile.html", "text": "Личный кабинет"}], "current": "История заказов" })
+
 				</div>
 				<div class="page-cabinet__heading">
 					<h1 class="page-cabinet__title">Личный кабинет</h1>
@@ -13,20 +14,18 @@
 				<div class="page-cabinet__nav">
 					@@include("../blocks/pseudo-tabs/pseudo-tabs.html", {
 						"items": [
-							{"href": "javascript:;", "text": "Профиль", "class": "current"},
+							{"href": "cabinet-profile.html", "text": "Профиль", "class": ""},
 							{"href": "cabinet-favorites.html", "text": "Избранное", "class": ""},
-							{"href": "cabinet-history.html", "text": "История заказов", "class": ""}
+							{"href": "javascript:;", "text": "История заказов", "class": "current"}
 						]
 					})
 				</div>
 				<div class="page-cabinet__section">
-					<div class="layout-narrow layout-narrow_align-left">
-						@@include("../blocks/personal-data/personal-data.html")
-					</div>
+					@@include('../blocks/order-history/order-history.html')
 				</div>
-				<div class="page-cabinet__section">
-					<div class="layout-narrow layout-narrow_align-left">
-						@@include("../blocks/personal-data-form/personal-data-form.html")
+				<div class="page-cabinet__section page-cabinet__section_center">
+					<div class="narrow layout-narrow_align-left">
+						@@include('../blocks/pagination/pagination.html')
 					</div>
 				</div>
 			</div>

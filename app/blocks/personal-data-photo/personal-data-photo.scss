@@ -31,6 +31,10 @@
 		}
 	}
 
+	&__photo-upload {
+		position: relative;
+	}
+
 	&__btn-upload {
 		position: relative;
 		display: inline-block;
@@ -38,6 +42,7 @@
 		padding: 0 0 0 3.3rem;
 		text-decoration: none;
 		color: inherit;
+		cursor: pointer;
 		transition: color $animation-speed;
 
 		&:hover {
@@ -58,5 +63,15 @@
 			background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNCAxOUgyMFYxMkgyMlYyMEMyMiAyMC4yNjUyIDIxLjg5NDYgMjAuNTE5NiAyMS43MDcxIDIwLjcwNzFDMjEuNTE5NiAyMC44OTQ2IDIxLjI2NTIgMjEgMjEgMjFIM0MyLjczNDc4IDIxIDIuNDgwNDMgMjAuODk0NiAyLjI5Mjg5IDIwLjcwNzFDMi4xMDUzNiAyMC41MTk2IDIgMjAuMjY1MiAyIDIwVjEySDRWMTlaTTE0IDlIMTlMMTIgMTZMNSA5SDEwVjNIMTRWOVoiIGZpbGw9ImJsYWNrIj48L3BhdGg+PC9zdmc+) no-repeat center;
 			background-size: contain;
 		}
+	}
+
+	&__input-upload {
+		height: 1px;
+		width: 1px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		opacity: 0;
+		pointer-events: none;
 	}
 }

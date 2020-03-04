@@ -5,10 +5,12 @@ export const libsJsLink = [
 	'app/libs/js/jquery.switch-class.js',
 	'app/libs/js/jquery.nav.js',
 	'node_modules/swiper/dist/js/swiper.min.js',
-	'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
+	'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+	'node_modules/simplebar/dist/simplebar.min.js'
 ];
 
 export const libsCssLink = [
 	'node_modules/swiper/dist/css/swiper.min.css',
-	'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css'
+	'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+	'node_modules/simplebar/dist/simplebar.min.css'
 ];

@@ -1,0 +1,24 @@
+<div class="order-history">
+	<div class="order-history__list">
+		<div class="order-history__item">
+			@@include("../widget-order-history/widget-order-history.html", {
+			"status": {"mod": "sent", "text": "Отправлен"},
+			"number": "456332",
+			"date": "20.09.2020",
+			"price": "666.99 BYN",
+			"payment": "Оплата картой",
+			"contain": "@@include('../favorites/favorites.html')"
+			})
+		</div>
+		<div class="order-history__item">
+			@@include("../widget-order-history/widget-order-history.html", {
+			"status": {"mod": "done", "text": "Доставлено"},
+			"number": "7777",
+			"date": "10.02.2019",
+			"price": "1999.99 BYN",
+			"payment": "Оплата наличными",
+			"contain": "@@include('../favorites/favorites.html')"
+			})
+		</div>
+	</div>
+</div>

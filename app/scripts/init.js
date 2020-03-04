@@ -6,6 +6,7 @@ app.navigation.init();
 app.headerLocation.init();
 app.headerPhones.init();
 app.headerSearch.init();
+app.common.initSimpleBar();
 app.newsSlider.init();
 app.popularSlider.init();
 app.formElement.togglePassword();

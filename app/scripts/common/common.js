@@ -89,5 +89,18 @@ app.common = {
 				});
 			}
 		});
+	},
+	initSimpleBar() {
+		app.common.initScript('simplebar.min', 'SimpleBar', () => {
+			const $simplebar = $('.js-simplebar');
+			if ($simplebar.length) {
+				$simplebar.each(function (index, element) {
+					new SimpleBar(element, {
+						autoHide: false
+					});
+				});
+			}
+		});
+		app.common.initStyle('simplebar.min');
 	}
 };

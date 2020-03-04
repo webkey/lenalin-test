@@ -24,7 +24,19 @@
 	}
 
 	&__section {
-		margin-bottom: 7.4rem;
+		margin-bottom: 6rem;
+
+		&_center {
+			text-align: center;
+		}
+
+		&_bottom-small {
+			margin-bottom: 3rem;
+		}
+
+		&_bottom-large {
+			margin-bottom: 10rem;
+		}
 
 		&:last-child {
 			margin-bottom: 0;

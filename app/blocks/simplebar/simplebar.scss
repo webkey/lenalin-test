@@ -1,0 +1,40 @@
+.no-js .js-simplebar {
+	overflow: auto;
+}
+
+.simplebar-track {
+	border-radius: 5px;
+	background-color: rgba(black, 0.2);
+
+	&.simplebar-vertical {
+		width: 5px;
+		top: 10px;
+		bottom: 10px;
+	}
+
+	&.simplebar-horizontal {
+		height: 5px;
+		left: 10px;
+		right: 10px;
+	}
+}
+
+.simplebar-scrollbar {
+	&::before {
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: 5px;
+
+		.simplebar-track.simplebar-vertical & {
+			top: 0;
+			bottom: 0;
+		}
+
+		.simplebar-track.simplebar-horizontal & {
+			left: 0;
+			right: 0;
+		}
+	}
+}

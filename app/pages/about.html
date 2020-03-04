@@ -1,28 +1,30 @@
 @@include("../blocks/head/head.html", {"title": "Lenalin - О компании"})
-@@include("../blocks/header/header.html", {"currentItem": "О компании"})
+@@include("../blocks/header/header.html", {"currentItem": "About"})
 <div class="main">
 	<div class="page-about">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-about__content">
 					<div class="page-about__layout">
-						<div class="page-about__layout-col edit-content">
+						<div class="page-about__layout-col">
 							<div class="page-about__breadcrumbs">
-								@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": ["Главная"], "current": "О компании" })
+								@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "О компании" })
 							</div>
 
-							<div class="page-about__heading">
-								<h1 class="page-about__title">О компании</h1>
+							<div class="edit-content">
+								<div class="page-about__heading">
+									<h1 class="page-about__title">О компании</h1>
+								</div>
+
+								<p>Magna eu nisi nulla velit amet aliquip sunt enim et proident dolor. Aliquip quis magna duis elit incididunt. Fugiat do incididunt in reprehenderit consectetur nulla. Fugiat eu sit magna ipsum. Sint ex excepteur aliqua sit cupidatat aliquip adipisicing ipsum nisi culpa nostrud.</p>
+
+								<img src="assets/images/temp/img-about-01.jpg" alt="О компании" />
+
+								<h2>Заголовок</h2>
+
+								<p>Pariatur quis commodo eu veniam incididunt nostrud proident fugiat nulla reprehenderit eu pariatur eiusmod. Ea proident aliqua aliqua incididunt exercitation est mollit quis in eu nostrud. Qui eu culpa ut sunt. Consectetur velit amet nisi culpa laborum pariatur incididunt est qui occaecat do enim reprehenderit exercitation. Dolor eu non culpa ut. Pariatur ex enim dolor labore eiusmod fugiat ut quis. Amet sit laboris ullamco ipsum aliquip enim sit amet aliquip.</p>
+								<p>Consectetur velit amet nisi culpa laborum pariatur incididunt est qui occaecat do enim reprehenderit exercitation. Dolor eu non culpa ut. Pariatur ex enim dolor labore eiusmod fugiat ut quis. Amet sit laboris ullamco ipsum aliquip enim sit amet aliquip.</p>
 							</div>
-
-							<p>Magna eu nisi nulla velit amet aliquip sunt enim et proident dolor. Aliquip quis magna duis elit incididunt. Fugiat do incididunt in reprehenderit consectetur nulla. Fugiat eu sit magna ipsum. Sint ex excepteur aliqua sit cupidatat aliquip adipisicing ipsum nisi culpa nostrud.</p>
-
-							<img src="assets/images/temp/img-about-01.jpg" alt="О компании" />
-
-							<h2>Заголовок</h2>
-
-							<p>Pariatur quis commodo eu veniam incididunt nostrud proident fugiat nulla reprehenderit eu pariatur eiusmod. Ea proident aliqua aliqua incididunt exercitation est mollit quis in eu nostrud. Qui eu culpa ut sunt. Consectetur velit amet nisi culpa laborum pariatur incididunt est qui occaecat do enim reprehenderit exercitation. Dolor eu non culpa ut. Pariatur ex enim dolor labore eiusmod fugiat ut quis. Amet sit laboris ullamco ipsum aliquip enim sit amet aliquip.</p>
-							<p>Consectetur velit amet nisi culpa laborum pariatur incididunt est qui occaecat do enim reprehenderit exercitation. Dolor eu non culpa ut. Pariatur ex enim dolor labore eiusmod fugiat ut quis. Amet sit laboris ullamco ipsum aliquip enim sit amet aliquip.</p>
 						</div>
 						<div class="page-about__layout-col">
 							<div class="page-about__section page-about__section_indented-right">
@@ -62,7 +64,7 @@
 		</div>
 	</div>
 </div>
-@@include("../blocks/footer/footer.html", {"currentItem": "О компании"})
+@@include("../blocks/footer/footer.html", {"currentItem": "About"})
 @@include("../blocks/popup-form/login.html")
 @@include("../blocks/popup-form/sing-up.html")
 @@include("../blocks/popup-form/recovery-password.html")

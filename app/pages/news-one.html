@@ -1,11 +1,11 @@
 @@include("../blocks/head/head.html", {"title": "Lenalin - Как правильно выбирать подарок ребенку?"})
-@@include("../blocks/header/header.html", {"currentItem": "Новости"})
+@@include("../blocks/header/header.html", {"currentItem": "News"})
 <div class="main">
 	<div class="page-news-one">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-news-one__breadcrumbs">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": ["Главная", "Новости"] })
+					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "news.html", "text": "Новости"}]})
 				</div>
 				<div class="page-news-one__heading">
 					<h1 class="page-news-one__title">Как правильно выбирать подарок ребенку?</h1>
@@ -56,7 +56,7 @@
 	</div>
 </div>
 
-@@include("../blocks/footer/footer.html", {"currentItem": "Новости"})
+@@include("../blocks/footer/footer.html", {"currentItem": "News"})
 @@include("../blocks/popup-form/login.html")
 @@include("../blocks/popup-form/sing-up.html")
 @@include("../blocks/popup-form/recovery-password.html")
