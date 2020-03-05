@@ -1,25 +1,74 @@
 app.formElement = {
-	showPassBtnElement: '.js-show-pass',
-	showPassActiveClass: 'is-show',
 	togglePassword() {
-		const self = this;
-		if ($(this.showPassBtnElement).length) {		$('body').on('click', self.showPassBtnElement, function (e) {
-			const $curBtn = $(this);
-			const $curInput = $curBtn.parent().find('input');
+		const showPassBtnElement = '.js-show-pass';
+		const showPassActiveClass = 'is-show';
 
-			$curInput.attr('type', 'text');
+		if ($(showPassBtnElement).length) {
+			$('body').on('click', showPassBtnElement, function (e) {
+				e.preventDefault();
 
-			if (!$curBtn.hasClass(self.showPassActiveClass)) {
-				$curBtn.addClass(self.showPassActiveClass);
+				const $curBtn = $(this);
+				const $curInput = $curBtn.parent().find('input');
+
 				$curInput.attr('type', 'text');
-			} else {
-				$curBtn.removeClass(self.showPassActiveClass);
-				$curInput.attr('type', 'password');
-			}
 
-			e.preventDefault();
-		});
-
+				if (!$curBtn.hasClass(showPassActiveClass)) {
+					$curBtn.addClass(showPassActiveClass);
+					$curInput.attr('type', 'text');
+				} else {
+					$curBtn.removeClass(showPassActiveClass);
+					$curInput.attr('type', 'password');
+				}
+			});
 		}
-	}
+	},
+	confirmPassword() {
+		// const pass = document.querySelectorAll('.js-confirm-password');
+		// console.log('pass: ', pass);
+		//
+		// let array = [];
+		// for (var i = pass.length >>> 0; i--;) {
+		// 	array[i] = pass[i];
+		// }
+		//
+		// for(let i = 0; i < pass.length; i++) {
+		// 	pass[i].oninput = function () {
+		// 		array.map((item, i, arr) => {
+		// 			console.log('item: ', item.value);
+		// 		});
+		// 	}
+		// }
+
+		const $pass1 = $('.js-main-password');
+		const $pass2  = $('.js-confirm-password');
+
+		function matchPasswords(pass1, pass2) {
+			const val1 = pass1.val();
+			const val2 = pass2.val();
+			const $pass = $pass1.add($pass2);
+			$pass
+				.toggleClass('confirm-error', val1 !== val2)
+				.toggleClass('confirm-success', val1 === val2);
+		}
+
+		if ($pass1.length && $pass2.length) {
+			let timeout1;
+			$pass1.keyup(function(){
+				const $curPassword = $(this);
+				clearTimeout(timeout1);
+				timeout1 = setTimeout(function () {
+					matchPasswords($curPassword, $curPassword.closest('form').find($pass2));
+				}, 300);
+			});
+
+			let timeout2;
+			$pass2.keyup(function(){
+				const $curPassword = $(this);
+				clearTimeout(timeout2);
+				timeout2 = setTimeout(function () {
+					matchPasswords($curPassword, $curPassword.closest('form').find($pass1));
+				}, 300);
+			});
+		}
+	},
 };

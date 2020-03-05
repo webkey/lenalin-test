@@ -1,11 +1,28 @@
 <div class="widget-order-history@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ widget-order-history_`+mods[i]+`}}">
-	<div class="widget-order-history__status widget-order-history__status_@@status.mod">@@status.text</div>
-	<div class="widget-order-history__number">Заказ: №@@number</div>
-	<div class="widget-order-history__date">@@date</div>
-	<div class="widget-order-history__price">Сумма: @@price</div>
-	<div class="widget-order-history__payment">@@payment</div>
-	<div class="widget-order-history__but">
-		@@include("../btn-def/btn-def.html", {"href": "order.html", "text": "Повторить заказ"})
+	<div class="widget-order-history__caption">
+		<div class="widget-order-history__caption-body">
+			<div class="widget-order-history__status">@@include("../sticker-status/sticker-status.html", {"mods": ["@@status.mod"], "text": "@@status.text"})</div>
+			<div class="widget-order-history__number">Заказ: №@@number</div>
+			<div class="widget-order-history__info">
+				<div class="widget-order-history__date">@@date</div>
+				<div class="widget-order-history__price">Сумма: @@price</div>
+				<div class="widget-order-history__payment">@@payment</div>
+			</div>
+		</div>
+		<div class="widget-order-history__caption-footer">
+			<div class="widget-order-history__but">
+				@@include("../btn-def/btn-def.html", {"href": "order.html", "text": "Повторить заказ"})
+			</div>
+		</div>
 	</div>
-	@@if(context.contain){<div class="widget-order-history__contain js-simplebar">@@contain</div>}
+	@@if(context.contain){
+	<div class="widget-order-history__contain js-simplebar">
+		<div class="widget-order-history__products">
+			<div class="order-products">
+				<div class="order-products__list">
+					@@contain
+				</div>
+			</div>
+		</div>
+	</div>}
 </div>

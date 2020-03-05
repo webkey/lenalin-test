@@ -10,6 +10,7 @@ app.common.initSimpleBar();
 app.newsSlider.init();
 app.popularSlider.init();
 app.formElement.togglePassword();
+app.formElement.confirmPassword();
 app.headerMob.init();
 app.flipOfferBgDescr.init();
 app.flipOfferImgDescr.init();

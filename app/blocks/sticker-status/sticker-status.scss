@@ -1,0 +1,31 @@
+.sticker-status {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	text-decoration: none;
+	text-align: center;
+	padding: 0.3rem 1.2rem 0.3rem;
+
+	&_delivered,
+	&_completed,
+	&_ready,
+	&_done {
+		color: #000;
+		background-color: #86bc94;
+	}
+
+	&_pending,
+	&_expected,
+	&_sent {
+		color: #000;
+		background-color: #f1eeec;
+	}
+
+	&_rejected,
+	&_canceled {
+		color: #fff;
+		background-color: $error-color;
+	}
+}

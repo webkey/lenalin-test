@@ -1,0 +1,19 @@
+.dl {
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+
+	&__i {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 0.5rem;
+	}
+
+	&__t {
+		float: left;
+		margin-right: 0.5em;
+	}
+
+	&__d {
+		display: block;
+	}
+}

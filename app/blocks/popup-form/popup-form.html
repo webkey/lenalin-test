@@ -3,7 +3,7 @@
 		@@if(context.title){<div class="popup-form__title">@@title</div>}
 		@@if(context.subTitle){<div class="popup-form__sub-title">@@subTitle</div>}
 		@@if(context.subTitle){<div class="popup-form__text">@@text</div>}
-		<form action="#" method="post">
+		<form action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
 			<div class="popup-form__content">
 				@@fields
 			</div>

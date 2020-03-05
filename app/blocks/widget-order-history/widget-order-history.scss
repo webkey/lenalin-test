@@ -1,5 +1,70 @@
 .widget-order-history {
+	&__caption {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		margin-bottom: 5rem;
+
+		&-body {
+			flex-grow: 1;
+			margin-right: 2rem;
+		}
+
+		&-footer {
+			display: block;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__status {
+		margin-bottom: 2.1rem;
+		line-height: 1rem;
+	}
+
+	&__number {
+		font-size: 2rem;
+		line-height: 2.4rem;
+		font-weight: bold;
+		margin-bottom: 1.5rem;
+	}
+
+	&__info {
+		margin-bottom: -1rem;
+
+		@include clearfix;
+	}
+
+	&__date {
+		float: left;
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		margin: 0 5.5rem 1rem 0;
+	}
+
+	&__price {
+		float: left;
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		font-weight: bold;
+		margin: 0 4rem 1rem 0;
+	}
+
+	&__payment {
+		float: left;
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		margin: 0 2rem 1rem 0;
+	}
+
 	&__contain {
 		max-height: 56rem;
+		padding-right: 3rem;
+	}
+
+	&__products {
+		overflow: hidden;
 	}
 }

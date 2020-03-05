@@ -1,0 +1,106 @@
+.widget-product {
+	$widget: &;
+
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	-webkit-tap-highlight-color: transparent;
+
+	&__figure {
+		$width: 20rem;
+
+		flex: 1 0 $width;
+		max-width: $width;
+
+		&-link {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		&-img {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		flex-grow: 1;
+		padding-left: 3.5rem;
+	}
+
+	&__title {
+		$lh: 2.2rem;
+		$count: 4;
+
+		font-weight: normal;
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		word-break: break-word;
+		color: inherit;
+		margin: 0 0 1rem;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			transition: all $animation-speed;
+			padding: 0.3em 0;
+
+			&:hover {
+				text-decoration: none;
+				color: $highlight-color--hover;
+			}
+		}
+	}
+
+	&__price {
+		$space-h: 0.6rem;
+		$space-v: 0.3rem;
+
+		font-size: 1.7rem;
+		line-height: 2rem;
+		margin-bottom: 1.5rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&-els {
+			margin: -#{$space-v} -#{$space-h};
+		}
+
+		&-el {
+			display: inline-block;
+			padding: #{$space-v} #{$space-h};
+
+			&_old {
+				text-decoration: line-through;
+			}
+
+			&_new {
+				font-weight: bold;
+			}
+		}
+	}
+
+	&__features {
+		margin-bottom: 1.5rem;
+	}
+
+	&__controls {
+		margin-bottom: 1.5rem;
+		display: flex;
+		align-items: center;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__count {
+		margin-right: 2rem;
+	}
+
+	&__order {
+		margin-left: auto;
+	}
+}

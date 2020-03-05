@@ -57,8 +57,11 @@ $layout-page-space_sm: 1.6rem !default; // below $md
 // Maximal width of content
 $layout-content-max-width: 114.6rem !default;
 
+// Maximal width of narrow content
+$layout-narrow-max-width: 75.4rem !default;
+
 // Maximal width of forms
-$layout-narrow-max-width: 68.6rem !default;
+$layout-form-max-width: 68.6rem !default;
 
 // Grid layout
 // ====================================================
@@ -84,7 +87,6 @@ $form-def-placeholder-color: #828282 !default;
 $form-def-bg-color: #fff !default;
 $form-def-border-color: #bdbdbd !default;
 $form-def-border-color--focus: #6f6f6f !default;
-$form-error-color: $error-color !default;
 $form-text-color--disabled: #ced4da !default;
 $form-bg-color--disabled: #e9ecef !default;
 $form-border-color--disabled: #ced4da !default;

@@ -1,0 +1,29 @@
+<div class="widget-product@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ widget-product_`+mods[i]+`}}">
+	<div class="widget-product__figure">
+		<a class="widget-product__figure-link" href="product-card.html">
+			<img class="widget-product__figure-img lazy-load" data-src="assets/images/temp/@@image" src="assets/images/empty.png" alt="@@title">
+		</a>
+	</div>
+	<div class="widget-product__content">
+		<div class="widget-product__title"><a href="product-card.html">@@title</a></div>
+		@@if(context.price) {
+		<div class="widget-product__price">
+			<div class="widget-product__price-els">
+				@@if(context.price.old) {<div class="widget-product__price-el widget-product__price-el_old">@@price.old</div>}
+				@@if(context.price.new) {<div class="widget-product__price-el widget-product__price-el_new">@@price.new</div>}
+			</div>
+		</div>}
+		<div class="widget-product__features">
+			@@include("../dl/dl.html", {"items": [
+			{"title": "Материал:", "descr": "лен"},
+			{"title": "Цвет:", "descr": "белый"},
+			{"title": "Размер:", "descr": "2 спл"}
+			]})
+		</div>
+		<div class="widget-product__controls">
+			@@if(context.count) {<div class="widget-product__count">Количество: @@count</div>}
+			@@if(context.spinner) {<div class="widget-product__spinner">Количество: - 1 +</div>}
+			@@if(context.order) {<div class="widget-product__order">@@include("../btn-def/btn-def.html", {"mods": ["invert", "small"], "href": "order.html", "text": "Заказать снова"})</div>}
+		</div>
+	</div>
+</div>

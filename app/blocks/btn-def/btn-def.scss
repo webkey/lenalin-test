@@ -84,4 +84,19 @@
 	&:active {
 		opacity: 0.7;
 	}
+
+	&_invert {
+		border-color: #000;
+		color: #000;
+		background: none;
+
+		&:hover {
+			color: white;
+			background-color: black;
+		}
+
+		&:active {
+			opacity: 0.7;
+		}
+	}
 }

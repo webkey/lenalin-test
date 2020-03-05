@@ -102,14 +102,15 @@
 
 	// Error
 	// ----------------------------------------------------
-	&.error {
-		color: $form-error-color;
-		border-color: $form-error-color;
+	&.error,
+	&.js-confirm-password.confirm-error {
+		border-color: $error-color;
+	}
 
-		// Placeholder
-		@include input-placeholder {
-			color: $form-error-color;
-		}
+	// Success
+	// ----------------------------------------------------
+	&.js-confirm-password.confirm-success {
+		border-color: $success-color;
 	}
 
 	// Disabled
@@ -197,6 +198,51 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.feedback {
+	&-error,
+	&-success {
+		float: left;
+		position: relative;
+		width: 100%;
+		padding: 0.4rem 0;
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		letter-spacing: normal;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: none;
+	}
+
+	&-error {
+		color: $error-color;
+
+		.error ~ & {
+			display: block;
+		}
+	}
+
+	&-success {
+		color: $success-color;
+
+		.success ~ & {
+			display: block;
+		}
+	}
+
+	&-error_confirm-password {
+		.confirm-error ~ & {
+			display: block;
+		}
+	}
+
+	&-success_confirm-password {
+		.confirm-success ~ & {
+			display: block;
 		}
 	}
 }

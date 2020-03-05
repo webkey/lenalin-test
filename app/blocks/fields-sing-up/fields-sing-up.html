@@ -47,6 +47,7 @@
 			</a>
 			@@include("../form-element/form-input.html", {
 			"id": "sing-up-password",
+			"class": "js-main-password",
 			"placeholder": "Ваш пароль",
 			"type": "password",
 			"required": "true"
@@ -59,7 +60,7 @@
 		<div class="form-unit__label">
 			@@include("../form-element/form-label.html", {
 			"label": "Повторить пароль:",
-			"id": "sing-up-repeat-password"
+			"id": "sing-up-confirm-password"
 			})
 		</div>
 		<div class="form-unit__input">
@@ -67,11 +68,14 @@
 				<span class="form-def-show-pass__icon"></span>
 			</a>
 			@@include("../form-element/form-input.html", {
-			"id": "sing-up-repeat-password",
+			"id": "sing-up-confirm-password",
+			"class": "js-confirm-password",
 			"placeholder": "Повторить Ваш пароль",
 			"type": "password",
 			"required": "true"
 			})
+			@@include("../form-element/feedback-error.html", { "mods": ["confirm-password"], "text": "Пароли не совпадают" })
+			@@include("../form-element/feedback-success.html", { "mods": ["confirm-password"], "text": "Пароли совпадают" })
 		</div>
 	</div>
 </div>

@@ -1,0 +1,14 @@
+.order-products {
+	$space-v: 2.5rem;
+
+	&__list {
+		display: block;
+		margin-bottom: calc(-#{$space-v} - 1px);
+	}
+
+	&__li {
+		padding-bottom: #{$space-v};
+		margin-bottom: #{$space-v};
+		border-bottom: 1px solid #c4c4c4;
+	}
+}
