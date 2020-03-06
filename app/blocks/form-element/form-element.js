@@ -40,7 +40,7 @@ app.formElement = {
 		// }
 
 		const $pass1 = $('.js-main-password');
-		const $pass2  = $('.js-confirm-password');
+		const $pass2 = $('.js-confirm-password');
 
 		function matchPasswords(pass1, pass2) {
 			const val1 = pass1.val();
@@ -53,7 +53,7 @@ app.formElement = {
 
 		if ($pass1.length && $pass2.length) {
 			let timeout1;
-			$pass1.keyup(function(){
+			$pass1.keyup(function () {
 				const $curPassword = $(this);
 				clearTimeout(timeout1);
 				timeout1 = setTimeout(function () {
@@ -62,7 +62,7 @@ app.formElement = {
 			});
 
 			let timeout2;
-			$pass2.keyup(function(){
+			$pass2.keyup(function () {
 				const $curPassword = $(this);
 				clearTimeout(timeout2);
 				timeout2 = setTimeout(function () {
