@@ -1,0 +1,27 @@
+@@include("../blocks/head/head.html", {"title": "Lenalin - Оформление заказа"})
+@@include("../blocks/header/header.html", {"currentItem": "Home"})
+<div class="main">
+	<div class="page-cabinet">
+		<div class="layout-page">
+			<div class="layout-content">
+				<div class="page-cabinet__breadcrumbs">
+					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "checkout.html", "text": "Оформление заказа"}], "current": "Профиль" })
+				</div>
+				<div class="page-cabinet__heading">
+					<h1 class="page-cabinet__title">Оформление заказа</h1>
+				</div>
+				<div class="page-cabinet__nav">
+					@@include("../blocks/btn-control/btn-control.html", { "mods": ["arrow-left"], "href": "javascript:;", "attr": "onclick='window.history.go(-1); return false;'", "text": "Вернуться в корзину" })
+				</div>
+				<div class="page-cabinet__section">
+					@@include("../blocks/checkout/checkout.html")
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@@include("../blocks/footer/footer.html", {"currentItem": "Home"})
+@@include("../blocks/popup-form/login.html")
+@@include("../blocks/popup-form/sing-up.html")
+@@include("../blocks/popup-form/recovery-password.html")
+@@include("../blocks/link/link.html")

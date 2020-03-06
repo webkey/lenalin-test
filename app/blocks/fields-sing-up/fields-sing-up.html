@@ -1,5 +1,5 @@
 <div class="popup-form__field">
-	<div class="form-unit form-unit_space_small">
+	<div class="form-unit">
 		<div class="form-unit__label">
 			@@include("../form-element/form-label.html", {
 			"label": "Имя:",
@@ -16,7 +16,7 @@
 	</div>
 </div>
 <div class="popup-form__field">
-	<div class="form-unit form-unit_space_small">
+	<div class="form-unit">
 		<div class="form-unit__label">
 			@@include("../form-element/form-label.html", {
 			"label": "E-mail:",
@@ -34,7 +34,7 @@
 	</div>
 </div>
 <div class="popup-form__field">
-	<div class="form-unit form-unit_space_small">
+	<div class="form-unit">
 		<div class="form-unit__label">
 			@@include("../form-element/form-label.html", {
 			"label": "Пароль:",
@@ -42,11 +42,10 @@
 			})
 		</div>
 		<div class="form-unit__input">
-			<a href="#" class="form-def-show-pass js-show-pass">
-				<span class="form-def-show-pass__icon"></span>
-			</a>
+			<a href="#" class="form-unit__input-icon form-unit__input-icon_show-pass js-show-pass"></a>
 			@@include("../form-element/form-input.html", {
 			"id": "sing-up-password",
+			"mods": ["icon-right"],
 			"class": "js-main-password",
 			"placeholder": "Ваш пароль",
 			"type": "password",
@@ -56,7 +55,7 @@
 	</div>
 </div>
 <div class="popup-form__field">
-	<div class="form-unit form-unit_space_small">
+	<div class="form-unit">
 		<div class="form-unit__label">
 			@@include("../form-element/form-label.html", {
 			"label": "Повторить пароль:",
@@ -64,11 +63,10 @@
 			})
 		</div>
 		<div class="form-unit__input">
-			<a href="#" class="form-def-show-pass js-show-pass">
-				<span class="form-def-show-pass__icon"></span>
-			</a>
+			<a href="#" class="form-unit__input-icon form-unit__input-icon_show-pass js-show-pass"></a>
 			@@include("../form-element/form-input.html", {
 			"id": "sing-up-confirm-password",
+			"mods": ["icon-right"],
 			"class": "js-confirm-password",
 			"placeholder": "Повторить Ваш пароль",
 			"type": "password",

@@ -1,4 +1,26 @@
-.personal-data-form {
+.checkout {
+	position: relative;
+
+	&__section {
+		margin-bottom: 6rem;
+
+		&_bottom-small {
+			margin-bottom: 3rem;
+		}
+
+		&_bottom-large {
+			margin-bottom: 10rem;
+		}
+
+		&_center {
+			text-align: center;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	&__heading {
 		margin-bottom: 1.6rem;
 	}

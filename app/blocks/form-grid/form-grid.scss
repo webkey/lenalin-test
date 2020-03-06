@@ -1,0 +1,73 @@
+.form-grid {
+	$space-h: 9.8rem;
+	$space-grid-h: 2.2rem;
+
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		margin: 0 -#{round-float($space-h / 2, 1)} 2.6rem;
+
+		&_space-small {
+			margin-bottom: 1.6rem;
+		}
+
+		&_space-no {
+			margin-bottom: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__col {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		flex: 1 0 100%;
+		max-width: 100%;
+		padding: 0 #{round-float(($space-h - $space-grid-h) / 2, 1)};
+
+		@for $i from 1 through 12 {
+			&_#{$i} {
+				$width: floor-float(100% / 12 * $i, 2);
+
+				flex-basis: $width;
+				max-width: $width;
+			}
+		}
+
+		&_space-small {
+			margin-bottom: 1.6rem;
+		}
+
+		&_space-no {
+			margin-bottom: 0;
+		}
+
+		.form-unit:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__field {
+		position: relative;
+		flex: 1 0 100%;
+		max-width: 100%;
+		margin-bottom: 2.6rem;
+		padding: 0 #{round-float($space-grid-h / 2, 1)};
+
+		@for $i from 1 through 12 {
+			&_#{$i} {
+				$width: floor-float(100% / 12 * $i, 2);
+
+				flex-basis: $width;
+				max-width: $width;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
