@@ -26,28 +26,28 @@
 	&__section {
 		margin-bottom: 6rem;
 
-		&_bottom-small {
+		&_space-smallest {
 			margin-bottom: 3rem;
 		}
 
-		&_bottom-large {
+		&_space-small {
+			margin-bottom: 4rem;
+		}
+
+		&_space-large {
+			margin-bottom: 8rem;
+		}
+
+		&_space-largest {
 			margin-bottom: 10rem;
 		}
 
-		&_center {
+		&_align-center {
 			text-align: center;
 		}
 
 		&:last-child {
 			margin-bottom: 0;
-		}
-	}
-
-	&__pagination {
-		margin-bottom: 6rem;
-
-		&_center {
-			text-align: center;
 		}
 	}
 }

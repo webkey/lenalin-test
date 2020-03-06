@@ -1,0 +1,44 @@
+.delivery {
+	display: flex;
+	align-items: flex-start;
+
+	&__box {
+		$width: 18.5rem;
+
+		flex: 1 0 $width;
+		max-width: $width;
+
+		&_date {
+			margin-right: 8rem;
+		}
+
+		&_time {
+			$width: 37rem;
+
+			flex: 1 0 $width;
+			max-width: $width;
+		}
+
+		&-title {
+			font-weight: bold;
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			color: $title-color;
+			margin: 0 0 1.6rem;
+		}
+	}
+
+	&__list {
+		line-height: 1;
+
+		&_two-cols {
+			column-count: 2;
+			column-gap: 2em;
+			font-size: 0.9em;
+		}
+
+		&-li {
+			margin-bottom: 2rem;
+		}
+	}
+}

@@ -109,6 +109,14 @@ em strong {
 	font-style: italic;
 }
 
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
 .nobr {
 	white-space: nowrap;
 }
@@ -151,36 +159,25 @@ em strong {
 
 .layout-content {
 	max-width: $layout-content-max-width;
-	margin-left: auto;
-	margin-right: auto;
-
-	&_align-left {
-		margin-left: initial;
-		margin-right: initial;
-	}
-
-	&_align-right {
-		margin-right: initial;
-	}
 }
 
 .layout-narrow {
 	max-width: $layout-narrow-max-width;
-	margin-left: auto;
-	margin-right: auto;
-
-	&_align-left {
-		margin-left: initial;
-		margin-right: initial;
-	}
-
-	&_align-right {
-		margin-right: initial;
-	}
 }
 
 .layout-form {
 	max-width: $layout-form-max-width;
+}
+
+.layout-single-form {
+	max-width: $layout-single-form-max-width;
+}
+
+.layout-content,
+.layout-narrow,
+.layout-form,
+.layout-single-form {
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 

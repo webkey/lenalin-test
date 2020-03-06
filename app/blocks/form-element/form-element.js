@@ -23,22 +23,6 @@ app.formElement = {
 		}
 	},
 	confirmPassword() {
-		// const pass = document.querySelectorAll('.js-confirm-password');
-		// console.log('pass: ', pass);
-		//
-		// let array = [];
-		// for (var i = pass.length >>> 0; i--;) {
-		// 	array[i] = pass[i];
-		// }
-		//
-		// for(let i = 0; i < pass.length; i++) {
-		// 	pass[i].oninput = function () {
-		// 		array.map((item, i, arr) => {
-		// 			console.log('item: ', item.value);
-		// 		});
-		// 	}
-		// }
-
 		const $pass1 = $('.js-main-password');
 		const $pass2 = $('.js-confirm-password');
 

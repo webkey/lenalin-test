@@ -1,19 +1,43 @@
 .checkout {
-	position: relative;
+	display: block;
+
+	&__form {
+		display: block;
+	}
+
+	&__body {
+		margin-bottom: 4.4rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 
 	&__section {
 		margin-bottom: 6rem;
 
-		&_bottom-small {
+		&_space-smallest {
 			margin-bottom: 3rem;
 		}
 
-		&_bottom-large {
+		&_space-small {
+			margin-bottom: 4rem;
+		}
+
+		&_space-large {
+			margin-bottom: 8rem;
+		}
+
+		&_space-largest {
 			margin-bottom: 10rem;
 		}
 
-		&_center {
+		&_align-center {
 			text-align: center;
+		}
+
+		&_align-right {
+			text-align: right;
 		}
 
 		&:last-child {
@@ -21,21 +45,27 @@
 		}
 	}
 
-	&__heading {
-		margin-bottom: 1.6rem;
-	}
+	&__divider {
+		border-bottom: 1px solid $border-color;
+		margin-bottom: 6rem;
 
-	&__title {
-		font-weight: bold;
-		font-size: 1.8rem;
-		line-height: 2.4rem;
-		color: $title-color;
-		margin: 0;
-	}
+		@include clearfix;
 
-	&__body {
-		margin-bottom: 4.4rem;
-		overflow: hidden; // Cut indents
+		&_space-smallest {
+			margin-bottom: 3rem;
+		}
+
+		&_space-small {
+			margin-bottom: 4rem;
+		}
+
+		&_space-large {
+			margin-bottom: 8rem;
+		}
+
+		&_space-largest {
+			margin-bottom: 10rem;
+		}
 
 		&:last-child {
 			margin-bottom: 0;

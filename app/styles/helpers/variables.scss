@@ -35,7 +35,7 @@ $text-color-light: #9ea2a2 !default;
 $title-color: #000 !default;
 $title-color-alt: #2f343d !default;
 // ----------------------------------------------------
-$border-color: #ccc !default;
+$border-color: #c4c4c4 !default;
 // ----------------------------------------------------
 $mark-color: $info-color !default;
 
@@ -60,8 +60,11 @@ $layout-content-max-width: 114.6rem !default;
 // Maximal width of narrow content
 $layout-narrow-max-width: 75.4rem !default;
 
-// Maximal width of forms
+// Maximal width of form
 $layout-form-max-width: 68.6rem !default;
+
+// Maximal width of form with one column
+$layout-single-form-max-width: 26.4rem !default;
 
 // Grid layout
 // ====================================================

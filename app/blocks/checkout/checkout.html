@@ -1,16 +1,17 @@
 <div class="checkout">
-	<form class="checkout__form" action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
-		<div class="checkout__section">
-			<div class="layout-form layout-form_align-left">
-				{{Состав заказа}}
+	<div class="layout-form layout-form_align-left">
+		<form class="checkout__form" action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
+			<div class="checkout__section checkout__section_space-smallest">
+				@@include("../widget-order-short/widget-order-short.html", {
+				"totalPrice": "666 руб.",
+				"countProducts": "10"
+				})
 			</div>
-		</div>
-		<div class="checkout__section">
-			<div class="layout-form layout-form_align-left">
-				<div class="checkout__heading">
-					<div class="checkout__title">Данные пользователя</div>
+			<div class="checkout__section checkout__section_space-large">
+				<div class="default-form__heading">
+					<div class="default-form__title">Данные пользователя</div>
 				</div>
-				<div class="checkout__body">
+				<div class="default-form__section">
 					<div class="form-grid">
 						<div class="form-grid__row">
 							<div class="form-grid__col form-grid__col_6">
@@ -19,12 +20,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "Имя:",
-											"id": "order-data-name"
+											"id": "checkout-name"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-name",
+											"id": "checkout-name",
 											"placeholder": "Ваш ответ",
 											"type": "text",
 											"required": "true"
@@ -37,12 +38,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "Фамилия:",
-											"id": "order-data-second"
+											"id": "checkout-second"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-second",
+											"id": "checkout-second",
 											"placeholder": "Ваш ответ",
 											"type": "text",
 											"required": "true"
@@ -57,12 +58,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "Мобильный телефон:",
-											"id": "order-data-phone"
+											"id": "checkout-phone"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-phone",
+											"id": "checkout-phone",
 											"placeholder": "Ваш ответ",
 											"type": "text",
 											"required": "true"
@@ -75,12 +76,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "E-mail:",
-											"id": "order-data-email"
+											"id": "checkout-email"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-email",
+											"id": "checkout-email",
 											"placeholder": "Ваш ответ",
 											"type": "email",
 											"required": "true"
@@ -93,13 +94,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="checkout__section">
-			<div class="layout-form layout-form_align-left">
-				<div class="checkout__heading">
-					<div class="checkout__title">Адрес</div>
+			<div class="checkout__section checkout__section_space-large">
+				<div class="default-form__heading">
+					<div class="default-form__title">Адрес</div>
 				</div>
-				<div class="checkout__body">
+				<div class="default-form__section">
 					<div class="form-grid">
 						<div class="form-grid__row">
 							<div class="form-grid__col form-grid__col_6">
@@ -108,12 +107,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "Страна:",
-											"id": "order-data-country"
+											"id": "checkout-country"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-country",
+											"id": "checkout-country",
 											"placeholder": "Ваш ответ",
 											"type": "text",
 											"required": "true"
@@ -126,12 +125,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "Город:",
-											"id": "order-data-city"
+											"id": "checkout-city"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-city",
+											"id": "checkout-city",
 											"placeholder": "Ваш ответ",
 											"type": "text",
 											"required": "true"
@@ -144,12 +143,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "Улица, дом:",
-											"id": "order-data-street"
+											"id": "checkout-street"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-street",
+											"id": "checkout-street",
 											"placeholder": "Ваш ответ",
 											"type": "text",
 											"required": "true"
@@ -164,12 +163,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "Код домофона:",
-											"id": "order-data-door-code"
+											"id": "checkout-door-code"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-door-code",
+											"id": "checkout-door-code",
 											"placeholder": "Ваш ответ",
 											"type": "text",
 											"required": ""
@@ -182,12 +181,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "Этаж:",
-											"id": "order-data-floor"
+											"id": "checkout-floor"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-floor",
+											"id": "checkout-floor",
 											"placeholder": "Ваш ответ",
 											"type": "text",
 											"required": ""
@@ -200,12 +199,12 @@
 										<div class="form-unit__label">
 											@@include("../form-element/form-label.html", {
 											"label": "Номер квартиры:",
-											"id": "order-data-card"
+											"id": "checkout-apartment-number"
 											})
 										</div>
 										<div class="form-unit__input">
 											@@include("../form-element/form-input.html", {
-											"id": "order-data-card",
+											"id": "checkout-apartment-number",
 											"placeholder": "Ваш ответ",
 											"type": "text",
 											"required": ""
@@ -218,126 +217,130 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="checkout__section">
-			<div class="">
-				<div class="">Дата</div>
-				<ul>
-					<li><label><input name="delivery-date" type="radio" checked /> Как можно скорее</label></li>
-					<li><label><input name="delivery-date" type="radio" /> 06.02.2020 [*]</label></li>
-				</ul>
-				<div class="">Дата</div>
-				<ul>
-					<li><label><input name="delivery-time" type="radio" checked /> 10:00 - 12:00</label></li>
-					<li><label><input name="delivery-time" type="radio" /> 12:00 - 14:00</label></li>
-					<li><label><input name="delivery-time" type="radio" /> 14:00 - 16:00</label></li>
-					<li><label><input name="delivery-time" type="radio" /> 16:00 - 18:00</label></li>
-				</ul>
+			<div class="checkout__section checkout__section_space-small">
+				@@include("../delivery/delivery.html")
 			</div>
-		</div>
-		<div class="checkout__section">
-			<div class="">
-				<div class="">Принимаем к оплате:</div>
-				<div>[*] [*] [*]</div>
-				<div class="">Итого: 666 руб.</div>
-				<div>Бесплатная доставка</div>
-			</div>
-		</div>
-		<div class="checkout__section">
-			@@include("../btn-def/btn-def_button-submit.html", {"text": "Оформить заказ", "mods": ["small", "sm", "sm_full-width"]})
-		</div>
-		<div class="checkout__section">
-			<div class="layout-form layout-form_align-left">
-				<div class="checkout__heading">
-					<div class="checkout__title">Данные пользователя</div>
+			<div class="checkout__divider checkout__divider_space-small"></div>
+			<div class="checkout__section">
+				<div class="">
+					<div class="">Принимаем к оплате:</div>
+					<div>[*] [*] [*]</div>
+					<div class="">Итого: 666 руб.</div>
+					<div>Бесплатная доставка</div>
 				</div>
-				<div class="checkout__body">
-					<div class="form-grid">
-						<div class="form-grid__row">
-							<div class="form-grid__col form-grid__col_6">
-								<div class="form-grid__field">
-									<div class="form-unit">
-										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
-											"label": "Имя:",
-											"id": "order-data-name"
-											})
-										</div>
-										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
-											"id": "order-data-name",
-											"placeholder": "Ваш ответ",
-											"type": "text",
-											"required": "true"
-											})
-										</div>
-									</div>
-								</div>
-								<div class="form-grid__field">
-									<div class="form-unit">
-										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
-											"label": "Фамилия:",
-											"id": "order-data-second"
-											})
-										</div>
-										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
-											"id": "order-data-second",
-											"placeholder": "Ваш ответ",
-											"type": "text",
-											"required": "true"
-											})
+			</div>
+			<div class="checkout__section checkout__section_align-right">
+				@@include("../btn-def/btn-def_button-submit.html", {"text": "Оформить заказ", "mods": ["sm", "sm_full-width"]})
+			</div>
+			<div class="checkout__section">
+				<div class="layout-single-form layout-single-form_align-left">
+					<div class="default-form__heading">
+						<div class="default-form__title">Оплата картой</div>
+					</div>
+					<div class="default-form__section">
+						<div class="form-grid">
+							<div class="form-grid__row">
+								<div class="form-grid__col">
+									<div class="form-grid__field">
+										<div class="form-unit">
+											<div class="form-unit__label">
+												@@include("../form-element/form-label.html", {
+												"label": "Номер карты:",
+												"id": "checkout-pay-card-number"
+												})
+											</div>
+											<div class="form-unit__input">
+												@@include("../form-element/form-input.html", {
+												"id": "checkout-pay-card-number",
+												"placeholder": "____ ____ ____ ____",
+												"type": "text",
+												"required": "true"
+												})
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-							<div class="form-grid__col form-grid__col_6">
-								<div class="form-grid__field">
-									<div class="form-unit">
-										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
-											"label": "Мобильный телефон:",
-											"id": "order-data-phone"
-											})
-										</div>
-										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
-											"id": "order-data-phone",
-											"placeholder": "Ваш ответ",
-											"type": "text",
-											"required": "true"
-											})
+									<div class="form-grid__field">
+										<div class="form-unit">
+											<div class="form-unit__label">
+												@@include("../form-element/form-label.html", {
+												"label": "Название карты:",
+												"id": "checkout-pay-card-name"
+												})
+											</div>
+											<div class="form-unit__input">
+												@@include("../form-element/form-input.html", {
+												"id": "checkout-pay-card-name",
+												"placeholder": "Введите данные",
+												"type": "text",
+												"required": "true"
+												})
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="form-grid__field">
-									<div class="form-unit">
-										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
-											"label": "E-mail:",
-											"id": "order-data-email"
-											})
+									<div class="form-grid__field form-grid__field_4">
+										<div class="form-unit">
+											<div class="form-unit__label">
+												@@include("../form-element/form-label.html", {
+												"label": "Месяц:",
+												"id": "checkout-pay-month"
+												})
+											</div>
+											<div class="form-unit__input">
+												@@include("../form-element/form-input.html", {
+												"id": "checkout-pay-month",
+												"placeholder": "__",
+												"type": "text",
+												"required": "true"
+												})
+											</div>
 										</div>
-										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
-											"id": "order-data-email",
-											"placeholder": "Ваш ответ",
-											"type": "email",
-											"required": "true"
-											})
+									</div>
+									<div class="form-grid__field form-grid__field_4">
+										<div class="form-unit">
+											<div class="form-unit__label">
+												@@include("../form-element/form-label.html", {
+												"label": "Год:",
+												"id": "checkout-pay-year"
+												})
+											</div>
+											<div class="form-unit__input">
+												@@include("../form-element/form-input.html", {
+												"id": "checkout-pay-year",
+												"placeholder": "__",
+												"type": "text",
+												"required": "true"
+												})
+											</div>
+										</div>
+									</div>
+									<div class="form-grid__field form-grid__field_4">
+										<div class="form-unit">
+											<div class="form-unit__label">
+												@@include("../form-element/form-label.html", {
+												"label": "CVC код:",
+												"id": "checkout-pay-cvc"
+												})
+											</div>
+											<div class="form-unit__input">
+												@@include("../form-element/form-input.html", {
+												"id": "checkout-pay-cvc",
+												"placeholder": "___",
+												"type": "text",
+												"required": "true"
+												})
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="checkout__footer">
-					@@include("../btn-def/btn-def_button-submit.html", {"text": "Оплатить", "mods": ["small", "full-width", "sm", "sm_full-width"]})
+					<div class="default-form__section">
+						@@include("../btn-def/btn-def_button-submit.html", {"text": "Оплатить", "mods": ["full-width", "sm", "sm_full-width"]})
+					</div>
 				</div>
 			</div>
-		</div>
-	</form>
+		</form>
+	</div>
 </div>

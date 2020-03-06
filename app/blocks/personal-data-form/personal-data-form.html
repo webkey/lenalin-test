@@ -1,9 +1,9 @@
 <div class="personal-data-form">
 	<form action="#" method="post" class="personal-data-form__form" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
-		<div class="personal-data-form__heading">
-			<div class="personal-data-form__title">Адрес</div>
+		<div class="default-form__heading">
+			<div class="default-form__title">Адрес</div>
 		</div>
-		<div class="personal-data-form__body">
+		<div class="default-form__section">
 			<div class="form-grid">
 				<div class="form-grid__row">
 					<div class="form-grid__col form-grid__col_6">
@@ -124,7 +124,7 @@
 								<div class="form-unit__label">
 									@@include("../form-element/form-label.html", {
 									"label": "Номер квартиры:",
-									"id": "personal-data-card"
+									"id": "personal-data-apartment-number"
 									})
 								</div>
 								<div class="form-unit__input">
@@ -132,7 +132,7 @@
 										<i class="icon icon_edit"></i>
 									</div>
 									@@include("../form-element/form-input.html", {
-									"id": "personal-data-card",
+									"id": "personal-data-apartment-number",
 									"mods": ["icon-right"],
 									"placeholder": "Ваш ответ",
 									"type": "text",
@@ -145,7 +145,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="personal-data-form__footer">
+		<div class="default-form__footer">
 			@@include("../btn-def/btn-def_button-submit.html", {"text": "Сохранить", "mods": ["small", "sm", "sm_full-width"]})
 		</div>
 	</form>

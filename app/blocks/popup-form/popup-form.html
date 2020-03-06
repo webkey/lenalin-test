@@ -5,7 +5,13 @@
 		@@if(context.subTitle){<div class="popup-form__text">@@text</div>}
 		<form action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
 			<div class="popup-form__content">
-				@@fields
+				<div class="form-grid">
+					<div class="form-grid__row form-grid__row_space-small">
+						<div class="form-grid__col">
+							@@fields
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="popup-form__buttons">@@include("../btn-def/btn-def_button-submit.html", {"text": "@@btnText", "mods": ["small", "full-width"]})</div>
 			@@if(context.note){<div class="popup-form__note">@@note</div>}

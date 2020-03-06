@@ -94,6 +94,7 @@
 		&-el {
 			display: inline-block;
 			padding: #{$space-v} #{$space-h};
+			white-space: nowrap;
 
 			&_old {
 				text-decoration: line-through;

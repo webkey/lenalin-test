@@ -1,5 +1,13 @@
-.no-js .js-simplebar {
-	overflow: auto;
+.js-simplebar {
+	overflow: hidden;
+
+	&[data-simplebar="init"] {
+		overflow: visible;
+	}
+
+	.no-js & {
+		overflow: auto;
+	}
 }
 
 .simplebar-track {
@@ -8,12 +16,10 @@
 
 	&.simplebar-vertical {
 		width: 5px;
-		bottom: 20px;
 	}
 
 	&.simplebar-horizontal {
 		height: 5px;
-		left: 20px;
 	}
 }
 
@@ -35,4 +41,8 @@
 			right: 0;
 		}
 	}
+}
+
+.widget-order-history .simplebar-track.simplebar-vertical {
+	bottom: 2rem;
 }

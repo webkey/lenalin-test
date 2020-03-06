@@ -1,0 +1,15 @@
+<div class="widget-order-short@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ widget-order-short_`+mods[i]+`}}">
+	<div class="widget-order-short__title">
+		В заказе @@countProducts позиций:
+	</div>
+	<div class="widget-order-short__body">
+		<div class="widget-order-short__contain js-simplebar">
+			<div class="widget-order-short__products">
+				@@include("../order-list-short/order-list-short.html", {"count": "@@countProducts"})
+			</div>
+		</div>
+	</div>
+	<div class="widget-order-short__footer">
+		<div class="widget-order-short__price">Сумма: @@totalPrice</div>
+	</div>
+</div>

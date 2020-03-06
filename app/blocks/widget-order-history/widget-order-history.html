@@ -10,19 +10,13 @@
 			</div>
 		</div>
 		<div class="widget-order-history__common-footer">
-			<div class="widget-order-history__but">
-				@@include("../btn-def/btn-def.html", {"href": "order.html", "text": "Повторить заказ"})
-			</div>
+			@@include("../btn-def/btn-def.html", {"href": "order.html", "text": "Повторить заказ"})
 		</div>
 	</div>
-	@@if(context.contain){
+	@@if(context.countProducts){
 	<div class="widget-order-history__contain js-simplebar">
 		<div class="widget-order-history__products">
-			<div class="order-products">
-				<div class="order-products__list">
-					@@contain
-				</div>
-			</div>
+			@@include("../order-list/order-list.html", {"count": "@@countProducts"})
 		</div>
 	</div>}
 </div>

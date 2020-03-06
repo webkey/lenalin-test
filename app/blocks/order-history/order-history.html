@@ -7,9 +7,10 @@
 			"date": "20.09.2020",
 			"price": "666.99 BYN",
 			"payment": "Оплата картой",
-			"contain": "@@for (var i = 0; i < 3; i++) { <div class='order-products__li'>@@include('../product/product.html')</div> }"
+			"countProducts": "5"
 			})
 		</div>
+		<!--"contain": "@@for (var i = 0; i < 3; i++) { <div class='order-products__li'>@@include('../product-example-01/product-example-01.html')</div> }"-->
 		<div class="order-history__item">
 			@@include("../widget-order-history/widget-order-history.html", {
 			"status": {"mod": "done", "text": "Доставлено"},
@@ -17,7 +18,7 @@
 			"date": "10.02.2019",
 			"price": "1999.99 BYN",
 			"payment": "Оплата наличными",
-			"contain": "@@for (var i = 0; i < 2; i++) { <div class='order-products__li'>@@include('../product/product.html')</div> }"
+			"countProducts": "2"
 			})
 		</div>
 		<div class="order-history__item">
@@ -27,7 +28,7 @@
 			"date": "05.01.2019",
 			"price": "18.81 BYN",
 			"payment": "Оплата наличными",
-			"contain": "@@for (var i = 0; i < 1; i++) { <div class='order-products__li'>@@include('../product/product.html')</div> }"
+			"countProducts": "1"
 			})
 		</div>
 	</div>
