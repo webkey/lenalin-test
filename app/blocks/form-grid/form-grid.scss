@@ -2,7 +2,7 @@
 	$space-h: 9.8rem;
 	$space-grid-h: 2.2rem;
 	$space-v: 2.6rem;
-	$space-v__small: 1.6rem;
+	$space-v_small: 1.6rem;
 
 	overflow: hidden; // Cut horizontal negative intends
 
@@ -17,11 +17,11 @@
 		}
 
 		&_space-small {
-			margin-bottom: #{$space-v__small};
+			margin-bottom: #{$space-v_small};
 
 			&_last,
 			&:last-child {
-				margin-bottom: -#{$space-v__small}; // Compensate last bottom space
+				margin-bottom: -#{$space-v_small}; // Compensate last bottom space
 			}
 		}
 	}
@@ -61,7 +61,7 @@
 		}
 
 		&_space-small {
-			margin-bottom: #{$space-v__small};
+			margin-bottom: #{$space-v_small};
 		}
 	}
 }

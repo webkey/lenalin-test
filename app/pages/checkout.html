@@ -10,8 +10,8 @@
 				<div class="page-cabinet__heading">
 					<h1 class="page-cabinet__title">Оформление заказа</h1>
 				</div>
-				<div class="page-cabinet__nav">
-					@@include("../blocks/btn-control/btn-control.html", { "mods": ["arrow-left"], "href": "javascript:;", "attr": "onclick='window.history.go(-1); return false;'", "text": "Вернуться в корзину" })
+				<div class="page-cabinet__section page-cabinet__section_space-smallest">
+					@@include("../blocks/btn-control/btn-control.html", { "href": "cart.html", "mods": ["small", "arrow-left"], "text": "Вернуться в корзину" })
 				</div>
 				<div class="page-cabinet__section">
 					@@include("../blocks/checkout/checkout.html")

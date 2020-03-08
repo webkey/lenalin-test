@@ -1,0 +1,8 @@
+<div class="payment-methods @@if(context.mods){@@for (var i = 0; i < mods.length; i++){ payment-methods_`+mods[i]+`}}">
+	<div class="payment-methods__list">
+		@@for (var i = 0; i < items.length; i++) {
+		<div class="payment-methods__item">
+			<img class="payment-methods__img lazy-load" data-src="assets/images/`+items[i].image+`" src="assets/images/empty.png" alt="`+items[i].title+`">
+		</div>}
+	</div>
+</div>

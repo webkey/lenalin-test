@@ -17,6 +17,7 @@
 		width: calc(100% - #{$width-main});
 		padding-left: $space-h;
 		min-height: 1rem;
+		margin-bottom: 2rem;
 	}
 
 	&__aside {
@@ -25,5 +26,21 @@
 		width: calc(100% - #{$width-main});
 		padding-left: $space-h;
 		min-height: 1rem;
+
+		&-section {
+			margin-bottom: 3rem;
+
+			&_last,
+			&_no-space,
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		line-height: 3rem;
+		margin: 0;
 	}
 }

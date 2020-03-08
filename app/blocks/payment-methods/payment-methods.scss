@@ -1,5 +1,5 @@
-.footer-payments {
-	$space-h: 3rem;
+.payment-methods {
+	$space-h: 2.8rem;
 	$space-v: 0.5rem;
 
 	overflow: hidden;
@@ -16,15 +16,12 @@
 	}
 
 	&__list {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
 		margin: -#{$space-v} -#{round-float($space-h / 2, 1)};
 	}
 
 	&__item {
-		flex-shrink: 0;
+		display: inline-block;
+		vertical-align: middle;
 		padding: #{$space-v} #{round-float($space-h / 2, 1)};
 	}
 }

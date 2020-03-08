@@ -1,0 +1,30 @@
+.form-list {
+	$space-v: 2rem;
+	$space-v_small: 0.8rem;
+
+	overflow: hidden; // Cut horizontal negative intends
+
+	&__list {
+		line-height: 1rem;
+		margin-bottom: -#{$space-v}; // Compensate last bottom space
+
+		&_space-small {
+			margin-bottom: -#{$space-v_small};
+		}
+
+		@for $i from 2 through 5 {
+			&_#{$i}-cols {
+				column-count: #{$i};
+				column-gap: 2em;
+			}
+		}
+	}
+
+	&__li {
+		margin-bottom: #{$space-v};
+
+		&_space-small {
+			margin-bottom: #{$space-v_small};
+		}
+	}
+}

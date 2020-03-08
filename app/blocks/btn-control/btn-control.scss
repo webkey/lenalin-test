@@ -1,5 +1,6 @@
 .btn-control {
 	$btn: &;
+	$arrow-size: 1.6rem;
 
 	overflow: hidden;
 	display: inline-block;
@@ -12,7 +13,7 @@
 	font-weight: bold;
 	font-size: 2.4rem;
 	line-height: 3.2rem;
-	color: #000;
+	color: inherit;
 	text-decoration: none;
 	text-align: center;
 	border: none;
@@ -22,37 +23,33 @@
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
 
-	&_arrow-left {
-		$arrow-size: 1.6rem;
-
-		padding-left: 2.3rem;
-
-		&::before,
-		&::after {
-			$size: $arrow-size;
-
-			content: "";
-			display: block;
-			position: absolute;
-			left: 0;
-			top: 50%;
-			height: $size;
-			width: $size;
-			margin-top: -#{round-float($size / 2, 1)};
-			transition: opacity $animation-speed;
-			background-repeat: no-repeat;
-			background-position: center;
-			background-size: contain;
+	@at-root {
+		#{$btn},
+		input#{$btn} {
+			border-radius: 0;
 		}
+	}
 
-		&::before {
-			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNy4yMTg1NSA3Ljk5OTk5TDEwLjUxODYgMTEuM0w5LjU3NTg5IDEyLjI0MjdMNS4zMzMyMiA3Ljk5OTk5TDkuNTc1ODkgMy43NTczMkwxMC41MTg2IDQuNjk5OTlMNy4yMTg1NSA3Ljk5OTk5WiIgZmlsbD0iYmxhY2siPjwvcGF0aD48L3N2Zz4=);
-		}
+	&_small {
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+	}
 
-		&::after {
-			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNy4yMTg1NSA3Ljk5OTk5TDEwLjUxODYgMTEuM0w5LjU3NTg5IDEyLjI0MjdMNS4zMzMyMiA3Ljk5OTk5TDkuNTc1ODkgMy43NTczMkwxMC41MTg2IDQuNjk5OTlMNy4yMTg1NSA3Ljk5OTk5WiIgZmlsbD0iI2NhYjNiMSI+PC9wYXRoPjwvc3ZnPg==);
-			opacity: 0;
-		}
+	&::before,
+	&::after {
+		$size: $arrow-size;
+
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		height: $size;
+		width: $size;
+		margin-top: -#{round-float($size / 2, 1)};
+		transition: opacity $animation-speed;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
 
 		@at-root {
 			#{$btn}:hover {
@@ -67,24 +64,43 @@
 		}
 	}
 
-	@at-root {
-		#{$btn},
-		input#{$btn} {
-			border-radius: 0;
+	&_arrow-left {
+		padding-left: $arrow-size + 0.7;
+
+		&::before,
+		&::after {
+			left: 0;
+		}
+
+		&::before {
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNy4yMTg1NSA3Ljk5OTk5TDEwLjUxODYgMTEuM0w5LjU3NTg5IDEyLjI0MjdMNS4zMzMyMiA3Ljk5OTk5TDkuNTc1ODkgMy43NTczMkwxMC41MTg2IDQuNjk5OTlMNy4yMTg1NSA3Ljk5OTk5WiIgZmlsbD0iYmxhY2siPjwvcGF0aD48L3N2Zz4=);
+		}
+
+		&::after {
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNy4yMTg1NSA3Ljk5OTk5TDEwLjUxODYgMTEuM0w5LjU3NTg5IDEyLjI0MjdMNS4zMzMyMiA3Ljk5OTk5TDkuNTc1ODkgMy43NTczMkwxMC41MTg2IDQuNjk5OTlMNy4yMTg1NSA3Ljk5OTk5WiIgZmlsbD0iI2NhYjNiMSI+PC9wYXRoPjwvc3ZnPg==);
+			opacity: 0;
 		}
 	}
 
-	span {
-		display: block;
-		position: relative;
+	&_arrow-right {
+		padding-right: $arrow-size + 0.7;
+
+		&::before,
+		&::after {
+			right: 0;
+		}
+
+		&::before {
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC43ODE0NCA4LjAwMDAxTDUuNDgxNDQgNC43MDAwMUw2LjQyNDExIDMuNzU3MzRMMTAuNjY2OCA4LjAwMDAxTDYuNDI0MTEgMTIuMjQyN0w1LjQ4MTQ1IDExLjNMOC43ODE0NCA4LjAwMDAxWiIgZmlsbD0iYmxhY2siPjwvcGF0aD48L3N2Zz4=);
+		}
+
+		&::after {
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC43ODE0NCA4LjAwMDAxTDUuNDgxNDQgNC43MDAwMUw2LjQyNDExIDMuNzU3MzRMMTAuNjY2OCA4LjAwMDAxTDYuNDI0MTEgMTIuMjQyN0w1LjQ4MTQ1IDExLjNMOC43ODE0NCA4LjAwMDAxWiIgZmlsbD0iI2NhYjNiMSI+PC9wYXRoPjwvc3ZnPg==);
+			opacity: 0;
+		}
 	}
 
 	&:hover {
 		color: $highlight-color;
-		background-color: white;
-	}
-
-	&:active {
-		opacity: 0.7;
 	}
 }

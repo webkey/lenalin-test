@@ -45,6 +45,32 @@
 		}
 	}
 
+	&__cols {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		&-col {
+			$left-col-width: 42.86%;
+
+			&:nth-child(1) {
+				$width: $left-col-width;
+
+				flex: 1 0 $width;
+				max-width: $width;
+				padding-right: 3rem;
+			}
+
+			&:nth-child(2) {
+				$width: 100% - $left-col-width;
+
+				flex: 1 0 $width;
+				max-width: $width;
+			}
+		}
+	}
+
 	&__divider {
 		border-bottom: 1px solid $border-color;
 		margin-bottom: 6rem;

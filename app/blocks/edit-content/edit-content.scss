@@ -2,8 +2,7 @@
 	p {
 		font-weight: 300;
 
-		a:not(.btn-default) {
-			font-weight: bold;
+		a:not([class*=btn-]) {
 			color: $link-color;
 			word-wrap: break-word;
 			text-decoration: none;

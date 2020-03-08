@@ -13,50 +13,98 @@
 		</div>
 	</div>
 	<div class="product-card__aside">
-		<div>
-			Описание:
-			Magna eu nisi nulla velit amet aliquip sunt enim et proident dolor. Aliquip quis magna duis elit incididunt. Fugiat do incididunt in reprehenderit consectetur nulla. Fugiat eu sit magna ipsum.
+		<div class="product-card__aside-section">
+			<div class="features">
+				<div class="features__list">
+					<div class="features__li">
+						<div class="features__title">Описание:</div>
+						<div class="features__descr">
+							Magna eu nisi nulla velit amet aliquip sunt enim et proident dolor. Aliquip quis magna duis elit incididunt. Fugiat do incididunt in reprehenderit consectetur nulla. Fugiat eu sit magna ipsum.
+						</div>
+					</div>
+					<div class="features__li">
+						<div class="features__title">Материал:</div>
+						<div class="features__descr"><strong>лен</strong></div>
+					</div>
+					<div class="features__li">
+						<div class="features__title">Размер:</div>
+						<div class="features__descr features__descr_full-width">
+							<div class="form-list">
+								<div class="form-list__list form-list__list_space-small">
+									<div class="form-list__li form-list__li_space-small">
+										<label class="form-radio">
+											<input class="form-radio__input" type="radio" name="size" checked>
+											<span class="form-radio__label">2-спл</span>
+										</label>
+									</div>
+									<div class="form-list__li form-list__li_space-small">
+										<label class="form-radio">
+											<input class="form-radio__input" type="radio" name="size">
+											<span class="form-radio__label">1.5-спл</span>
+										</label>
+									</div>
+									<div class="form-list__li form-list__li_space-small">
+										<label class="form-radio">
+											<input class="form-radio__input" type="radio" name="size">
+											<span class="form-radio__label">Евро</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="features__li">
+						<div class="features__title">Цвет:</div>
+						<div class="features__descr features__descr_full-width">
+							<div class="form-list">
+								<div class="form-list__list form-list__list_space-small">
+									<div class="form-list__li form-list__li_space-small">
+										<label class="form-radio">
+											<input class="form-radio__input" type="radio" name="color" checked>
+											<span class="form-radio__label">Белый</span>
+										</label>
+									</div>
+									<div class="form-list__li form-list__li_space-small">
+										<label class="form-radio">
+											<input class="form-radio__input" type="radio" name="color">
+											<span class="form-radio__label">Чёрный</span>
+										</label>
+									</div>
+									<div class="form-list__li form-list__li_space-small">
+										<label class="form-radio">
+											<input class="form-radio__input" type="radio" name="color">
+											<span class="form-radio__label">Голубой</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<div>Материал:  лен</div>
-
-		<div>
-			Размер:
-			<ul>
-				<li><label><input name="size" type="radio" checked /> 2-спл</label></li>
-				<li><label><input name="size" type="radio" /> 1.5-спл</label></li>
-				<li><label><input name="size" type="radio" /> Евро</label></li>
-			</ul>
+		<div class="widget-product__controls">
+			<div class="widget-product__count">
+				<div class="">Количество:</div>
+				<div>
+					@@include("../form-spinner/form-spinner.html", {"value": "1", "name": "product-count"})
+				</div>
+			</div>
+			<div class="quick-offer__price">
+				<div class="quick-offer__price-els">
+					<div class="quick-offer__price-el quick-offer__price-el_old">200 руб.</div>
+					<div class="quick-offer__price-el quick-offer__price-el_new">180 руб.</div>
+				</div>
+			</div>
 		</div>
 
 		<div>
-			Цвет:
-			<ul>
-				<li><label><input name="color" type="radio" checked /> Белый</label></li>
-				<li><label><input name="color" type="radio" /> Чёрный</label></li>
-				<li><label><input name="color" type="radio" /> Голубой</label></li>
-			</ul>
+			@@include("../btn-def/btn-def.html", {"mods": ["sm-full-width"], "text": "В корзину"})
 		</div>
 
 		<div>
-			<div>Количество:</div>
-			<div>- 1 +</div>
-		</div>
-
-		<div>
-			<div>200 руб.</div>
-			<div>189.99 руб.</div>
-		</div>
-
-		<div>
-			@@include("../btn-def/btn-def.html", {"mods": ["sm", "sm_full-width"], "text": "В корзину"})
-		</div>
-
-		<div>
-			@@include("../btn-def-alt/btn-def-alt.html", {"mods": ["sm", "sm_full-width"], "text": "В избранное"})
-		</div>
-		<div>
-			@@include("../btn-def-alt/btn-def-alt.html", {"mods": ["sm", "sm_full-width"], "class": "active", "text": "В избранное"})
+			@@include("../btn-def/btn-def.html", {"mods": ["invert", "sm-full-width"], "text": "В избранное"})
 		</div>
 
 		<div>

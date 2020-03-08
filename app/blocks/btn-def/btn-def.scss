@@ -1,4 +1,4 @@
-.btn-default {
+.btn-def {
 	$btn: &;
 
 	overflow: hidden;
@@ -30,38 +30,14 @@
 		}
 	}
 
-	&_sm {
-		@include below($sm) {
-			&_full-width {
-				display: block;
-				width: 100%;
-			}
-
-			&_no-min-width {
-				min-width: 0;
-			}
-		}
-	}
-
 	&_small {
 		padding-top: 0.9rem;
 		padding-bottom: 0.5rem;
 		min-width: 16rem;
 
-		&_sm {
-			@include below($sm) {
-				padding-left: 1.5rem;
-				padding-right: 1.5rem;
-
-				&_full-width {
-					display: block;
-					width: 100%;
-				}
-
-				&_no-min-width {
-					min-width: 0;
-				}
-			}
+		@include below($sm) {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
 		}
 	}
 
@@ -69,6 +45,20 @@
 		display: block;
 		min-width: 0;
 		width: 100%;
+	}
+
+	// For small screen
+	&_sm {
+		@include below($sm) {
+			&-full-width {
+				display: block;
+				width: 100%;
+			}
+
+			&-no-min-width {
+				min-width: 0;
+			}
+		}
 	}
 
 	span {

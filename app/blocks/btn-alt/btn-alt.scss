@@ -1,4 +1,4 @@
-.btn-default-alt {
+.btn-alt {
 	$btn: &;
 
 	overflow: hidden;
@@ -30,19 +30,6 @@
 		}
 	}
 
-	&_sm {
-		@include below($sm) {
-			&_full-width {
-				display: block;
-				width: 100%;
-			}
-
-			&_no-min-width {
-				min-width: 0;
-			}
-		}
-	}
-
 	&_small {
 		padding-top: 0.9rem;
 		padding-bottom: 0.9rem;
@@ -50,20 +37,9 @@
 		font-size: 1.4rem;
 		line-height: 2rem;
 
-		&_sm {
-			@include below($sm) {
-				padding-left: 1rem;
-				padding-right: 1rem;
-
-				&_full-width {
-					display: block;
-					width: 100%;
-				}
-
-				&_no-min-width {
-					min-width: 0;
-				}
-			}
+		@include below($sm) {
+			padding-left: 1rem;
+			padding-right: 1rem;
 		}
 	}
 
@@ -73,10 +49,16 @@
 		width: 100%;
 	}
 
-	@at-root {
-		#{$btn},
-		input#{$btn} {
-			border-radius: 0;
+	&_sm {
+		@include below($sm) {
+			&-full-width {
+				display: block;
+				width: 100%;
+			}
+
+			&-no-min-width {
+				min-width: 0;
+			}
 		}
 	}
 

@@ -22,7 +22,14 @@
 			<div class="footer-assets__box-heading">Принимаем к оплате:</div>
 			<div class="footer-assets__box-content">
 				<div class="footer-assets__box-content-item">
-					@@include("../footer-payments/footer-payments.html")
+					@@include("../payment-methods/payment-methods.html", {
+					"items": [
+						{"image": "icon-pay-visa_white.svg", "title": "Visa"},
+						{"image": "icon-pay-mastercard_white.svg", "title": "Mastercard"},
+						{"image": "icon-pay-paypal_white.svg", "title": "Paypal"}
+					],
+					"mods": ["sm_inline"]
+					})
 				</div>
 				<div class="footer-assets__box-content-item">
 					@@include("../footer-callback/footer-callback.html")
