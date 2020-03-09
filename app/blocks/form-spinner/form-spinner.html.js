@@ -45,7 +45,7 @@ app.formSpinner = {
 
 			$curSpinner.on('keyup', function () {
 				const $curEl = $(this);
-				let value = parseFloat($curEl.val());
+				// let value = parseFloat($curEl.val());
 
 				if ($curEl.val() === '' ) {
 					$curEl.val('');
@@ -61,7 +61,7 @@ app.formSpinner = {
 				if ($curEl.val() === '') {
 					$curEl.val(1);
 				}
-			})
+			});
 
 			// $curSpinner.on('keyup', function (e) {
 			// 	const $curEl = $(this);

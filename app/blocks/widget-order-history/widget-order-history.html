@@ -16,7 +16,7 @@
 	@@if(context.countProducts){
 	<div class="widget-order-history__contain js-simplebar">
 		<div class="widget-order-history__products">
-			@@include("../order-list/order-list.html", {"count": "@@countProducts"})
+			@@include("../order-list/order-list.html", {"count": "@@countProducts", "quantity": 1, "order": true})
 		</div>
 	</div>}
 </div>

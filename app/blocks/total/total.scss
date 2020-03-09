@@ -1,0 +1,57 @@
+.total {
+	$space-h: 3rem;
+	$space-v: 2rem;
+
+	&__title {
+		font-size: 3.2rem;
+		line-height: 4rem;
+		font-weight: bold;
+		padding-bottom: 0.5rem;
+		margin-bottom: 1rem;
+		border-bottom: 1px solid $border-color;
+	}
+
+	&__cols {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		margin: 0 -#{round-float($space-h / 2, 1)} -#{$space-v};
+
+		&_align-bottom {
+			align-items: flex-end;
+		}
+	}
+
+	&__col {
+		position: relative;
+		flex: 1 0 50%;
+		max-width: 50%;
+		margin-bottom: #{$space-v};
+		padding: 0 #{round-float($space-h / 2, 1)};
+	}
+
+	&__count {
+		font-weight: bold;
+		font-size: 2.2rem;
+		line-height: 3.2rem;
+	}
+
+	&__value {
+		font-weight: bold;
+		font-size: 3.7rem;
+		line-height: 4.2rem;
+		text-align: right;
+		margin-bottom: 0.5rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__note {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		text-align: right;
+		color: rgba(#000, 0.5);
+	}
+}

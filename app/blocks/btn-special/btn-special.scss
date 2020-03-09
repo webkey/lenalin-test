@@ -30,10 +30,35 @@
 		}
 	}
 
+	&_small {
+		padding-top: 0.9rem;
+		padding-bottom: 0.5rem;
+		min-width: 16rem;
+
+		@include below($sm) {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+	}
+
 	&_full-width {
 		display: block;
 		min-width: 0;
 		width: 100%;
+	}
+
+	// For small screen
+	&_sm {
+		@include below($sm) {
+			&-full-width {
+				display: block;
+				width: 100%;
+			}
+
+			&-no-min-width {
+				min-width: 0;
+			}
+		}
 	}
 
 	span {

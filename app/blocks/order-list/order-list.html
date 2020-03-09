@@ -6,9 +6,11 @@
 			"image": "img-product-card-01.jpg",
 			"title": "Комплект постельного белья изо льна",
 			"price": { "old": "200 руб.", "new": "180 руб." },
-			"count": 1,
-			"order": "true"
+			"quantity": "@@quantity",
+			"spinner": "@@spinner",
+			"order": "@@order"
 			})
+			@@if(context.removeBtn){<a href="#" class="order-list__li-remove"><i class="order-list__li-remove-icon"></i><span class="order-list__li-remove-text">Удалить</span></a>}
 		</div>}
 	</div>
 </div>

@@ -7,8 +7,52 @@
 	}
 
 	&__li {
+		position: relative;
 		padding-bottom: #{$space-v};
 		margin-bottom: #{$space-v};
 		border-bottom: 1px solid #c4c4c4;
+
+		&-remove {
+			$size: 2.4rem;
+
+			position: absolute;
+			right: -0.4rem;
+			top: 0;
+			width: $size;
+			height: $size;
+			color: white;
+			border-radius: $size;
+			cursor: pointer;
+			transition: background-color $animation-speed, box-shadow 0.1s;
+			outline: none;
+			user-select: none;
+
+			&-icon {
+				$size: 2.4rem;
+
+				display: inline-block;
+				font-size: 0;
+				line-height: 0;
+				height: $size;
+				width: $size;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -#{round-float($size / 2, 1)} 0 0 -#{round-float($size / 2, 1)};
+				background-size: contain;
+				background-position: 50%;
+				background-repeat: no-repeat;
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTYuMzIwMSA5LjEzMDY4TDEzLjIyNTUgMTIuMjI1M0wxNi4yODQyIDE1LjI4MzlMMTUuMzA1OCAxNi4yNjIzTDEyLjI0NzEgMTMuMjAzN0w5LjEzMDggMTYuMzJMOC4wNDM3OCAxNS4yMzNMMTEuMTYwMSAxMi4xMTY2TDguMTE2NDcgOS4wNzI5OUw5LjA5NDg1IDguMDk0NkwxMi4xMzg1IDExLjEzODNMMTUuMjMzMSA4LjA0MzY2TDE2LjMyMDEgOS4xMzA2OFoiIGZpbGw9ImJsYWNrIi8+PC9zdmc+);
+			}
+
+			&-text {
+				font-size: 0;
+				line-height: 0;
+			}
+
+			&:hover {
+				background-color: $highlight-color;
+			}
+		}
 	}
 }

@@ -1,0 +1,89 @@
+.cart {
+	$width-main: 57.2%;
+	$space-h: 3rem;
+
+	&__layout {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__main {
+		$width: $width-main;
+
+		flex: 1 0 $width;
+		max-width: $width;
+		position: relative;
+		z-index: 1;
+		padding: 0 1.8rem 3.4rem 0;
+		min-height: 1rem;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 999rem;
+			height: calc(100% + 6.8rem);
+			display: block;
+			background-color: $bg-color-alt;
+			z-index: -1;
+		}
+	}
+
+	&__contain {
+		max-height: 47.6rem;
+	}
+
+	&__products {
+		overflow: hidden;
+		padding-right: 6rem;
+	}
+
+	&__heading {
+		float: right;
+		clear: right;
+		width: calc(100% - #{$width-main});
+		padding-left: $space-h;
+		min-height: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	&__aside {
+		$width: 100% - $width-main;
+
+		flex: 1 0 $width;
+		max-width: $width;
+		padding-left: $space-h;
+		min-height: 1rem;
+
+		&-section {
+			margin-bottom: 5rem;
+
+			&_last,
+			&_no-space,
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-title {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			color: inherit;
+			font-weight: bold;
+			margin-bottom: 0.5rem;
+		}
+
+		&-text {
+			font-size: 1.4rem;
+			line-height: 2rem;
+			color: inherit;
+		}
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		line-height: 3rem;
+		margin: 0;
+	}
+}

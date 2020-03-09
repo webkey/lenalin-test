@@ -32,6 +32,8 @@
 		$lh: 2.2rem;
 		$count: 4;
 
+		max-width: 22.4rem;
+		padding-right: 2.4rem;
 		font-weight: normal;
 		font-size: 1.8rem;
 		line-height: 1.8rem;
@@ -95,6 +97,12 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+
+	&__spinner {
+		flex-basis: 100%;
+		width: 100%;
+		max-width: 20rem;
 	}
 
 	&__count {

@@ -1,0 +1,15 @@
+<div class="promo-code">
+	<div class="promo-code__label">
+		<label class="promo-code__label-inner" for="promoCode">Добавить промокод:</label>
+	</div>
+	<div class="promo-code__field">
+		<div class="promo-code__entry">
+			<input id="promoCode" class="promo-code__input" placeholder="Введите Ваш промокод" name="promo-code" type="text">
+		</div>
+		<div class="promo-code__submit">
+			@@include("../btn-special/btn-special.html", {"mods": ["small", "sm-no-min-width"], "text": "Принять"})
+		</div>
+	</div>
+	<span class="promo-code__error" style="display: none;">Промокод не верен</span>
+	<span class="promo-code__success">Промокод применен</span>
+</div>

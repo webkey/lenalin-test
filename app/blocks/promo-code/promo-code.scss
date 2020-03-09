@@ -1,0 +1,95 @@
+.promo-code {
+	$search-form-height: 4rem;
+
+	width: 55.8rem;
+	max-width: 100%;
+
+	&__field {
+		display: flex;
+		align-items: center;
+	}
+
+	&__label {
+		margin-bottom: 0.8rem;
+
+		@include below($sm) {
+			margin-bottom: 1rem;
+		}
+
+		&-inner {
+			font-weight: bold;
+			font-size: 1.7rem;
+			line-height: 2.4rem;
+			color: inherit;
+		}
+	}
+
+	&__entry {
+		flex: 1 0 auto;
+		margin-right: 0;
+	}
+
+	&__input {
+		$input: &;
+		$font-size: 1.4rem;
+		$line-height: 2rem;
+		$ident-v: #{round-float(($search-form-height - $line-height) / 2, 1)};
+
+		display: block;
+		padding: #{$ident-v} 1.9rem;
+		height: $search-form-height;
+		width: 100%;
+		margin: 0;
+		color: #000;
+		cursor: text;
+		background: $bg-color-alt;
+		box-shadow: none;
+		border: none;
+		border-radius: 0;
+		font-family: inherit;
+		font-size: $font-size;
+		line-height: $line-height;
+
+		@at-root {
+			#{$input},
+			input#{$input} {
+				border-radius: 0;
+			}
+		}
+
+		@include input-placeholder {
+			color: rgba(#000, 0.6);
+			transition: opacity $animation-speed, color $animation-speed;
+		}
+
+		@include input-placeholder-focus {
+			opacity: 0;
+		}
+	}
+
+	&__submit {
+		flex-shrink: 0;
+	}
+
+	&__error,
+	&__success {
+		float: left;
+		position: relative;
+		width: 100%;
+		padding: 0.4rem 0;
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		letter-spacing: normal;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	&__error {
+		color: $error-color;
+	}
+
+	&__success {
+		color: $success-color;
+	}
+}

@@ -9,6 +9,7 @@ app.headerSearch.init();
 app.common.initSimpleBar();
 app.newsSlider.init();
 app.popularSlider.init();
+app.productCardGallery.init();
 app.formElement.togglePassword();
 app.formElement.confirmPassword();
 app.formSpinner.init();
