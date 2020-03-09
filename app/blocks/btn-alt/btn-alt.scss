@@ -19,7 +19,7 @@
 	border: 0.1rem solid $highlight-color;
 	background-color: $highlight-color;
 	box-shadow: none;
-	transition: background-color $animation-speed, border-color $animation-speed, color $animation-speed, opacity $animation-speed;
+	transition: background-color $animation-speed, border-color $animation-speed, color $animation-speed, opacity $animation-speed, box-shadow 0.1s;
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
 

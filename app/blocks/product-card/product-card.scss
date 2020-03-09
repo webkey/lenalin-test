@@ -36,6 +36,20 @@
 				margin-bottom: 0;
 			}
 		}
+
+		&-title {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			color: inherit;
+			font-weight: bold;
+			margin-bottom: 0.5rem;
+		}
+
+		&-text {
+			font-size: 1.4rem;
+			line-height: 2rem;
+			color: inherit;
+		}
 	}
 
 	&__title {

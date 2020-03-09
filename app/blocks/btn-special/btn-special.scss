@@ -19,7 +19,7 @@
 	border: 0.1rem solid #86bc94;
 	background-color: #86bc94;
 	box-shadow: none;
-	transition: background-color $animation-speed, border-color $animation-speed, color $animation-speed, opacity $animation-speed;
+	transition: background-color $animation-speed, border-color $animation-speed, color $animation-speed, opacity $animation-speed, box-shadow 0.1s;
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
 
@@ -47,6 +47,6 @@
 	}
 
 	&:active {
-		opacity: 0.7;
+		box-shadow: 0 0 0 0.4rem #c4c4c4;
 	}
 }

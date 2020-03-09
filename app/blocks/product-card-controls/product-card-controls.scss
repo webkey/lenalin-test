@@ -1,0 +1,32 @@
+.product-card-controls {
+	$space-h: 6rem;
+	$space-v: 2rem;
+
+	&__cols {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		margin: 0 -#{round-float($space-h / 2, 1)} -#{$space-v};
+
+		&_align-bottom {
+			align-items: flex-end;
+		}
+	}
+
+	&__col {
+		position: relative;
+		flex: 1 0 100%;
+		max-width: 100%;
+		margin-bottom: #{$space-v};
+		padding: 0 #{round-float($space-h / 2, 1)};
+
+		@for $i from 1 through 12 {
+			&_#{$i} {
+				$width: floor-float(100% / 12 * $i, 2);
+
+				flex-basis: $width;
+				max-width: $width;
+			}
+		}
+	}
+}

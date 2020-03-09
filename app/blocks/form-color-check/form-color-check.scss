@@ -1,0 +1,76 @@
+.form-color-check {
+	$elem: &;
+	$radio-size: 2rem;
+	$radio-check-size: 1.2rem;
+
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 0;
+	font-size: inherit;
+	line-height: 2rem;
+	color: inherit;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+
+	&__pict {
+		$size: 1.6rem;
+
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin: -#{round-float($size / 2, 1)} 0;
+		display: block;
+		height: $size;
+		width: $size;
+		font-size: 0;
+		line-height: 0;
+		border-radius: $size;
+		border: 1px solid #c4c4c4;
+		cursor: pointer;
+		transition: all $animation-speed;
+
+		@at-root {
+			#{$elem}:hover & {
+				box-shadow: 0 0 0 1px #c4c4c4;
+			}
+		}
+	}
+
+	&__label {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 2.06em;
+		cursor: pointer;
+		transition: all $animation-speed;
+
+		@at-root {
+			#{$elem}:hover & {
+				color: $highlight-color;
+			}
+		}
+	}
+
+	&__input {
+		position: absolute;
+		padding: 0;
+		margin: 0;
+		display: none;
+
+		@at-root {
+			&:checked {
+				& ~ #{$elem}__pict {
+					border-color: #000;
+					box-shadow: 0 0 0 1px #000;
+				}
+
+				& ~ #{$elem}__label {
+					font-weight: bold;
+					color: inherit;
+					cursor: default;
+				}
+			}
+		}
+	}
+}

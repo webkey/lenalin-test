@@ -26,7 +26,7 @@
 						<div class="features__title">Материал:</div>
 						<div class="features__descr"><strong>лен</strong></div>
 					</div>
-					<div class="features__li">
+					<div class="features__li features__li_6">
 						<div class="features__title">Размер:</div>
 						<div class="features__descr features__descr_full-width">
 							<div class="form-list">
@@ -53,28 +53,19 @@
 							</div>
 						</div>
 					</div>
-					<div class="features__li">
+					<div class="features__li features__li_6">
 						<div class="features__title">Цвет:</div>
 						<div class="features__descr features__descr_full-width">
 							<div class="form-list">
 								<div class="form-list__list form-list__list_space-small">
 									<div class="form-list__li form-list__li_space-small">
-										<label class="form-radio">
-											<input class="form-radio__input" type="radio" name="color" checked>
-											<span class="form-radio__label">Белый</span>
-										</label>
+										@@include("../form-color-check/form-color-check.html", {"type": "radio", "label": "Белый", "color": "#fff", "name": "form-color", "checked": true, "disabled": false})
 									</div>
 									<div class="form-list__li form-list__li_space-small">
-										<label class="form-radio">
-											<input class="form-radio__input" type="radio" name="color">
-											<span class="form-radio__label">Чёрный</span>
-										</label>
+										@@include("../form-color-check/form-color-check.html", {"type": "radio", "label": "Чёрный", "color": "#000", "name": "form-color", "checked": false, "disabled": false})
 									</div>
 									<div class="form-list__li form-list__li_space-small">
-										<label class="form-radio">
-											<input class="form-radio__input" type="radio" name="color">
-											<span class="form-radio__label">Голубой</span>
-										</label>
+										@@include("../form-color-check/form-color-check.html", {"type": "radio", "label": "Голубой", "color": "#7798ab", "name": "form-color", "checked": false, "disabled": false})
 									</div>
 								</div>
 							</div>
@@ -84,36 +75,40 @@
 			</div>
 		</div>
 
-		<div class="widget-product__controls">
-			<div class="widget-product__count">
-				<div class="">Количество:</div>
-				<div>
-					@@include("../form-spinner/form-spinner.html", {"value": "1", "name": "product-count"})
+		<div class="product-card__aside-section">
+			<div class="product-card-controls">
+				<div class="product-card-controls__cols product-card-controls__cols_align-bottom">
+					<div class="product-card-controls__col product-card-controls__col_6">
+						@@include("../product-card-quantity/product-card-quantity.html")
+					</div>
+					<div class="product-card-controls__col product-card-controls__col_6">
+						@@include("../product-card-price/product-card-price.html")
+					</div>
 				</div>
 			</div>
-			<div class="quick-offer__price">
-				<div class="quick-offer__price-els">
-					<div class="quick-offer__price-el quick-offer__price-el_old">200 руб.</div>
-					<div class="quick-offer__price-el quick-offer__price-el_new">180 руб.</div>
+		</div>
+
+		<div class="product-card__aside-section">
+			<div class="product-card-controls">
+				<div class="product-card-controls__cols product-card-controls__cols_align-bottom">
+					<div class="product-card-controls__col product-card-controls__col_6">
+						@@include("../btn-def/btn-def.html", {"mods": ["full-width"], "text": "В корзину"})
+					</div>
+					<div class="product-card-controls__col product-card-controls__col_6">
+						@@include("../btn-def/btn-def.html", {"mods": ["invert", "full-width"], "text": "В избранное"})
+					</div>
+					<div class="product-card-controls__col">
+						@@include("../btn-special/btn-special.html", {"mods": ["full-width"], "text": "Купить в один клик"})
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div>
-			@@include("../btn-def/btn-def.html", {"mods": ["sm-full-width"], "text": "В корзину"})
-		</div>
-
-		<div>
-			@@include("../btn-def/btn-def.html", {"mods": ["invert", "sm-full-width"], "text": "В избранное"})
-		</div>
-
-		<div>
-			@@include("../btn-special/btn-special.html", {"mods": ["full-width"], "text": "Купить в один клик"})
-		</div>
-
-		<div>
-			Доставка:
-			Magna eu nisi nulla velit amet aliquip sunt enim et proident dolor. Aliquip quis magna duis elit incididunt. Fugiat do incididunt in reprehenderit consectetur nulla.
+		<div class="product-card__aside-section">
+			<div class="product-card__aside-title">Доставка:</div>
+			<div class="product-card__aside-text">
+				<p>Magna eu nisi nulla velit amet aliquip sunt enim et proident dolor. Aliquip quis magna duis elit incididunt. Fugiat do incididunt in reprehenderit consectetur nulla.</p>
+			</div>
 		</div>
 	</div>
 </section>

@@ -1,0 +1,26 @@
+.product-card-price {
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+	text-align: right;
+
+	&__els {
+		display: block;
+	}
+
+	&__el {
+		display: block;
+		white-space: nowrap;
+		text-align: right;
+
+		&_old {
+			text-decoration: line-through;
+			margin-bottom: 0.5rem;
+		}
+
+		&_new {
+			font-size: 2.4rem;
+			line-height: 3.2rem;
+			font-weight: bold;
+		}
+	}
+}

@@ -182,7 +182,7 @@
 	display: inline-block;
 	vertical-align: top;
 	margin: 0;
-	font-size: 1.7rem;
+	font-size: inherit;
 	line-height: 2rem;
 	color: inherit;
 	user-select: none;
@@ -218,7 +218,7 @@
 		position: relative;
 		display: inline-block;
 		vertical-align: top;
-		padding-left: 3.5rem;
+		padding-left: 2.06em;
 		cursor: pointer;
 
 		&::before,
@@ -282,7 +282,7 @@
 		position: relative;
 		display: inline-block;
 		vertical-align: top;
-		padding-left: 3.5rem;
+		padding-left: 2.06em;
 		cursor: pointer;
 
 		&::before,

@@ -1,0 +1,16 @@
+.product-card-quantity {
+	display: flex;
+	align-items: center;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+
+	&__title {
+		font-weight: 300;
+		margin-right: 0.5rem;
+	}
+
+	&__spinner {
+		line-height: 1.6rem;
+		margin-left: auto;
+	}
+}

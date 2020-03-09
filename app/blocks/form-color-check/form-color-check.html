@@ -1,0 +1,6 @@
+<label class="form-color-check">
+	@@if(context.type === "radio"){<input class="form-color-check__input" type="radio" name="@@name"@@if(context.checked){ checked}@@if(context.disabled){ disabled}>}
+	@@if(context.type === "checkbox"){<input class="form-color-check__input" type="checkbox" name="@@name"@@if(context.checked){ checked}@@if(context.disabled){ disabled}>}
+	<i class="form-color-check__pict" style="background-color: @@color"></i>
+	<span class="form-color-check__label">@@label</span>
+</label>
