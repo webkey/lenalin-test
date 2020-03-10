@@ -1,5 +1,5 @@
 .product-card {
-	$width-main: 50%;
+	$width-main: 51.31%;
 	$space-h: 9.8rem;
 
 	@include clearfix;
@@ -14,7 +14,7 @@
 	&__heading {
 		float: right;
 		clear: right;
-		width: calc(100% - #{$width-main});
+		width: 100% - $width-main;
 		padding-left: $space-h;
 		min-height: 1rem;
 		margin-bottom: 2rem;
@@ -23,7 +23,7 @@
 	&__aside {
 		float: right;
 		clear: right;
-		width: calc(100% - #{$width-main});
+		width: 100% - $width-main;
 		padding-left: $space-h;
 		min-height: 1rem;
 

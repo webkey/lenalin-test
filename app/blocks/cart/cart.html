@@ -1,35 +1,40 @@
 <section class="cart">
-	<form class="cart__layout" action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
-		<div class="cart__main">
-			<div class="cart__contain js-simplebar">
-				<div class="cart__products">
-					@@include("../order-list/order-list.html", {"count": 5, "spinner": "1", "removeBtn": true})
-				</div>
-			</div>
-		</div>
-		<div class="cart__aside">
-			<div class="cart__aside-section">
-				<div class="total">
-					<div class="total__title">Итого</div>
-					<div class="total__cols">
-						<div class="total__col">
-							<div class="total__count">Товаров: 2</div>
-						</div>
-						<div class="total__col">
-							<div class="total__value">666.66 руб.</div>
-							<div class="total__note">Бесплатная доставка</div>
+	<div class="layout-page">
+		<div class="layout-content">
+			<form class="cart__layout" action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
+				<div class="cart__main">
+					<div class="cart__contain js-simplebar">
+						<div class="cart__products">
+							@@include("../order-list/order-list.html", {"count": 5, "spinner": "1", "removeBtn": true})
 						</div>
 					</div>
+					<div class="no-item-warning" style="display: none"><strong>В корзине нет товаров. <a href="catalog.html">Перейти в каталог</a>.</strong></div>
 				</div>
-			</div>
+				<div class="cart__aside">
+					<div class="cart__aside-section">
+						<div class="total">
+							<div class="total__title">Итого</div>
+							<div class="total__cols">
+								<div class="total__col">
+									<div class="total__count">Товаров: 2</div>
+								</div>
+								<div class="total__col">
+									<div class="total__value">666.66 руб.</div>
+									<div class="total__note">Бесплатная доставка</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-			<div class="cart__aside-section">
-				@@include("../promo-code/promo-code.html")
-			</div>
+					<div class="cart__aside-section">
+						@@include("../promo-code/promo-code.html")
+					</div>
 
-			<div class="cart__aside-section">
-				@@include("../btn-def/btn-def_button-submit.html", {"mods": ["full-width"], "text": "Оформить заказ"})
-			</div>
+					<div class="cart__aside-section">
+						@@include("../btn-def/btn-def_button-submit.html", {"mods": ["full-width"], "text": "Оформить заказ"})
+					</div>
+				</div>
+			</form>
 		</div>
-	</form>
+	</div>
 </section>

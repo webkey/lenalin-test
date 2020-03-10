@@ -1,6 +1,12 @@
 .cart {
 	$width-main: 57.2%;
 	$space-h: 3rem;
+	$padding-top: 6.8rem;
+
+	overflow: hidden;
+	position: relative;
+	margin-top: -$padding-top;
+	z-index: 1;
 
 	&__layout {
 		display: flex;
@@ -12,18 +18,17 @@
 
 		flex: 1 0 $width;
 		max-width: $width;
-		position: relative;
-		z-index: 1;
-		padding: 0 1.8rem 3.4rem 0;
+		padding: #{$padding-top} 1.8rem 3.4rem 0;
 		min-height: 1rem;
+		position: relative;
 
 		&::before {
 			content: "";
 			position: absolute;
-			right: 0;
+			top: -40rem;
 			bottom: 0;
+			right: 0;
 			width: 999rem;
-			height: calc(100% + 6.8rem);
 			display: block;
 			background-color: $bg-color-alt;
 			z-index: -1;
@@ -53,7 +58,7 @@
 
 		flex: 1 0 $width;
 		max-width: $width;
-		padding-left: $space-h;
+		padding: #{$padding-top} 0 0 #{$space-h};
 		min-height: 1rem;
 
 		&-section {

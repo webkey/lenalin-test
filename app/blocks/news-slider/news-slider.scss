@@ -51,7 +51,7 @@
 		color: black;
 		border-radius: $size;
 		background-color: white;
-		transition: background-color $animation-speed, box-shadow $animation-speed, color $animation-speed;
+		transition: all $animation-speed;
 		cursor: pointer;
 		box-shadow: 0 0.4rem 2rem rgba(black, 0.15);
 
@@ -76,18 +76,20 @@
 		}
 
 		// :hover
-		&:hover {
+		&:not(.swiper-button-disabled):hover {
 			background-color: $highlight-color--hover;
 			color: white;
 			box-shadow: 0 4px 20px rgba($highlight-color--hover, 0.15);
 		}
 
 		// :active
-		&:active {
-			transition-duration: 0s;
-			background-color: $highlight-color--active;
-			color: white;
-			box-shadow: 0 4px 20px rgba($highlight-color--active, 0.15);
+		&:not(.swiper-button-disabled):active {
+			transform: scale(0.9);
+		}
+
+		// Disabled
+		&.swiper-button-disabled {
+			opacity: 0.3;
 		}
 	}
 }
