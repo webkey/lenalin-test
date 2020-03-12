@@ -8,7 +8,7 @@ gulp.task('templates', () => (
 		.pipe(plumber())
 		.pipe(fileinclude({
 			prefix: '@@',
-			basepath: '@file'
+			basepath: 'app' // '@file', '@root'
 		}))
 		.pipe(htmlbeautify({
 			"indent_with_tabs": true,

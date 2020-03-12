@@ -1,10 +1,12 @@
 app.navigation = {
 	navElement: '.js-nav',
 	init() {
-		app.common.initScript('jquery.nav', 'switchClass', () => {
-			if ($(this.navElement).length) {
-				this.runNavigation();
-			}
+		app.common.initScript('jquery.accordion-simple', 'accordionSimple', () => {
+			app.common.initScript('jquery.nav', 'nav', () => {
+				if ($(this.navElement).length) {
+					this.runNavigation();
+				}
+			});
 		});
 	},
 	runNavigation() {

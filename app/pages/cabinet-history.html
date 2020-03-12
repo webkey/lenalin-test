@@ -1,17 +1,17 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - Личный кабинет. История заказов"})
-@@include("../blocks/header/header.html", {"currentItem": "Cabinet"})
+@@include("blocks/head/head.html", {"title": "Lenalin - Личный кабинет. История заказов"})
+@@include("blocks/header/header.html", {"currentItem": "Cabinet"})
 <div class="main">
 	<div class="page-cabinet">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-cabinet__breadcrumbs">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "cabinet-profile.html", "text": "Личный кабинет"}], "current": "История заказов" })
+					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "cabinet-profile.html", "text": "Личный кабинет"}], "current": "История заказов" })
 				</div>
 				<div class="page-cabinet__heading">
 					<h1 class="page-cabinet__title">Личный кабинет</h1>
 				</div>
 				<div class="page-cabinet__nav">
-					@@include("../blocks/pseudo-tabs/pseudo-tabs.html", {
+					@@include("blocks/pseudo-tabs/pseudo-tabs.html", {
 						"items": [
 							{"href": "cabinet-profile.html", "text": "Профиль", "class": ""},
 							{"href": "cabinet-favorites.html", "text": "Избранное", "class": ""},
@@ -21,21 +21,21 @@
 				</div>
 				<div class="page-cabinet__section">
 					<div class="layout-narrow layout-narrow_align-left">
-						@@include('../blocks/order-history/order-history.html')
+						@@include("blocks/order-history/order-history.html")
 					</div>
 					<div class="no-item-warning" style="display: none"><strong>Вы еще не заказали ниодного товара. <a href="catalog.html">Перейти в каталог</a>.</strong></div>
 				</div>
 				<div class="page-cabinet__section page-cabinet__section_align-center">
 					<div class="layout-narrow layout-narrow_align-left">
-						@@include('../blocks/pagination/pagination.html')
+						@@include("blocks/pagination/pagination.html")
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-@@include("../blocks/footer/footer.html", {"currentItem": "Cabinet"})
-@@include("../blocks/popup-form/login.html")
-@@include("../blocks/popup-form/sing-up.html")
-@@include("../blocks/popup-form/recovery-password.html")
-@@include("../blocks/link/link.html")
+@@include("blocks/footer/footer.html", {"currentItem": "Cabinet"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

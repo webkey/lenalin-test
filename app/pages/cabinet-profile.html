@@ -1,17 +1,17 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - Личный кабинет. Профиль"})
-@@include("../blocks/header/header.html", {"currentItem": "Cabinet"})
+@@include("blocks/head/head.html", {"title": "Lenalin - Личный кабинет. Профиль"})
+@@include("blocks/header/header.html", {"currentItem": "Cabinet"})
 <div class="main">
 	<div class="page-cabinet">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-cabinet__breadcrumbs">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "cabinet-profile.html", "text": "Личный кабинет"}], "current": "Профиль" })
+					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "cabinet-profile.html", "text": "Личный кабинет"}], "current": "Профиль" })
 				</div>
 				<div class="page-cabinet__heading">
 					<h1 class="page-cabinet__title">Личный кабинет</h1>
 				</div>
 				<div class="page-cabinet__nav">
-					@@include("../blocks/pseudo-tabs/pseudo-tabs.html", {
+					@@include("blocks/pseudo-tabs/pseudo-tabs.html", {
 						"items": [
 							{"href": "javascript:;", "text": "Профиль", "class": "current"},
 							{"href": "cabinet-favorites.html", "text": "Избранное", "class": ""},
@@ -21,20 +21,20 @@
 				</div>
 				<div class="page-cabinet__section">
 					<div class="layout-form layout-form_align-left">
-						@@include("../blocks/personal-data/personal-data.html")
+						@@include("blocks/personal-data/personal-data.html")
 					</div>
 				</div>
 				<div class="page-cabinet__section">
 					<div class="layout-form layout-form_align-left">
-						@@include("../blocks/personal-data-form/personal-data-form.html")
+						@@include("blocks/personal-data-form/personal-data-form.html")
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-@@include("../blocks/footer/footer.html", {"currentItem": "Cabinet"})
-@@include("../blocks/popup-form/login.html")
-@@include("../blocks/popup-form/sing-up.html")
-@@include("../blocks/popup-form/recovery-password.html")
-@@include("../blocks/link/link.html")
+@@include("blocks/footer/footer.html", {"currentItem": "Cabinet"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

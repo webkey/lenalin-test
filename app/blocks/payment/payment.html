@@ -1,7 +1,7 @@
 <div class="payment @@if(context.mods){@@for (var i = 0; i < mods.length; i++){ payment_`+mods[i]+`}}">
 	<div class="payment__title">Принимаем к оплате:</div>
 	<div class="payment__methods">
-		@@include("../payment-methods/payment-methods.html", {
+		@@include("blocks/payment-methods/payment-methods.html", {
 		"items": [
 		{"image": "icon-pay-visa_black.svg", "title": "Visa"},
 		{"image": "icon-pay-mastercard_black.svg", "title": "Mastercard"},

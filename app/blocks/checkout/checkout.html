@@ -2,7 +2,7 @@
 	<div class="layout-form layout-form_align-left">
 		<form class="checkout__form" action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
 			<div class="checkout__section checkout__section_space-smallest">
-				@@include("../widget-order-short/widget-order-short.html", {
+				@@include("blocks/widget-order-short/widget-order-short.html", {
 				"totalPrice": "666 руб.",
 				"countProducts": "10"
 				})
@@ -18,13 +18,13 @@
 								<div class="form-grid__field">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "Имя:",
 											"id": "checkout-name"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-name",
 											"placeholder": "Ваш ответ",
 											"type": "text",
@@ -36,13 +36,13 @@
 								<div class="form-grid__field">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "Фамилия:",
 											"id": "checkout-second"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-second",
 											"placeholder": "Ваш ответ",
 											"type": "text",
@@ -56,13 +56,13 @@
 								<div class="form-grid__field">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "Мобильный телефон:",
 											"id": "checkout-phone"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-phone",
 											"placeholder": "Ваш ответ",
 											"type": "text",
@@ -74,13 +74,13 @@
 								<div class="form-grid__field">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "E-mail:",
 											"id": "checkout-email"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-email",
 											"placeholder": "Ваш ответ",
 											"type": "email",
@@ -105,13 +105,13 @@
 								<div class="form-grid__field">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "Страна:",
 											"id": "checkout-country"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-country",
 											"placeholder": "Ваш ответ",
 											"type": "text",
@@ -123,13 +123,13 @@
 								<div class="form-grid__field">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "Город:",
 											"id": "checkout-city"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-city",
 											"placeholder": "Ваш ответ",
 											"type": "text",
@@ -141,13 +141,13 @@
 								<div class="form-grid__field">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "Улица, дом:",
 											"id": "checkout-street"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-street",
 											"placeholder": "Ваш ответ",
 											"type": "text",
@@ -161,13 +161,13 @@
 								<div class="form-grid__field form-grid__field_6">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "Код домофона:",
 											"id": "checkout-door-code"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-door-code",
 											"placeholder": "Ваш ответ",
 											"type": "text",
@@ -179,13 +179,13 @@
 								<div class="form-grid__field form-grid__field_6">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "Этаж:",
 											"id": "checkout-floor"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-floor",
 											"placeholder": "Ваш ответ",
 											"type": "text",
@@ -197,13 +197,13 @@
 								<div class="form-grid__field">
 									<div class="form-unit">
 										<div class="form-unit__label">
-											@@include("../form-element/form-label.html", {
+											@@include("blocks/form-element/form-label.html", {
 											"label": "Номер квартиры:",
 											"id": "checkout-apartment-number"
 											})
 										</div>
 										<div class="form-unit__input">
-											@@include("../form-element/form-input.html", {
+											@@include("blocks/form-element/form-input.html", {
 											"id": "checkout-apartment-number",
 											"placeholder": "Ваш ответ",
 											"type": "text",
@@ -283,10 +283,10 @@
 			<div class="checkout__section">
 				<div class="checkout__cols">
 					<div class="checkout__cols-col">
-						@@include("../payment/payment.html")
+						@@include("blocks/payment/payment.html")
 					</div>
 					<div class="checkout__cols-col">
-						@@include("../checkout-total/checkout-total.html")
+						@@include("blocks/checkout-total/checkout-total.html")
 					</div>
 				</div>
 			</div>
@@ -303,13 +303,13 @@
 										<div class="form-grid__field">
 											<div class="form-unit">
 												<div class="form-unit__label">
-													@@include("../form-element/form-label.html", {
+													@@include("blocks/form-element/form-label.html", {
 													"label": "Номер карты:",
 													"id": "checkout-pay-card-number"
 													})
 												</div>
 												<div class="form-unit__input">
-													@@include("../form-element/form-input.html", {
+													@@include("blocks/form-element/form-input.html", {
 													"id": "checkout-pay-card-number",
 													"placeholder": "____ ____ ____ ____",
 													"type": "text",
@@ -321,13 +321,13 @@
 										<div class="form-grid__field">
 											<div class="form-unit">
 												<div class="form-unit__label">
-													@@include("../form-element/form-label.html", {
+													@@include("blocks/form-element/form-label.html", {
 													"label": "Название карты:",
 													"id": "checkout-pay-card-name"
 													})
 												</div>
 												<div class="form-unit__input">
-													@@include("../form-element/form-input.html", {
+													@@include("blocks/form-element/form-input.html", {
 													"id": "checkout-pay-card-name",
 													"placeholder": "Введите данные",
 													"type": "text",
@@ -339,13 +339,13 @@
 										<div class="form-grid__field form-grid__field_4">
 											<div class="form-unit">
 												<div class="form-unit__label">
-													@@include("../form-element/form-label.html", {
+													@@include("blocks/form-element/form-label.html", {
 													"label": "Месяц:",
 													"id": "checkout-pay-month"
 													})
 												</div>
 												<div class="form-unit__input">
-													@@include("../form-element/form-input.html", {
+													@@include("blocks/form-element/form-input.html", {
 													"id": "checkout-pay-month",
 													"placeholder": "__",
 													"type": "text",
@@ -357,13 +357,13 @@
 										<div class="form-grid__field form-grid__field_4">
 											<div class="form-unit">
 												<div class="form-unit__label">
-													@@include("../form-element/form-label.html", {
+													@@include("blocks/form-element/form-label.html", {
 													"label": "Год:",
 													"id": "checkout-pay-year"
 													})
 												</div>
 												<div class="form-unit__input">
-													@@include("../form-element/form-input.html", {
+													@@include("blocks/form-element/form-input.html", {
 													"id": "checkout-pay-year",
 													"placeholder": "__",
 													"type": "text",
@@ -375,13 +375,13 @@
 										<div class="form-grid__field form-grid__field_4">
 											<div class="form-unit">
 												<div class="form-unit__label">
-													@@include("../form-element/form-label.html", {
+													@@include("blocks/form-element/form-label.html", {
 													"label": "CVC код:",
 													"id": "checkout-pay-cvc"
 													})
 												</div>
 												<div class="form-unit__input">
-													@@include("../form-element/form-input.html", {
+													@@include("blocks/form-element/form-input.html", {
 													"id": "checkout-pay-cvc",
 													"placeholder": "___",
 													"type": "text",
@@ -400,10 +400,10 @@
 			<div class="checkout__section checkout__section_align-right">
 				<div class="checkout__cols">
 					<div class="checkout__cols-col">
-						@@include("../btn-def/btn-def_button-submit.html", {"mods": ["full-width"], "text": "Оплатить"})
+						@@include("blocks/btn-def/btn-def_button-submit.html", {"mods": ["full-width"], "text": "Оплатить"})
 					</div>
 					<div class="checkout__cols-col">
-						@@include("../btn-def/btn-def_button-submit.html", {"text": "Оформить заказ", "mods": ["full-width"]})
+						@@include("blocks/btn-def/btn-def_button-submit.html", {"text": "Оформить заказ", "mods": ["full-width"]})
 					</div>
 				</div>
 			</div>

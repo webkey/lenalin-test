@@ -1,13 +1,13 @@
 <div class="form-grid__field form-grid__field_space-small">
 	<div class="form-unit">
 		<div class="form-unit__label">
-			@@include("../form-element/form-label.html", {
+			@@include("blocks/form-element/form-label.html", {
 			"label": "E-mail:",
 			"id": "login-email"
 			})
 		</div>
 		<div class="form-unit__input">
-			@@include("../form-element/form-input.html", {
+			@@include("blocks/form-element/form-input.html", {
 			"id": "login-email",
 			"placeholder": "Ваш e-mail",
 			"type": "email",
@@ -19,14 +19,14 @@
 <div class="form-grid__field form-grid__field_space-small">
 	<div class="form-unit">
 		<div class="form-unit__label">
-			@@include("../form-element/form-label.html", {
+			@@include("blocks/form-element/form-label.html", {
 			"label": "Пароль:",
 			"id": "login-password"
 			})
 		</div>
 		<div class="form-unit__input">
 			<a href="#" class="form-unit__input-icon form-unit__input-icon_show-pass js-show-pass"></a>
-			@@include("../form-element/form-input.html", {
+			@@include("blocks/form-element/form-input.html", {
 			"id": "login-password",
 			"mods": ["icon-right"],
 			"placeholder": "Ваш пароль",

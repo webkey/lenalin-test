@@ -1,11 +1,11 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - Новости"})
-@@include("../blocks/header/header.html", {"currentItem": "News"})
+@@include("blocks/head/head.html", {"title": "Lenalin - Новости"})
+@@include("blocks/header/header.html", {"currentItem": "News"})
 <div class="main">
 	<div class="page-news">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-news__breadcrumbs">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Новости" })
+					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Новости" })
 				</div>
 				<div class="page-news__heading">
 					<h1 class="page-news__title">Новости</h1>
@@ -29,17 +29,17 @@
 					</div>
 				</div>
 				<div class="page-news__content">
-					@@include('../blocks/news-previews/news-previews.html')
+					@@include("blocks/news-previews/news-previews.html")
 				</div>
 				<div class="page-news__pagination page-news__pagination_center">
-					@@include('../blocks/pagination/pagination.html')
+					@@include("blocks/pagination/pagination.html")
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-@@include("../blocks/footer/footer.html", {"currentItem": "News"})
-@@include("../blocks/popup-form/login.html")
-@@include("../blocks/popup-form/sing-up.html")
-@@include("../blocks/popup-form/recovery-password.html")
-@@include("../blocks/link/link.html")
+@@include("blocks/footer/footer.html", {"currentItem": "News"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

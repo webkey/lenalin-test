@@ -1,12 +1,12 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - Контакты"})
-@@include("../blocks/header/header.html", {"currentItem": "Contacts"})
+@@include("blocks/head/head.html", {"title": "Lenalin - Контакты"})
+@@include("blocks/header/header.html", {"currentItem": "Contacts"})
 <div class="main">
 	<div class="page-contacts">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-contacts__content">
 					<div class="page-contacts__breadcrumbs">
-						@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Контакты" })
+						@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Контакты" })
 					</div>
 
 					<div class="page-contacts__heading">
@@ -34,7 +34,7 @@
 					</div>
 
 					<div class="page-contacts__section">
-						@@include("../blocks/btn-def/btn-def.html", {"class": "js-popup-form-opener", "mods": ["sm-full-width"], "attrs": [{"attr": "data-src", "value": "#popup-callback"}], "text": "Обратная связь"})
+						@@include("blocks/btn-def/btn-def.html", {"class": "js-popup-form-opener", "mods": ["sm-full-width"], "attrs": [{"attr": "data-src", "value": "#popup-callback"}], "text": "Обратная связь"})
 					</div>
 				</div>
 			</div>
@@ -44,8 +44,8 @@
 		</div>
 	</div>
 </div>
-@@include("../blocks/footer/footer.html", {"currentItem": "Contacts"})
-@@include("../blocks/popup-form/login.html")
-@@include("../blocks/popup-form/sing-up.html")
-@@include("../blocks/popup-form/recovery-password.html")
-@@include("../blocks/link/link.html")
+@@include("blocks/footer/footer.html", {"currentItem": "Contacts"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

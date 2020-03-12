@@ -1,18 +1,18 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - Карточка продукта"})
-@@include("../blocks/header/header.html", {"currentItem": "Catalog"})
+@@include("blocks/head/head.html", {"title": "Lenalin - Карточка продукта"})
+@@include("blocks/header/header.html", {"currentItem": "Catalog"})
 <div class="main">
 	<div class="page-product-card">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-product-card__breadcrumbs">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "catalog.html", "text": "Каталог"}], "current": "Постельное белье" })
+					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "catalog.html", "text": "Каталог"}], "current": "Постельное белье" })
 				</div>
 				<div class="page-product-card__control-panel">
-					@@include("../blocks/btn-control/btn-control.html", { "mods": ["arrow-left"], "href": "javascript:;", "attr": "onclick='window.history.go(-1); return false;'", "text": "Вернуться назад" })
+					@@include("blocks/btn-control/btn-control.html", { "mods": ["arrow-left"], "href": "javascript:;", "attr": "onclick='window.history.go(-1); return false;'", "text": "Вернуться назад" })
 				</div>
 				<div class="page-product-card__content">
 					<div class="page-product-card__section">
-						@@include("../blocks/product-card/product-card.html")
+						@@include("blocks/product-card/product-card.html")
 					</div>
 				</div>
 			</div>
@@ -30,7 +30,7 @@
 			<div class="additionally__content">
 				<div class="layout-page">
 					<div class="layout-content">
-						@@include('../blocks/popular-slider/popular-slider.html')
+						@@include("blocks/popular-slider/popular-slider.html")
 					</div>
 				</div>
 			</div>
@@ -38,8 +38,8 @@
 	</div>
 </div>
 
-@@include("../blocks/footer/footer.html", {"currentItem": "Catalog"})
-@@include("../blocks/popup-form/login.html")
-@@include("../blocks/popup-form/sing-up.html")
-@@include("../blocks/popup-form/recovery-password.html")
-@@include("../blocks/link/link.html")
+@@include("blocks/footer/footer.html", {"currentItem": "Catalog"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

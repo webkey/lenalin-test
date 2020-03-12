@@ -1,19 +1,19 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - Каталог"})
-@@include("../blocks/header/header.html", {"currentItem": "Catalog"})
+@@include("blocks/head/head.html", {"title": "Lenalin - Каталог"})
+@@include("blocks/header/header.html", {"currentItem": "Catalog"})
 <div class="main">
 	<div class="page-catalog">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-catalog__breadcrumbs">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Каталог" })
+					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Каталог" })
 				</div>
 				<div class="page-catalog__heading">
 					<h1 class="page-catalog__title">Каталог</h1>
 				</div>
-				<div class="page-catalog__content edit-content">
+				<div class="page-catalog__content">
 					<div class="page-catalog__layout">
 						<aside class="page-catalog__layout-aside">
-							@@include('../blocks/filters/filters.html')
+							@@include("blocks/filters-panel/filters-panel.html")
 						</aside>
 						<div class="page-catalog__layout-content">
 							<div class="page-catalog__thumbs">
@@ -34,11 +34,11 @@
 									</select>
 								</div>
 							</div>
-							<div class="page-catalog__main">
-								@@include('../blocks/catalog/catalog.html')
+							<div class="page-catalog__main edit-content">
+								@@include("blocks/catalog/catalog.html")
 							</div>
 							<div class="page-catalog__pagination page-catalog__pagination_center">
-								@@include('../blocks/pagination/pagination.html')
+								@@include("blocks/pagination/pagination.html")
 							</div>
 						</div>
 					</div>
@@ -47,8 +47,8 @@
 		</div>
 	</div>
 </div>
-@@include("../blocks/footer/footer.html", {"currentItem": "Catalog"})
-@@include("../blocks/popup-form/login.html")
-@@include("../blocks/popup-form/sing-up.html")
-@@include("../blocks/popup-form/recovery-password.html")
-@@include("../blocks/link/link.html")
+@@include("blocks/footer/footer.html", {"currentItem": "Catalog"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

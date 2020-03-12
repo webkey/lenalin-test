@@ -3,14 +3,14 @@
 		<div class="header-mob__container">
 			<a href="#" class="header-mob__mob-menu-control js-mob-menu-control">Open menu</a>
 			<div class="header-mob__search">
-				@@include("../header-search/header-search.html")
+				@@include("blocks/header-search/header-search.html")
 			</div>
 			<div class="header-mob__logo">
 				@@if(context.currentItem == "Home"){<span class="header-mob__logo-inner">Lenalin</span>}
 				@@if(context.currentItem != "Home"){<a href="home.html" class="header-mob__logo-inner" title="Lenalin">Lenalin</a>}
 			</div>
 			<div class="header-mob__action">
-				@@include("../header-action-mob/header-action-mob.html")
+				@@include("blocks/header-action-mob/header-action-mob.html")
 			</div>
 		</div>
 	</div>

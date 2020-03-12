@@ -7,6 +7,7 @@ app.headerLocation.init();
 app.headerPhones.init();
 app.headerSearch.init();
 app.common.initSimpleBar();
+app.filters.init();
 app.newsSlider.init();
 app.popularSlider.init();
 app.productCardGallery.init();

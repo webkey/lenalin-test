@@ -3,7 +3,7 @@
 		<div class="quick-offer__entry">
 			<div class="quick-offer__title">@@title</div>
 			<div class="quick-offer__size">
-				@@include("../size/size.html", {
+				@@include("blocks/size/size.html", {
 				"items": [
 				{"label": "2-спл", "input": "<input type=\"radio\" name=\"quick-offer-size\" checked/>"},
 				{"label": "1.5-спл", "input": "<input type=\"radio\" name=\"quick-offer-size\"/>"},
@@ -12,7 +12,7 @@
 				})
 			</div>
 			<div class="quick-offer__colors">
-				@@include("../colors/colors.html", {
+				@@include("blocks/colors/colors.html", {
 				"items": [
 				{"color": "#7798ab", "input": "<input type=\"radio\" name=\"quick-offer-color\" />"},
 				{"color": "#757575", "input": "<input type=\"radio\" name=\"quick-offer-color\" checked/>"},
@@ -30,10 +30,10 @@
 			</div>
 		</div>
 		<div class="quick-offer__favorites">
-			@@include("../btn-favorites/btn-favorites.html", {"active": ""})
+			@@include("blocks/btn-favorites/btn-favorites.html", {"active": ""})
 		</div>
 		<div class="quick-offer__button">
-			@@include("../btn-def/btn-def_button-submit.html", {"mods": ["small"], "text": "Заказать"})
+			@@include("blocks/btn-def/btn-def_button-submit.html", {"mods": ["small"], "text": "Заказать"})
 		</div>
 	</div>
 </form>

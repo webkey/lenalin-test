@@ -1,5 +1,5 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - О компании"})
-@@include("../blocks/header/header.html", {"currentItem": "About"})
+@@include("blocks/head/head.html", {"title": "Lenalin - О компании"})
+@@include("blocks/header/header.html", {"currentItem": "About"})
 <div class="main">
 	<div class="page-about">
 		<div class="layout-page">
@@ -8,7 +8,7 @@
 					<div class="page-about__layout">
 						<div class="page-about__layout-col">
 							<div class="page-about__breadcrumbs">
-								@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "О компании" })
+								@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "О компании" })
 							</div>
 
 							<div class="edit-content">
@@ -57,15 +57,15 @@
 			<div class="additionally__content">
 				<div class="layout-page">
 					<div class="layout-content">
-						@@include('../blocks/services/services.html')
+						@@include("blocks/services/services.html")
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-@@include("../blocks/footer/footer.html", {"currentItem": "About"})
-@@include("../blocks/popup-form/login.html")
-@@include("../blocks/popup-form/sing-up.html")
-@@include("../blocks/popup-form/recovery-password.html")
-@@include("../blocks/link/link.html")
+@@include("blocks/footer/footer.html", {"currentItem": "About"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

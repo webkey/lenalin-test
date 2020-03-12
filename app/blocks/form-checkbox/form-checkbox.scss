@@ -1,0 +1,80 @@
+.form-checkbox {
+	$elem: &;
+	$checkbox-size: 2rem;
+	$checkbox-check-height: 0.6rem;
+	$checkbox-check-width: 1rem;
+
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	font-size: inherit;
+	line-height: 2rem;
+	color: inherit;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+
+	&__label {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 2.06em;
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			transition: border-color ease-in-out 0.2s;
+			box-sizing: border-box;
+		}
+
+		&::before {
+			left: 0;
+			top: 50%;
+			width: $checkbox-size;
+			height: $checkbox-size;
+			margin: -#{round-float($checkbox-size / 2, 1)} 0;
+			border: 1px solid #c4c4c4;
+			background-color: #c4c4c4;
+			border-radius: 0.4rem;
+			transition: opacity ease-in-out 0.2s;
+		}
+
+		&::after {
+			opacity: 0;
+			left: 0;
+			top: 50%;
+			height: $checkbox-check-height;
+			width: $checkbox-check-width;
+			margin: -#{round-float($checkbox-check-height / 2, 1) + 0.1} #{round-float(($checkbox-size - $checkbox-check-width) / 2, 1)};
+			border: solid currentColor;
+			border-width: 0 0 0.2rem 0.2rem;
+			transform: rotate(-30deg) scale3d(1.1, 1.1, 1);
+			transition: transform cubic-bezier(0.45, -1.1, 0.45, 2.1) 0.22s, opacity ease-in-out 0.2s;
+		}
+	}
+
+	&__input {
+		position: absolute;
+		padding: 0;
+		margin: 0;
+		display: none;
+
+		&:checked ~ #{$elem}__label {
+			&::after {
+				opacity: 1;
+				transform: rotate(-45deg) scale3d(1, 1, 1);
+			}
+		}
+
+		&:disabled {
+			opacity: 0.3;
+
+			& ~ #{$elem}__label {
+				cursor: default;
+				opacity: 0.3;
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+.preloader {
+	background-color: rgba(white, 0.5);
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+	z-index: 99999;
+
+	&_fit {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	&_cover {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+	}
+
+	&__figure {
+		$size: 8rem;
+
+		height: $size;
+		width: $size;
+		margin: -#{round-float($size / 2, 1)};
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		background-image: url('../images/preloader.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		&_small {
+			$size: floor-float($size / 2, 1);
+
+			height: $size;
+			width: $size;
+			margin: -#{round-float($size / 2, 1)};
+		}
+
+		&_large {
+			$size: floor-float($size * 1.5, 1);
+
+			height: $size;
+			width: $size;
+			margin: -#{round-float($size / 2, 1)};
+		}
+
+		@include below($lg) {
+			$size: 4.8rem;
+
+			height: $size;
+			width: $size;
+			margin: -#{round-float($size / 2, 1)};
+		}
+	}
+}

@@ -1,0 +1,86 @@
+.form-radio {
+	$elem: &;
+	$radio-size: 2rem;
+	$radio-check-size: 1.2rem;
+
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	font-size: inherit;
+	line-height: 2rem;
+	color: inherit;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+
+	&__label {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 2.06em;
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			transition: all ease-in-out 0.2s;
+			box-sizing: border-box;
+		}
+
+		&::before {
+			left: 0;
+			top: 50%;
+			width: $radio-size;
+			height: $radio-size;
+			margin: -#{round-float($radio-size / 2, 1)} 0;
+			border: 1px solid #c4c4c4;
+			background-color: #c4c4c4;
+			border-radius: round-float($radio-size / 2, 1);
+		}
+
+		&::after {
+			opacity: 0;
+			left: 0;
+			top: 50%;
+			height: $radio-check-size;
+			width: $radio-check-size;
+			margin: -#{round-float($radio-check-size / 2, 1)} #{round-float(($radio-size - $radio-check-size) / 2, 1)};
+			border: round-float($radio-check-size / 2, 1) solid currentColor;
+			border-radius: round-float($radio-check-size / 2, 1);
+
+			$scale: 1.35, 1.35;
+
+			transform: scale($scale);
+			transform: scale3d($scale, 1);
+		}
+	}
+
+	&__input {
+		position: absolute;
+		padding: 0;
+		margin: 0;
+		display: none;
+
+		&:checked ~ #{$elem}__label {
+			&::after {
+				opacity: 1;
+
+				$rotate: 0;
+				$scale: 1, 1;
+
+				transform: scale($scale);
+				transform: scale3d($scale, 1);
+			}
+		}
+
+		&:disabled {
+			opacity: 0.3;
+
+			& ~ #{$elem}__label {
+				cursor: default;
+				opacity: 0.3;
+			}
+		}
+	}
+}

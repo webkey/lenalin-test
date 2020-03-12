@@ -1,13 +1,13 @@
 <div class="form-grid__field form-grid__field_space-small">
 	<div class="form-unit">
 		<div class="form-unit__label">
-			@@include("../form-element/form-label.html", {
+			@@include("blocks/form-element/form-label.html", {
 			"label": "Имя:",
 			"id": "sing-up-name"
 			})
 		</div>
 		<div class="form-unit__input">
-			@@include("../form-element/form-input.html", {
+			@@include("blocks/form-element/form-input.html", {
 			"id": "sing-up-name",
 			"placeholder": "Ваше имя",
 			"required": "true"
@@ -18,13 +18,13 @@
 <div class="form-grid__field form-grid__field_space-small">
 	<div class="form-unit">
 		<div class="form-unit__label">
-			@@include("../form-element/form-label.html", {
+			@@include("blocks/form-element/form-label.html", {
 			"label": "E-mail:",
 			"id": "sing-up-email"
 			})
 		</div>
 		<div class="form-unit__input">
-			@@include("../form-element/form-input.html", {
+			@@include("blocks/form-element/form-input.html", {
 			"id": "sing-up-email",
 			"placeholder": "Ваш e-mail",
 			"type": "email",
@@ -36,14 +36,14 @@
 <div class="form-grid__field form-grid__field_space-small">
 	<div class="form-unit">
 		<div class="form-unit__label">
-			@@include("../form-element/form-label.html", {
+			@@include("blocks/form-element/form-label.html", {
 			"label": "Пароль:",
 			"id": "sing-up-password"
 			})
 		</div>
 		<div class="form-unit__input">
 			<a href="#" class="form-unit__input-icon form-unit__input-icon_show-pass js-show-pass"></a>
-			@@include("../form-element/form-input.html", {
+			@@include("blocks/form-element/form-input.html", {
 			"id": "sing-up-password",
 			"mods": ["icon-right"],
 			"class": "js-main-password",
@@ -57,14 +57,14 @@
 <div class="form-grid__field form-grid__field_space-small">
 	<div class="form-unit">
 		<div class="form-unit__label">
-			@@include("../form-element/form-label.html", {
+			@@include("blocks/form-element/form-label.html", {
 			"label": "Повторить пароль:",
 			"id": "sing-up-confirm-password"
 			})
 		</div>
 		<div class="form-unit__input">
 			<a href="#" class="form-unit__input-icon form-unit__input-icon_show-pass js-show-pass"></a>
-			@@include("../form-element/form-input.html", {
+			@@include("blocks/form-element/form-input.html", {
 			"id": "sing-up-confirm-password",
 			"mods": ["icon-right"],
 			"class": "js-confirm-password",
@@ -72,8 +72,8 @@
 			"type": "password",
 			"required": "true"
 			})
-			@@include("../form-element/feedback-error.html", { "mods": ["confirm-password"], "text": "Пароли не совпадают" })
-			@@include("../form-element/feedback-success.html", { "mods": ["confirm-password"], "text": "Пароли совпадают" })
+			@@include("blocks/form-element/feedback-error.html", { "mods": ["confirm-password"], "text": "Пароли не совпадают" })
+			@@include("blocks/form-element/feedback-success.html", { "mods": ["confirm-password"], "text": "Пароли совпадают" })
 		</div>
 	</div>
 </div>

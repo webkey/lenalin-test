@@ -3,7 +3,7 @@
 		<h1 class="product-card__title">Комплект постельного белья изо льна <strong>Cладкие сны</strong></h1>
 	</div>
 	<div class="product-card__main">
-		@@include("../product-card-gallery/product-card-gallery.html")
+		@@include("blocks/product-card-gallery/product-card-gallery.html")
 	</div>
 	<div class="product-card__aside">
 		<div class="product-card__aside-section">
@@ -52,13 +52,13 @@
 							<div class="form-list">
 								<div class="form-list__list form-list__list_space-small">
 									<div class="form-list__li form-list__li_space-small">
-										@@include("../form-color-check/form-color-check.html", {"type": "radio", "label": "Белый", "color": "#fff", "name": "form-color", "checked": true, "disabled": false})
+										@@include("blocks/form-color-check/form-color-check.html", {"type": "radio", "label": "Белый", "color": "#fff", "name": "form-color", "checked": true, "disabled": false})
 									</div>
 									<div class="form-list__li form-list__li_space-small">
-										@@include("../form-color-check/form-color-check.html", {"type": "radio", "label": "Чёрный", "color": "#000", "name": "form-color", "checked": false, "disabled": false})
+										@@include("blocks/form-color-check/form-color-check.html", {"type": "radio", "label": "Чёрный", "color": "#000", "name": "form-color", "checked": false, "disabled": false})
 									</div>
 									<div class="form-list__li form-list__li_space-small">
-										@@include("../form-color-check/form-color-check.html", {"type": "radio", "label": "Голубой", "color": "#7798ab", "name": "form-color", "checked": false, "disabled": false})
+										@@include("blocks/form-color-check/form-color-check.html", {"type": "radio", "label": "Голубой", "color": "#7798ab", "name": "form-color", "checked": false, "disabled": false})
 									</div>
 								</div>
 							</div>
@@ -72,10 +72,10 @@
 			<div class="product-card-controls">
 				<div class="product-card-controls__cols product-card-controls__cols_align-bottom">
 					<div class="product-card-controls__col product-card-controls__col_6">
-						@@include("../product-card-quantity/product-card-quantity.html")
+						@@include("blocks/product-card-quantity/product-card-quantity.html")
 					</div>
 					<div class="product-card-controls__col product-card-controls__col_6">
-						@@include("../product-card-price/product-card-price.html")
+						@@include("blocks/product-card-price/product-card-price.html")
 					</div>
 				</div>
 			</div>
@@ -85,13 +85,13 @@
 			<div class="product-card-controls">
 				<div class="product-card-controls__cols product-card-controls__cols_align-bottom">
 					<div class="product-card-controls__col product-card-controls__col_6">
-						@@include("../btn-def/btn-def.html", {"mods": ["full-width"], "text": "В корзину"})
+						@@include("blocks/btn-def/btn-def.html", {"mods": ["full-width"], "text": "В корзину"})
 					</div>
 					<div class="product-card-controls__col product-card-controls__col_6">
-						@@include("../btn-def/btn-def.html", {"mods": ["invert", "full-width"], "text": "В избранное"})
+						@@include("blocks/btn-def/btn-def.html", {"mods": ["invert", "full-width"], "text": "В избранное"})
 					</div>
 					<div class="product-card-controls__col">
-						@@include("../btn-special/btn-special.html", {"mods": ["full-width"], "text": "Купить в один клик"})
+						@@include("blocks/btn-special/btn-special.html", {"mods": ["full-width"], "text": "Купить в один клик"})
 					</div>
 				</div>
 			</div>

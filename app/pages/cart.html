@@ -1,16 +1,16 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - Корзина"})
-@@include("../blocks/header/header.html", {"currentItem": "Cart"})
+@@include("blocks/head/head.html", {"title": "Lenalin - Корзина"})
+@@include("blocks/header/header.html", {"currentItem": "Cart"})
 <div class="main">
 	<div class="page">
 		<div class="page__breadcrumbs">
 			<div class="layout-page">
 				<div class="layout-content">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Корзина" })
+					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Корзина" })
 				</div>
 			</div>
 		</div>
 		<div class="page__section page__section_cart">
-			@@include("../blocks/cart/cart.html")
+			@@include("blocks/cart/cart.html")
 		</div>
 	</div>
 	<div class="page-additionally">
@@ -25,7 +25,7 @@
 			<div class="additionally__content">
 				<div class="layout-page">
 					<div class="layout-content">
-						@@include('../blocks/popular-slider/popular-slider.html')
+						@@include("blocks/popular-slider/popular-slider.html")
 					</div>
 				</div>
 			</div>
@@ -33,8 +33,8 @@
 	</div>
 </div>
 
-@@include("../blocks/footer/footer.html", {"currentItem": "Catalog"})
-@@include("../blocks/popup-form/login.html")
-@@include("../blocks/popup-form/sing-up.html")
-@@include("../blocks/popup-form/recovery-password.html")
-@@include("../blocks/link/link.html")
+@@include("blocks/footer/footer.html", {"currentItem": "Catalog"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

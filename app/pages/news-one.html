@@ -1,11 +1,11 @@
-@@include("../blocks/head/head.html", {"title": "Lenalin - Как правильно выбирать подарок ребенку?"})
-@@include("../blocks/header/header.html", {"currentItem": "News"})
+@@include("blocks/head/head.html", {"title": "Lenalin - Как правильно выбирать подарок ребенку?"})
+@@include("blocks/header/header.html", {"currentItem": "News"})
 <div class="main">
 	<div class="page-news-one">
 		<div class="layout-page">
 			<div class="layout-content">
 				<div class="page-news-one__breadcrumbs">
-					@@include("../blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "news.html", "text": "Новости"}]})
+					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "news.html", "text": "Новости"}]})
 				</div>
 				<div class="page-news-one__heading">
 					<h1 class="page-news-one__title">Как правильно выбирать подарок ребенку?</h1>
@@ -29,7 +29,7 @@
 							<p>Мы любим лен, мы знаем о нем все и уверены, что это лучший материал для создания комфортного и красивого личного пространства.</p>
 						</div>
 						<aside class="page-news-one__layout-aside">
-							@@include('../blocks/news-previews-short/news-previews-short.html')
+							@@include("blocks/news-previews-short/news-previews-short.html")
 						</aside>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 			<div class="additionally__content">
 				<div class="layout-page">
 					<div class="layout-content">
-						@@include('../blocks/popular-slider/popular-slider.html')
+						@@include("blocks/popular-slider/popular-slider.html")
 					</div>
 				</div>
 			</div>
@@ -56,8 +56,8 @@
 	</div>
 </div>
 
-@@include("../blocks/footer/footer.html", {"currentItem": "News"})
-@@include("../blocks/popup-form/login.html")
-@@include("../blocks/popup-form/sing-up.html")
-@@include("../blocks/popup-form/recovery-password.html")
-@@include("../blocks/link/link.html")
+@@include("blocks/footer/footer.html", {"currentItem": "News"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

@@ -14,7 +14,7 @@
 			</div>
 		</div>}
 		<div class="widget-product__features">
-			@@include("../dl/dl.html", {"items": [
+			@@include("blocks/dl/dl.html", {"items": [
 			{"title": "Материал:", "descr": "лен"},
 			{"title": "Цвет:", "descr": "белый"},
 			{"title": "Размер:", "descr": "2 спл"}
@@ -22,8 +22,8 @@
 		</div>
 		<div class="widget-product__controls">
 			@@if(quantity !== "@@quantity" && quantity !== false) {<div class="widget-product__count">Количество: @@quantity</div>}
-			@@if(spinner !== "@@spinner" && spinner !== false) {<div class="widget-product__spinner">@@include("../product-quantity/product-quantity.html")</div>}
-			@@if(order !== "@@order" && spinner !== false) {<div class="widget-product__order">@@include("../btn-def/btn-def.html", {"mods": ["invert", "small"], "href": "order.html", "text": "Заказать снова"})</div>}
+			@@if(spinner !== "@@spinner" && spinner !== false) {<div class="widget-product__spinner">@@include("blocks/product-quantity/product-quantity.html")</div>}
+			@@if(order !== "@@order" && spinner !== false) {<div class="widget-product__order">@@include("blocks/btn-def/btn-def.html", {"mods": ["invert", "small"], "href": "order.html", "text": "Заказать снова"})</div>}
 		</div>
 	</div>
 </div>

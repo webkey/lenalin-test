@@ -1,0 +1,48 @@
+@@include("blocks/head/head.html", {"title": "Lenalin - Карточка продукта"})
+@@include("blocks/header/header.html", {"currentItem": "Catalog"})
+<div class="main">
+	<div class="page-product-card">
+		<div class="layout-page">
+			<div class="layout-content">
+				<div class="page-product-card__section">
+					<h1>Типографика</h1>
+					<div class="form-list">
+						<div class="form-list__list form-list__list_space-small">
+							<div class="form-list__li form-list__li_space-small">
+								@@include("blocks/form-checkbox/form-checkbox.html", {"label": "Чекбокс_1", "name": "checkbox-name_1", "checked": false, "disabled": false})
+							</div>
+							<div class="form-list__li form-list__li_space-small">
+								@@include("blocks/form-checkbox/form-checkbox.html", {"label": "Чекбокс_2", "name": "checkbox-name_2", "checked": true, "disabled": false})
+							</div>
+							<div class="form-list__li form-list__li_space-small">
+								@@include("blocks/form-checkbox/form-checkbox.html", {"label": "Чекбокс_3", "name": "checkbox-name_3", "checked": false, "disabled": true})
+							</div>
+							<div class="form-list__li form-list__li_space-small">
+								@@include("blocks/form-checkbox/form-checkbox.html", {"label": "Чекбокс_4", "name": "checkbox-name_3", "checked": true, "disabled": true})
+							</div>
+
+							<div class="form-list__li form-list__li_space-small">
+								@@include("blocks/form-radio/form-radio.html", {"label": "Радио_1", "name": "checkbox-name", "checked": false, "disabled": false})
+							</div>
+							<div class="form-list__li form-list__li_space-small">
+								@@include("blocks/form-radio/form-radio.html", {"label": "Радио_2", "name": "checkbox-name", "checked": true, "disabled": false})
+							</div>
+							<div class="form-list__li form-list__li_space-small">
+								@@include("blocks/form-radio/form-radio.html", {"label": "Радио_3", "name": "checkbox-name", "checked": false, "disabled": true})
+							</div>
+							<div class="form-list__li form-list__li_space-small">
+								@@include("blocks/form-radio/form-radio.html", {"label": "Радио_4", "name": "checkbox-name_2", "checked": true, "disabled": true})
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@@include("blocks/footer/footer.html", {"currentItem": "Catalog"})
+@@include("blocks/popup-form/login.html")
+@@include("blocks/popup-form/sing-up.html")
+@@include("blocks/popup-form/recovery-password.html")
+@@include("blocks/link/link.html")

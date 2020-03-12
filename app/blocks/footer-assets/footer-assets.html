@@ -3,26 +3,26 @@
 		<div class="footer-assets__box">
 			<div class="footer-assets__box-heading"><a href="#">Разделы</a></div>
 			<div class="footer-assets__box-content">
-				@@include("../footer-nav/footer-nav-01.html", {"currentItem": "@@currentItem"})
+				@@include("blocks/footer-nav/footer-nav-01.html", {"currentItem": "@@currentItem"})
 			</div>
 		</div>
 		<div class="footer-assets__box">
 			<div class="footer-assets__box-heading">Помощь</div>
 			<div class="footer-assets__box-content">
-				@@include("../footer-nav/footer-nav-02.html", {"currentItem": "@@currentItem"})
+				@@include("blocks/footer-nav/footer-nav-02.html", {"currentItem": "@@currentItem"})
 			</div>
 		</div>
 		<div class="footer-assets__box footer-assets__box_sm_full-width footer-assets__box_sm_divider">
 			<div class="footer-assets__box-heading">Контакты</div>
 			<div class="footer-assets__box-content">
-				@@include("../footer-contacts/footer-contacts.html")
+				@@include("blocks/footer-contacts/footer-contacts.html")
 			</div>
 		</div>
 		<div class="footer-assets__box footer-assets__box_sm_full-width">
 			<div class="footer-assets__box-heading">Принимаем к оплате:</div>
 			<div class="footer-assets__box-content">
 				<div class="footer-assets__box-content-item">
-					@@include("../payment-methods/payment-methods.html", {
+					@@include("blocks/payment-methods/payment-methods.html", {
 					"items": [
 						{"image": "icon-pay-visa_white.svg", "title": "Visa"},
 						{"image": "icon-pay-mastercard_white.svg", "title": "Mastercard"},
@@ -32,7 +32,7 @@
 					})
 				</div>
 				<div class="footer-assets__box-content-item">
-					@@include("../footer-callback/footer-callback.html")
+					@@include("blocks/footer-callback/footer-callback.html")
 				</div>
 			</div>
 		</div>
