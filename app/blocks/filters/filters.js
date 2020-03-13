@@ -31,7 +31,7 @@ app.filters = {
 			const $curItem = $curEl.closest(self.filtersItemElement);
 
 			// Show preloader
-			app.common.preloader.show($curEl.closest(self.initElement).parent(), 'fit', 'small');
+			app.preloader.show($curEl.closest(self.initElement).parent(), 'fit', 'small');
 
 			// setTimeout for example
 			setTimeout(() => {
@@ -54,7 +54,7 @@ app.filters = {
 				}
 
 				// Hide preloader
-				app.common.preloader.hide();
+				app.preloader.hide();
 			}, 500);
 		});
 
@@ -62,14 +62,14 @@ app.filters = {
 			const $curEl = $(this);
 
 			// Show preloader
-			app.common.preloader.show($curEl.closest(self.initElement).parent(), 'fit', 'small');
+			app.preloader.show($curEl.closest(self.initElement).parent(), 'fit', 'small');
 
 			// setTimeout for example
 			setTimeout(() => {
 				$curEl.parentsUntil(self.initElement).filter(self.filtersItemElement).addClass('current');
 
 				// Hide preloader
-				app.common.preloader.hide();
+				app.preloader.hide();
 			}, 500);
 		});
 	}

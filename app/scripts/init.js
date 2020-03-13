@@ -11,6 +11,7 @@ app.filters.init();
 app.newsSlider.init();
 app.popularSlider.init();
 app.productCardGallery.init();
+app.formSelect.init();
 app.formElement.togglePassword();
 app.formElement.confirmPassword();
 app.formSpinner.init();

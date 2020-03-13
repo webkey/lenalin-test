@@ -1,11 +1,17 @@
 @@include("blocks/head/head.html", {"title": "Lenalin - Карточка продукта"})
 @@include("blocks/header/header.html", {"currentItem": "Catalog"})
 <div class="main">
-	<div class="page-product-card">
+	<div class="page">
 		<div class="layout-page">
 			<div class="layout-content">
-				<div class="page-product-card__section">
-					<h1>Типографика</h1>
+				<div class="page__breadcrumbs">
+					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Typography" })
+				</div>
+				<div class="page__heading">
+					<h1 class="page__title">Typography</h1>
+				</div>
+				<div class="page__section edit-content">
+					<h2>Checkboxes</h2>
 					<div class="form-list">
 						<div class="form-list__list form-list__list_space-small">
 							<div class="form-list__li form-list__li_space-small">
@@ -20,7 +26,13 @@
 							<div class="form-list__li form-list__li_space-small">
 								@@include("blocks/form-checkbox/form-checkbox.html", {"label": "Чекбокс_4", "name": "checkbox-name_3", "checked": true, "disabled": true})
 							</div>
-
+						</div>
+					</div>
+				</div>
+				<div class="page__section edit-content">
+					<h2>Radio buttons</h2>
+					<div class="form-list">
+						<div class="form-list__list form-list__list_space-small">
 							<div class="form-list__li form-list__li_space-small">
 								@@include("blocks/form-radio/form-radio.html", {"label": "Радио_1", "name": "checkbox-name", "checked": false, "disabled": false})
 							</div>
@@ -32,6 +44,100 @@
 							</div>
 							<div class="form-list__li form-list__li_space-small">
 								@@include("blocks/form-radio/form-radio.html", {"label": "Радио_4", "name": "checkbox-name_2", "checked": true, "disabled": true})
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page__section edit-content">
+					<h2>Inputs</h2>
+					<div class="form-grid">
+						<div class="form-grid__row">
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Input 1:",
+											"id": "example-input-text-1"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-element/form-input.html", {
+											"id": "example-input-text-1",
+											"placeholder": "Input 1",
+											"type": "text",
+											"required": true
+											})
+										</div>
+										<div class="form-unit__note">Input text</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Input 2:",
+											"id": "example-input-email-1"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-element/form-input.html", {
+											"id": "example-input-email-1",
+											"placeholder": "Input 2",
+											"type": "email",
+											"required": true
+											})
+										</div>
+										<div class="form-unit__note">Input email</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page__section edit-content">
+					<h2>Selects</h2>
+					<div class="form-grid">
+						<div class="form-grid__row">
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Select example 1:",
+											"id": "example-select-1"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-select/form-select.html", {
+											"id": "example-select-1",
+											"required": true
+											})
+										</div>
+										<div class="form-unit__note">Select required</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Select example 2:",
+											"id": "example-select-2"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-select/form-select.html", {
+											"id": "example-select-2",
+											"required": false
+											})
+										</div>
+										<div class="form-unit__note">Select not required</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

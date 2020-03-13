@@ -124,6 +124,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^2.1.4",
+    "select2": "^4.0.13",
     "simplebar": "^5.1.0",
     "svg4everybody": "^2.0.0",
     "swiper": "^4.5.1",
