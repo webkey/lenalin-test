@@ -1,5 +1,4 @@
-<select
-	class="form-select@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ form-select_`+mods[i]+`}}@@if(context.classes){@@for (var i = 0; i < classes.length; i++){ `+classes[i]+`}} js-form-select" id="@@id" name="@@id"@@if(context.placeholder){ data-placeholder="@@placeholder" }@@if(context.attrs){@@for (var i = 0; i < attrs.length; i++){ `+attrs[i].attr+`="`+attrs[i].value+`"}}@@if(context.disabled){ disabled}@@if(context.required){ required}>
+<select class="form-select@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ form-select_`+mods[i]+`}}@@if(context.classes){@@for (var i = 0; i < classes.length; i++){ `+classes[i]+`}} js-form-select" id="@@id" name="@@id"@@if(context.placeholder){ data-placeholder="@@placeholder" }@@if(context.attrs){@@for (var i = 0; i < attrs.length; i++){ `+attrs[i].attr+`="`+attrs[i].value+`"}}@@if(context.disabled){ disabled}@@if(context.required){ required}>
 	<!--Important! The first element must have a value of ""-->
 	<option value="">- Choose option -</option>
 	<option value="1">The Pilgrim’s Progress by John Bunyan (1678)</option>
