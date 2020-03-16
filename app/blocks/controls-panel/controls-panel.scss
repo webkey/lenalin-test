@@ -1,0 +1,15 @@
+.controls-panel {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	&__sorting {
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+	}
+
+	&__show {
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+	}
+}

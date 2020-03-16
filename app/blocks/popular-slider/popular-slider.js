@@ -21,48 +21,53 @@ app.popularSlider = {
 		const $slider = $(this.sliderElement);
 
 		if ($slider.length) {
-			const slider = new Swiper(this.sliderElement, this.options);
+			$.each($slider, function () {
+				const $curSlider = $(this);
+				const $nextEl = $curSlider.find('.js-popular-slider__button-next');
+				const $prevEl = $curSlider.find('.js-popular-slider__button-prev');
 
-			slider.on('init', function () {
-				$slider.addClass('is-loaded');
-			});
+				const sliderInstance = new Swiper($curSlider.find('.swiper-container'), {
+					init: false,
+					loop: true,
+					slidesPerView: 3,
+					slidesPerGroup: 3,
+					spaceBetween: 30,
+					watchSlidesVisibility: true,
+					lazy: true,
 
-			slider.init();
-		}
-	},
-	options: {
-		init: false,
-		loop: true,
-		slidesPerView: 3,
-		slidesPerGroup: 3,
-		spaceBetween: 30,
-		watchSlidesVisibility: true,
-		lazy: true,
+					navigation: {
+						nextEl: $nextEl,
+						prevEl: $prevEl
+					},
 
-		navigation: {
-			nextEl: '.js-popular-slider__button-next',
-			prevEl: '.js-popular-slider__button-prev'
-		},
+					breakpoints: {
+						767: {
+							slidesPerView: 2,
+							slidesPerGroup: 2,
+							spaceBetween: 20
+						},
+						575: {
+							slidesPerView: 1,
+							slidesPerGroup: 1,
+							spaceBetween: 16
+						},
+					},
 
-		breakpoints: {
-			767: {
-				slidesPerView: 2,
-				slidesPerGroup: 2,
-				spaceBetween: 20
-			},
-			575: {
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				spaceBetween: 16
-			},
-		},
+					on: {
+						slideChangeTransitionEnd() {
+							if (app.lazyLoadNewsSliderInstance) {
+								app.lazyLoadNewsSliderInstance.update();
+							}
+						}
+					}
+				});
 
-		on: {
-			slideChangeTransitionEnd() {
-				if (app.lazyLoadNewsSliderInstance) {
-					app.lazyLoadNewsSliderInstance.update();
-				}
-			}
+				sliderInstance.on('init', function () {
+					$curSlider.addClass('is-loaded');
+				});
+
+				sliderInstance.init();
+			})
 		}
 	}
 };

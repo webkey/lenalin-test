@@ -1,0 +1,16 @@
+.form-unit-inline {
+	&__label,
+	&__input {
+		display: inline-block;
+		vertical-align: top;
+		font: inherit;
+	}
+
+	&__label {
+		margin-right: 0.5rem;
+
+		label {
+			font: inherit;
+		}
+	}
+}

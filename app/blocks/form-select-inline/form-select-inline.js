@@ -1,5 +1,5 @@
-app.formSelect = {
-	initElement: '.js-form-select',
+app.formSelectInline = {
+	initElement: '.js-form-select-inline',
 	init(selector) {
 		app.common.initScript('select2.full.min', 'select2', () => {
 			const el = document.querySelectorAll(selector || this.initElement);
@@ -18,9 +18,10 @@ app.formSelect = {
 				theme: 'custom',
 				language: 'ru',
 				width: '100%',
+				dropdownAutoWidth: true,
 				minimumResultsForSearch: showSearch,
-				containerCssClass: 'form-select__selection',
-				dropdownCssClass: 'form-select__dropdown',
+				containerCssClass: 'form-select-inline__selection',
+				dropdownCssClass: 'form-select-inline__dropdown',
 			});
 		}
 	},

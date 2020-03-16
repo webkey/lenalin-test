@@ -1,29 +1,37 @@
 .page-contacts {
 	position: relative;
 
+	&__content {
+		width: 50%;
+		padding-right: 10rem;
+		padding-bottom: 9.4rem;
+	}
+
 	&__breadcrumbs {
 		margin-bottom: 2rem;
 		padding: 2rem 0 0;
 	}
 
 	&__heading {
-		margin-bottom: 3rem;
+		margin-bottom: 2.9rem;
+
+		&-title {
+			font-weight: bold;
+			font-size: 4.2rem;
+			line-height: 5rem;
+		}
 	}
 
-	&__title {
-		font-weight: bold;
-		font-size: 4.2rem;
-		line-height: 5rem;
-	}
+	&__entry {
+		margin-bottom: 4rem;
 
-	&__content {
-		width: 50%;
-		padding-right: 10rem;
-		padding-bottom: 6rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	&__section {
-		margin-bottom: 3rem;
+		margin-bottom: 2.6rem;
 
 		&:last-child {
 			margin-bottom: 0;

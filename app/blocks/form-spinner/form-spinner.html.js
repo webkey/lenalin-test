@@ -43,18 +43,19 @@ app.formSpinner = {
 				$curInput.val(value);
 			});
 
-			$curSpinner.on('keyup', function () {
-				const $curEl = $(this);
-				// let value = parseFloat($curEl.val());
-
-				if ($curEl.val() === '' ) {
-					$curEl.val('');
-				} else if (value) {
-					$curEl.val(value < 1 ? 1 : value);
-				} else {
-					$curEl.val(1);
-				}
-			});
+			// $curSpinner.on('keyup', function () {
+			// 	const $curEl = $(this);
+			// 	let value = parseFloat($curEl.val());
+			//
+			//
+			// 	if ($curEl.val() === '' ) {
+			// 		$curEl.val('');
+			// 	} else if (value) {
+			// 		$curEl.val(value < 1 ? 1 : value);
+			// 	} else {
+			// 		$curEl.val(1);
+			// 	}
+			// });
 
 			$curSpinner.on('blur', function () {
 				const $curEl = $(this);
@@ -62,20 +63,6 @@ app.formSpinner = {
 					$curEl.val(1);
 				}
 			});
-
-			// $curSpinner.on('keyup', function (e) {
-			// 	const $curEl = $(this);
-			// 	let value = Number($curEl.val());
-			// 	if (e.key === 'ArrowUp') {
-			// 		e.preventDefault();
-			// 		++value;
-			// 	}
-			// 	if (e.key === 'ArrowDown' && value > 1) {
-			// 		e.preventDefault();
-			// 		--value;
-			// 	}
-			// 	$curEl.val(value);
-			// })
 		});
 	}
 };

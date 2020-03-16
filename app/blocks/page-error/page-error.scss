@@ -1,4 +1,6 @@
 .page-error {
+	overflow: hidden;
+
 	&__title {
 		font-weight: bold;
 		font-size: 4.8rem;
@@ -9,30 +11,41 @@
 	&__text {
 		font-size: 2.4rem;
 		line-height: 2.8rem;
-		margin-bottom: 5.3rem;
+		margin-bottom: 5.8rem;
+		max-width: 45rem;
 	}
 
 	&__layout {
 		display: flex;
 		align-items: center;
+		min-height: 64.2rem;
 
 		&-text {
 			$width: 50%;
 
 			flex: 1 0 $width;
+			max-width: $width;
+			padding: 2.8rem 0 0;
 		}
 
 		&-figure {
 			$width: 50%;
 
 			flex: 1 0 $width;
+			max-width: $width;
+			position: relative;
 		}
 	}
 
 	&__figure {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 136.4%;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+		transform: translate(-32.7%, -38.2%);
 
 		&::before {
 			content: "";

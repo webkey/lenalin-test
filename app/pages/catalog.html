@@ -16,33 +16,26 @@
 							@@include("blocks/filters-panel/filters-panel.html")
 						</aside>
 						<div class="page-catalog__layout-content">
-							<div class="page-catalog__thumbs">
-								<div class="page-catalog__sorting">
-									<div class="form-unit">
-										<div class="form-unit__label">
-											<label for="sort-by" class="form-def-label">Сортировать по</label>
-										</div>
-										<div class="form-unit__input">
-											<select class="form-select js-form-select" id="sort-by" name="sort-by" required>
-												<option value="">Сортировать по</option>
-												<option value="1">Сортировать по дате</option>
-												<option value="2">Сортировать по релевантности</option>
-											</select>
-										</div>
+							<div class="controls-panel">
+								<div class="controls-panel__sorting">
+									<div class="form-unit-inline__input">
+										@@include("blocks/form-select-inline/form-select-inline.html", {
+										"id": "sort-by",
+										"required": false,
+										"options": [{"val": "", "text": "Сортировать по"}, {"val": "price", "text": "Сортировать по цене"}, {"val": "date", "text": "Сортировать по дате"}, {"val": "popular", "text": "Сортировать по популярности"}]
+										})
 									</div>
 								</div>
-								<div class="page-catalog__show">
-									<div class="form-unit">
-										<div class="form-unit__label">
-											<label for="show-count" class="form-def-label">Показывать по:</label>
-										</div>
-										<div class="form-unit__input">
-											<select class="form-select js-form-select" id="show-count" name="show-count" required>
-												<option value="9">9</option>
-												<option value="1">12</option>
-												<option value="2">25</option>
-											</select>
-										</div>
+								<div class="controls-panel__show">
+									<div class="form-unit-inline__label">
+										<label for="show-count">Показывать по:</label>
+									</div>
+									<div class="form-unit-inline__input">
+										@@include("blocks/form-select-inline/form-select-inline.html", {
+										"id": "show-count",
+										"required": false,
+										"options": [{"val": "9", "text": "9"}, {"val": "12", "text": "12"}, {"val": "25", "text": "25"}]
+										})
 									</div>
 								</div>
 							</div>

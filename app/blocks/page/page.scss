@@ -4,30 +4,51 @@
 	&__breadcrumbs {
 		position: relative;
 		z-index: 2;
-		padding: 2rem 0 0;
-		margin-bottom: 2rem;
+		padding: 1.7rem 0 0;
+		margin-bottom: 2.2rem;
+		line-height: 1;
 	}
 
 	&__heading {
-		margin-bottom: 3rem;
-	}
+		margin-bottom: 2.7rem;
 
-	&__control-panel {
-		margin-bottom: 3rem;
-	}
-
-	&__title {
-		font-weight: bold;
-		font-size: 4.2rem;
-		line-height: 5rem;
-	}
-
-	&__content {
-		margin-bottom: 6rem;
+		&_space-large {
+			margin-bottom: 5.7rem;
+		}
 	}
 
 	&__section {
-		margin-bottom: 4rem;
+		margin-bottom: 6rem;
+
+		&_space-smallest {
+			margin-bottom: 2.8rem;
+		}
+
+		&_space-small {
+			margin-bottom: 4rem;
+		}
+
+		&_space-large {
+			margin-bottom: 8rem;
+		}
+
+		&_space-largest {
+			margin-bottom: 10rem;
+		}
+
+		&_align-center {
+			text-align: center;
+		}
+
+		&_indented {
+			&-left {
+				margin-left: -32.2rem;
+			}
+
+			&-right {
+				margin-right: -32.2rem;
+			}
+		}
 
 		&:last-child {
 			margin-bottom: 0;

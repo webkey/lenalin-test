@@ -116,7 +116,7 @@
 											"required": true
 											})
 										</div>
-										<div class="form-unit__note">Select required</div>
+										<div class="form-unit__note">required</div>
 									</div>
 								</div>
 							</div>
@@ -132,10 +132,141 @@
 										<div class="form-unit__input">
 											@@include("blocks/form-select/form-select.html", {
 											"id": "example-select-2",
+											"search": true,
 											"required": false
 											})
 										</div>
-										<div class="form-unit__note">Select not required</div>
+										<div class="form-unit__note">has search, no required</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-grid__row">
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Select example 2:",
+											"id": "example-select-3"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-select/form-select.html", {
+											"id": "example-select-3",
+											"disabled": true,
+											"required": true
+											})
+										</div>
+										<div class="form-unit__note">disabled, required</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Select example 3:",
+											"id": "example-select-4"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-select/form-select.html", {
+											"id": "example-select-4",
+											"disabled": true,
+											"selected": true,
+											"required": false
+											})
+										</div>
+										<div class="form-unit__note">disabled, selected, no required</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-grid__row">
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Select example 5:",
+											"id": "example-select-5"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-select/form-select.html", {
+											"id": "example-select-5",
+											"multiple": true,
+											"required": true
+											})
+										</div>
+										<div class="form-unit__note">multiple, required</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Select example 6:",
+											"id": "example-select-6"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-select/form-select.html", {
+											"id": "example-select-6",
+											"multiple": true,
+											"required": false
+											})
+										</div>
+										<div class="form-unit__note">multiple, no required</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-grid__row">
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Select example 7:",
+											"id": "example-select-7"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-select/form-select.html", {
+											"id": "example-select-7",
+											"multiple": true,
+											"disabled": true,
+											"required": true
+											})
+										</div>
+										<div class="form-unit__note">multiple, disabled, required</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-grid__col form-grid__col_6">
+								<div class="form-grid__field">
+									<div class="form-unit">
+										<div class="form-unit__label">
+											@@include("blocks/form-element/form-label.html", {
+											"label": "Select example 8:",
+											"id": "example-select-8"
+											})
+										</div>
+										<div class="form-unit__input">
+											@@include("blocks/form-select/form-select.html", {
+											"id": "example-select-8",
+											"multiple": true,
+											"selected": true,
+											"disabled": true,
+											"required": false
+											})
+										</div>
+										<div class="form-unit__note">multiple, disabled, selected, no required</div>
 									</div>
 								</div>
 							</div>

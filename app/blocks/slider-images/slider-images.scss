@@ -1,4 +1,4 @@
-.popular-slider {
+.slider-images {
 	position: relative;
 
 	html:not(.no-js) &:not(.is-loaded) {
@@ -9,55 +9,45 @@
 
 	&__slide {
 		position: relative;
+
+		&-bg {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+
+			&::before {
+				content: "";
+				display: block;
+				position: relative;
+
+				@include ratio(88, 57);
+			}
+		}
 	}
 
 	&__controls {
 		position: absolute;
-		top: 18.3rem;
-		left: -10rem;
-		height: 0;
-		width: calc(100% + 20rem);
+		left: 0.9rem;
+		bottom: 1rem;
+		height: 10.8rem;
+		width: 4.8rem;
 		z-index: 5;
-
-		@include below($xl) {
-			width: 100%;
-			left: 0;
-		}
-
-		&_vertical-middle {
-			@include below($lg) {
-				top: 15vw;
-			}
-
-			@include below($md) {
-				top: 22.5vw;
-			}
-
-			@include below($sm) {
-				top: 42.8vw;
-			}
-		}
-
-		&-holder {
-			position: relative;
-			height: 0;
-			padding: 0 2rem;
-		}
 	}
 
 	&__button {
 		$size: 4.8rem;
 
+		position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: $size;
 		width: $size;
-		margin-top: -#{round-float($size / 2, 1)};
+		margin: 0;
 		color: black;
 		border-radius: $size;
 		background-color: white;
-		transition: background-color $animation-speed, color $animation-speed, transform 0.1s;
+		transition: all $animation-speed;
 		cursor: pointer;
 		box-shadow: 0 0.4rem 2rem rgba(black, 0.15);
 
@@ -74,11 +64,13 @@
 		}
 
 		&_prev {
-			float: left;
+			left: 0;
+			top: 0;
 		}
 
 		&_next {
-			float: right;
+			left: 0;
+			bottom: 0;
 		}
 
 		// :hover

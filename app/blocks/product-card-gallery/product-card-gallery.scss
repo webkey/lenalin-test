@@ -214,7 +214,7 @@ $base-color: #cab3b1;
 			color: black;
 			border-radius: $size;
 			background-color: white;
-			transition: all $animation-speed;
+			transition: background-color $animation-speed, color $animation-speed, transform 0.1s;
 			cursor: pointer;
 			box-shadow: 0 0.4rem 2rem rgba(black, 0.15);
 			user-select: none;

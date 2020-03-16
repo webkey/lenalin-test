@@ -1,6 +1,6 @@
-.form-select {
+.form-select-inline {
 	$el: &;
-	$select-arrow-width: $form-def-height;
+	$select-arrow-width: 2rem;
 
 	// Селект, который будет кастомизироваться, необходимо скрыть, пока на нем не отработает скрипт
 	html:not(.no-js) & {
@@ -18,19 +18,17 @@
 		&.select2-selection {
 			display: block;
 			position: relative;
-			height: $form-def-height;
-			width: 100%;
-			padding: 0.9rem #{$select-arrow-width} 0.9rem 1.2rem;
+			height: auto;
+			width: auto;
+			padding: 0 #{$select-arrow-width} 0 0;
 			margin: 0;
-			background-color: $form-def-bg-color;
+			background: none;
 			box-shadow: none;
 			border-radius: 0;
-			border: 0.1rem solid $form-def-border-color;
-			font-family: inherit;
-			font-size: 1.2rem;
-			line-height: 2rem;
-			color: $form-def-text-color;
-			transition: color $animation-speed, border $animation-speed;
+			border: none;
+			font: inherit;
+			color: inherit;
+			transition: color $animation-speed;
 
 			// ------ mob -----------------------------------------
 			// Set style for mobile
@@ -73,28 +71,30 @@
 			background: none;
 			z-index: 5;
 
-			.select2-container--open & {
-				transform: rotate(0.5turn);
-			}
-
 			// ------ mob -----------------------------------------
 			// Set style for mobile
 
 			b {
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				width: 9px;
+				height: 5px;
+				margin: -2px 0;
 				border: none;
-				left: 0;
-				top: 0;
-				height: 100%;
-				width: 100%;
-				margin: 0;
+
+				.select2-container--open & {
+					transform: rotate(0.5turn);
+				}
 
 				&::before,
 				&::after {
 					content: "";
 					position: absolute;
 					top: 50%;
-					width: 8px;
-					height: 2px;
+					width: 6px;
+					height: 1px;
 					background-color: $text-color;
 					margin-top: -1px;
 					z-index: 1;
@@ -102,132 +102,12 @@
 
 				&::before {
 					transform: rotate(45deg);
-					right: 18px;
+					right: 3px;
 				}
 
 				&::after {
 					transform: rotate(-45deg);
-					right: 13px;
-				}
-			}
-		}
-
-		// MULTIPLE
-		// ====================================================
-		&.select2-selection--multiple {
-			height: auto;
-			min-height: $form-def-height;
-			// Внутренние отступы поля выбора отличаются от single-селекта
-			// По вертикали отступы должны быть меньше на расстояние между
-			// активными опшинами мультиселекта + размер их бордера
-			padding: 0.5rem 0.8rem;
-			cursor: text;
-
-			// ------ mob -----------------------------------------
-			// Set style for mobile
-
-			.select2-selection__rendered {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				width: 100%;
-
-				li {
-					list-style: none;
-					padding: 0 0.3rem;
-
-					&::before {
-						content: none;
-					}
-				}
-			}
-
-			.select2-selection__placeholder {
-				float: left;
-				margin: 0.3rem 0;
-			}
-
-			// Clear button
-			.select2-selection__clear {
-				cursor: pointer;
-				float: right;
-				font-weight: normal;
-				margin-top: 0.3rem;
-			}
-
-			// Активные опшины
-			.select2-selection__choice {
-				float: left;
-				padding: 0 0.5rem;
-				background-color: #e4e4e4;
-				border: 1px solid $form-def-border-color;
-				border-radius: 0;
-				cursor: default;
-				overflow: hidden;
-				white-space: nowrap;
-				text-overflow: ellipsis;
-				max-width: 24rem;
-
-				// ------ mob -----------------------------------------
-				// Set style for mobile
-			}
-
-			.select2-selection__choice,
-			.select2-search--inline {
-				margin: 0.3rem 0.4rem 0.3rem 0;
-			}
-
-			// SEARCH for MULTIPLE
-			// ====================================================
-			.select2-search--inline {
-				float: left;
-				border: solid transparent;
-				border-width: 1px 0;
-
-				// input .select2-search__field лежащий внутри поля выбора multiple-селекта.
-				// При фокусе на поле выбора, курсор попадает в этот input,
-				// и служит полем ввода для автокомплита.
-				// В single-селекте аналогичное поле автокомплита
-				// находится вверху выпадающего меню опшинов.
-				input {
-					display: block;
-					margin-top: 0;
-					font-family: inherit;
-					font-size: inherit;
-					line-height: inherit;
-					padding: 0;
-					background: transparent;
-					border: none;
-					outline: 0;
-					box-shadow: none;
-					-webkit-appearance: textfield;
-					transition: border $animation-speed;
-
-					@include input-placeholder {
-						color: $form-def-placeholder-color;
-						transition: $animation-speed opacity;
-					}
-				}
-			}
-
-			// Крестик для удаления активного опшина
-			.select2-selection__choice__remove {
-				display: inline-block;
-				cursor: pointer;
-				margin-right: 2px;
-				color: #999;
-				font-weight: normal; // Перебить стили
-
-				&:hover {
-					color: #333;
-				}
-			}
-
-			// Disabled
-			&.select2-container--disabled {
-				.select2-selection__choice__remove,
-				.select2-selection__clear {
-					display: none;
+					right: 0;
 				}
 			}
 		}
@@ -271,9 +151,10 @@
 	// ====================================================
 	&__dropdown {
 		// Общие стили для выпадающего списка селекта
-		.select2-dropdown {
+		&.select2-dropdown {
 			overflow: hidden; // Если есть закругления, то нужно обрезать внутренние элементы
-			border: 0.1rem solid $form-def-border-color--focus;
+			max-width: 20rem;
+			border: 0.1rem solid $form-def-border-color;
 			border-radius: 0;
 			background-color: $form-def-bg-color;
 			z-index: 5; // Поднять выше стрелок соседних селектов
@@ -282,7 +163,7 @@
 			// Set style for mobile
 		}
 
-		.select2-container--open {
+		.select2-container--open & {
 			// Специальные стили для выпадающего меню
 			// при открытии ВЫШЕ поля выбора
 			&.select2-container--above {
@@ -302,7 +183,7 @@
 			}
 
 			// Arrow active
-			.select2-selection__arrow {
+			&.select2-selection__arrow {
 				b {
 					&::before {
 						transform: rotate(-45deg);
@@ -316,16 +197,18 @@
 
 			// Специальные стили для выпадающего меню
 			// при открытии ВЫШЕ поля выбора
-			.select2-dropdown--above {
-				border-bottom: none;
+			&.select2-dropdown--above {
+				margin-bottom: 0.5rem;
+				border-top: 0.1rem solid $form-def-border-color;
 				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0;
 			}
 
 			// Специальные стили для выпадающего меню
 			// при открытии НИЖЕ поля выбора
-			.select2-dropdown--below {
-				border-top: none;
+			&.select2-dropdown--below {
+				margin-top: 0.5rem;
+				border-bottom: 0.1rem solid $form-def-border-color;
 				border-top-left-radius: 0;
 				border-top-right-radius: 0;
 			}

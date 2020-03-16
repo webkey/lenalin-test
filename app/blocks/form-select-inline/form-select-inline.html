@@ -1,0 +1,6 @@
+<select class="form-select-inline@@if(context.mods){@@for (var i = 0; i < mods.length; i++){ form-select_`+mods[i]+`}}@@if(context.classes){@@for (var i = 0; i < classes.length; i++){ `+classes[i]+`}} js-form-select-inline" id="@@id" name="@@id"@@if(context.placeholder){ data-placeholder="@@placeholder" }@@if(context.attrs){@@for (var i = 0; i < attrs.length; i++){ `+attrs[i].attr+`="`+attrs[i].value+`"}}@@if(context.search){ data-search}@@if(context.multiple){ multiple="multiple"}@@if(context.disabled){ disabled}@@if(context.required){ required}>
+@@if(context.options){@@for (var i = 0; i < options.length; i++){<option value="`+options[i].val+`">`+options[i].text+`</option>}}
+@@if(!context.options){<option value="">- Choose option -</option>
+<option value="1">The Pilgrim’s Progress by John Bunyan (1678)</option>
+<option value="2">Robinson Crusoe by Daniel Defoe (1719)</option>}
+</select>

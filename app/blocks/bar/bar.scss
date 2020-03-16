@@ -1,7 +1,7 @@
-.additionally {
+.bar {
 	&__heading {
 		position: relative;
-		margin-bottom: 3rem;
+		margin-bottom: 4.7rem;
 
 		@include below($lg) {
 			margin-bottom: 2rem;

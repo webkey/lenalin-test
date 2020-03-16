@@ -1,5 +1,5 @@
-app.newsSlider = {
-	sliderElement: '.js-news-slider',
+app.sliderImages = {
+	sliderElement: '.js-slider-images',
 	init() {
 		app.common.initScript('swiper.min', 'Swiper', () => {
 			this.lazyLoad();
@@ -10,10 +10,9 @@ app.newsSlider = {
 	lazyLoad() {
 		const self = this;
 		app.common.initScript('lazyload.min', 'LazyLoad', () => {
-			app.lazyLoadNewsSliderInstance = new LazyLoad({
+			app.lazyLoadSliderImagesInstance = new LazyLoad({
 				threshold: 50,
-				elements_selector: self.sliderElement + ' .lazy-load',
-				class_loaded: 'image-loaded'
+				elements_selector: self.sliderElement + ' .lazy-load'
 			});
 		});
 	},
@@ -33,33 +32,19 @@ app.newsSlider = {
 	options: {
 		init: false,
 		loop: true,
-		slidesPerView: 3,
-		slidesPerGroup: 3,
-		spaceBetween: 30,
+		slidesPerView: 1,
+		slidesPerGroup: 1,
 		watchSlidesVisibility: true,
 
 		navigation: {
-			nextEl: '.js-news-slider__button-next',
-			prevEl: '.js-news-slider__button-prev'
-		},
-
-		breakpoints: {
-			767: {
-				slidesPerView: 2,
-				slidesPerGroup: 2,
-				spaceBetween: 20
-			},
-			575: {
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				spaceBetween: 16
-			},
+			nextEl: '.js-slider-images__button-next',
+			prevEl: '.js-slider-images__button-prev'
 		},
 
 		on: {
 			slideChangeTransitionEnd() {
-				if (app.lazyLoadNewsSliderInstance) {
-					app.lazyLoadNewsSliderInstance.update();
+				if (app.lazyLoadSliderImagesInstance) {
+					app.lazyLoadSliderImagesInstance.update();
 				}
 			}
 		}

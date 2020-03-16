@@ -1,24 +1,22 @@
 @@include("blocks/head/head.html", {"title": "Lenalin - О компании"})
 @@include("blocks/header/header.html", {"currentItem": "About"})
 <div class="main">
-	<div class="page-about">
-		<div class="layout-page">
-			<div class="layout-content">
-				<div class="page-about__content">
-					<div class="page-about__layout">
-						<div class="page-about__layout-col">
-							<div class="page-about__breadcrumbs">
+	<div class="page">
+		<div class="page__section">
+			<div class="layout-page">
+				<div class="layout-content">
+					<div class="layout-two-cols">
+						<div class="layout-two-cols__col">
+							<div class="page__breadcrumbs">
 								@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "О компании" })
 							</div>
-
+							<div class="page__heading">
+								@@include("blocks/heading/heading.html", {"title": "О компании"})
+							</div>
 							<div class="edit-content">
-								<div class="page-about__heading">
-									<h1 class="page-about__title">О компании</h1>
-								</div>
-
 								<p>Magna eu nisi nulla velit amet aliquip sunt enim et proident dolor. Aliquip quis magna duis elit incididunt. Fugiat do incididunt in reprehenderit consectetur nulla. Fugiat eu sit magna ipsum. Sint ex excepteur aliqua sit cupidatat aliquip adipisicing ipsum nisi culpa nostrud.</p>
 
-								<img src="assets/images/temp/img-about-01.jpg" alt="О компании" />
+								<img class="lazy-load" data-src="assets/images/temp/img-about-01.jpg" src="assets/images/empty.png" alt="О компании" />
 
 								<h2>Заголовок</h2>
 
@@ -26,15 +24,9 @@
 								<p>Consectetur velit amet nisi culpa laborum pariatur incididunt est qui occaecat do enim reprehenderit exercitation. Dolor eu non culpa ut. Pariatur ex enim dolor labore eiusmod fugiat ut quis. Amet sit laboris ullamco ipsum aliquip enim sit amet aliquip.</p>
 							</div>
 						</div>
-						<div class="page-about__layout-col">
-							<div class="page-about__section page-about__section_indented-right">
-								<div class="images-gallery swiper-container js-images-gallery">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<img src="assets/images/temp/img-promo-04.jpg" alt="About slider - slide 02" />
-										</div>
-									</div>
-								</div>
+						<div class="layout-two-cols__col">
+							<div class="page__section page__section_indented-right page__section_space-small">
+								@@include("blocks/slider-images/slider-images.html")
 							</div>
 
 							<div class="edit-content">
@@ -42,22 +34,20 @@
 
 								<p>мы располагаем собственными производственными мощностями по пошиву текстильных изделий любой сложности. мы любим лен, мы знаем о нем все и уверены, что это лучший материал для создания комфортного и красивого личного пространства.</p>
 
-								<div>{{img}}</div>
-
-								<img src="assets/images/temp/img-about-02.jpg" alt="О компании" />
+								<img class="lazy-load" data-src="assets/images/temp/img-about-02.jpg" src="assets/images/empty.png" alt="О компании" />
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="page-additionally">
-		<div class="additionally">
-			<div class="additionally__content">
-				<div class="layout-page">
-					<div class="layout-content">
-						@@include("blocks/services/services.html")
+		<div class="page__section">
+			<div class="bar">
+				<div class="bar__content">
+					<div class="layout-page">
+						<div class="layout-content">
+							@@include("blocks/services/services.html")
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,5 @@
 .news-previews-short {
-	$space-h: 3rem;
-	$space-v: 2rem;
+	$space-v: 2.2rem;
 
 	overflow: hidden;
 
@@ -9,7 +8,7 @@
 	}
 
 	&__item {
-		padding-bottom: #{$space-v};
+		padding-bottom: 1.5rem;
 		margin-bottom: #{$space-v};
 		border-bottom: 1px solid #c4c4c4;
 

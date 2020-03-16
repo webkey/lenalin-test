@@ -1,7 +1,5 @@
 .pagination {
-	$pagination-vspace: 0.5rem;
-	$pagination-hspace: 0;
-	$pagination-font-size: 1.7rem;
+	$pagination-font-size: 1.6rem;
 	$pagination-border-width: 0;
 
 	display: inline-block;
@@ -17,34 +15,20 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin: -#{$pagination-vspace} 0;
 	}
 
 	&__left,
 	&__right {
-		font-size: 1.7rem;
-		line-height: 4.2rem;
-		padding: #{$pagination-vspace} 0;
-
-		@include below($lg) {
-			line-height: 3.2rem;
-		}
+		font-size: $pagination-font-size;
+		line-height: 3.4rem;
 	}
 
 	&__left {
-		margin-left: -1.8rem;
-
-		@include below($lg) {
-			margin-left: -1.1rem;
-		}
+		margin-left: -0.5rem;
 	}
 
 	&__right {
-		margin-right: -1.8rem;
-
-		@include below($lg) {
-			margin-right: -1.1rem;
-		}
+		margin-right: -0.5rem;
 	}
 
 	&__prev,
@@ -58,16 +42,16 @@
 		color: inherit;
 		text-align: center;
 		background: transparent;
-		min-width: 4.2rem;
-		height: 4.2rem;
+		height: 3.4rem;
+		min-width: 2rem;
 		text-decoration: none;
 		transition: color $animation-speed;
 		user-select: none;
 		-webkit-tap-highlight-color: transparent;
 
-		@include below($lg) {
-			min-width: 3.2rem;
-			height: 3.2rem;
+		@include below($sm) {
+			height: 3rem;
+			min-width: 3rem;
 		}
 
 		&:hover {
@@ -90,7 +74,7 @@
 			left: 50%;
 			top: 50%;
 
-			$size: 2.4rem;
+			$size: 1.6rem;
 
 			height: $size;
 			width: $size;
@@ -119,20 +103,13 @@
 		&-li {
 			$li: &;
 
-			padding: #{$pagination-vspace} #{$pagination-hspace};
-			font-size: 1.7rem;
-			line-height: 4.2rem;
-			text-indent: 0.08em;
-
-			@include below($lg) {
-				font-size: 1.6rem;
-				line-height: 3.2rem;
-				text-indent: 0.05em;
-			}
+			font-size: $pagination-font-size;
+			line-height: 3.4rem;
+			font-weight: bold;
 
 			&-el {
 				$el: &;
-				$width: 4.2rem;
+				$width: 3.4rem;
 
 				position: relative;
 				display: inline-block;
@@ -141,16 +118,16 @@
 				color: inherit;
 				text-align: center;
 				background: transparent;
-				min-width: $width;
 				height: $width;
+				min-width: $width;
 				user-select: none;
 				-webkit-tap-highlight-color: transparent;
 
 				@include below($lg) {
-					$width: 3.2rem;
+					$width: 3rem;
 
-					min-width: $width;
 					height: $width;
+					min-width: $width;
 				}
 
 				@at-root {
@@ -182,12 +159,12 @@
 				color: inherit;
 				text-align: center;
 				background: transparent;
-				min-width: 4.2rem;
-				height: 4.2rem;
+				height: 3.4rem;
+				min-width: 3.4rem;
 
 				@include below($lg) {
-					min-width: 3.2rem;
-					height: 3.2rem;
+					height: 3rem;
+					min-width: 3rem;
 				}
 			}
 		}

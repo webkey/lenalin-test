@@ -11,12 +11,13 @@
 		margin: 0;
 		list-style: none;
 		cursor: default;
-		font: inherit;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
 	}
 
 	&__li {
 		display: inline;
-		padding-right: 4rem;
+		padding-right: 2.6rem;
 		margin: 0;
 		color: $link-color;
 
@@ -25,7 +26,7 @@
 			content: "";
 			height: 0.9rem;
 			width: 0.6rem;
-			margin-left: 4.4rem;
+			margin-left: 4rem;
 			background: url(../images/icon-bcr-arrow.svg) no-repeat;
 			background-size: contain;
 		}

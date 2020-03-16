@@ -1,37 +1,52 @@
 @@include("blocks/head/head.html", {"title": "Lenalin - Новости"})
 @@include("blocks/header/header.html", {"currentItem": "News"})
 <div class="main">
-	<div class="page-news">
-		<div class="layout-page">
-			<div class="layout-content">
-				<div class="page-news__breadcrumbs">
+	<div class="page">
+		<div class="page__breadcrumbs">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Новости" })
 				</div>
-				<div class="page-news__heading">
-					<h1 class="page-news__title">Новости</h1>
+			</div>
+		</div>
+		<div class="page__heading">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("blocks/heading/heading.html", {"title": "Новости"})
 				</div>
-				<div class="page-news__thumbs">
-					<div class="page-news__sorting">
-						<label for="sorting"></label>
-						<select name="sorting" id="sorting">
-							<option value="">Сортировать по</option>
-							<option value="1">Сортировать по дате</option>
-							<option value="1">Сортировать по релевантности</option>
-						</select>
-					</div>
-					<div class="page-news__show">
-						<label for="show"></label>
-						<select name="show" id="show">
-							<option value="">Показывать по: 9</option>
-							<option value="1">Показывать по: 12</option>
-							<option value="1">Показывать по: 25</option>
-						</select>
+			</div>
+		</div>
+		<div class="page__section page__section_space-smallest">
+			<div class="layout-page">
+				<div class="layout-content">
+					<div class="controls-panel">
+						<div class="controls-panel__sorting">
+							<div class="form-unit-inline__input">
+								@@include("blocks/form-select-inline/form-select-inline.html", { "id": "sort-by", "required": false, "options": [{"val": "", "text": "Сортировать по"}, {"val": "date", "text": "Сортировать по дате"}, {"val": "popular", "text": "Сортировать по популярности"}] })
+							</div>
+						</div>
+						<div class="controls-panel__show">
+							<div class="form-unit-inline__label">
+								<label for="show-count">Показывать по:</label>
+							</div>
+							<div class="form-unit-inline__input">
+								@@include("blocks/form-select-inline/form-select-inline.html", { "id": "show-count", "required": false, "options": [{"val": "9", "text": "9"}, {"val": "12", "text": "12"}, {"val": "25", "text": "25"}] })
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="page-news__content">
+			</div>
+		</div>
+		<div class="page__section">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/news-previews/news-previews.html")
 				</div>
-				<div class="page-news__pagination page-news__pagination_center">
+			</div>
+		</div>
+		<div class="page__section page__section_align-center">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/pagination/pagination.html")
 				</div>
 			</div>
