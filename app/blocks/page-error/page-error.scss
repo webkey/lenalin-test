@@ -26,6 +26,8 @@
 			flex: 1 0 $width;
 			max-width: $width;
 			padding: 2.8rem 0 0;
+			position: relative;
+			z-index: 2;
 		}
 
 		&-figure {
@@ -45,7 +47,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-		transform: translate(-32.7%, -38.2%);
+		transform: translate(-45.4%, -52.4%);
 
 		&::before {
 			content: "";

@@ -81,33 +81,24 @@
 			// Set style for mobile
 
 			b {
+				$size: 1.6rem;
+
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				width: $size;
+				height: $size;
+				margin-top: -0.9rem;
 				border: none;
-				left: 0;
-				top: 0;
-				height: 100%;
-				width: 100%;
-				margin: 0;
+				background-color: transparent;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC4wMDA0OCA5Ljc4MTQ1TDExLjMwMDUgNi40ODE0NUwxMi4yNDMxIDcuNDI0MTFMOC4wMDA0OCAxMS42NjY4TDMuNzU3ODEgNy40MjQxMUw0LjcwMDQ4IDYuNDgxNDVMOC4wMDA0OCA5Ljc4MTQ1WiIgZmlsbD0iYmxhY2siPjwvcGF0aD48L3N2Zz4=);
 
-				&::before,
-				&::after {
-					content: "";
-					position: absolute;
-					top: 50%;
-					width: 8px;
-					height: 2px;
-					background-color: $text-color;
-					margin-top: -1px;
-					z-index: 1;
-				}
-
-				&::before {
-					transform: rotate(45deg);
-					right: 18px;
-				}
-
-				&::after {
-					transform: rotate(-45deg);
-					right: 13px;
+				.select2-container--open & {
+					transform: rotate(0.5turn);
+					margin-top: -0.7rem;
 				}
 			}
 		}

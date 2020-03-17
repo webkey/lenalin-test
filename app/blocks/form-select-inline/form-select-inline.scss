@@ -1,6 +1,6 @@
 .form-select-inline {
 	$el: &;
-	$select-arrow-width: 2rem;
+	$select-arrow-width: 2.1rem;
 
 	// Селект, который будет кастомизироваться, необходимо скрыть, пока на нем не отработает скрипт
 	html:not(.no-js) & {
@@ -75,39 +75,24 @@
 			// Set style for mobile
 
 			b {
+				$size: 1.6rem;
+
 				display: block;
 				position: absolute;
 				right: 0;
 				top: 50%;
-				width: 9px;
-				height: 5px;
-				margin: -2px 0;
+				width: $size;
+				height: $size;
+				margin-top: -0.9rem;
 				border: none;
+				background-color: transparent;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC4wMDA0OCA5Ljc4MTQ1TDExLjMwMDUgNi40ODE0NUwxMi4yNDMxIDcuNDI0MTFMOC4wMDA0OCAxMS42NjY4TDMuNzU3ODEgNy40MjQxMUw0LjcwMDQ4IDYuNDgxNDVMOC4wMDA0OCA5Ljc4MTQ1WiIgZmlsbD0iYmxhY2siPjwvcGF0aD48L3N2Zz4=);
 
 				.select2-container--open & {
 					transform: rotate(0.5turn);
-				}
-
-				&::before,
-				&::after {
-					content: "";
-					position: absolute;
-					top: 50%;
-					width: 6px;
-					height: 1px;
-					background-color: $text-color;
-					margin-top: -1px;
-					z-index: 1;
-				}
-
-				&::before {
-					transform: rotate(45deg);
-					right: 3px;
-				}
-
-				&::after {
-					transform: rotate(-45deg);
-					right: 0;
+					margin-top: -0.7rem;
 				}
 			}
 		}

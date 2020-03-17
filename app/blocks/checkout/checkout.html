@@ -1,7 +1,7 @@
 <div class="checkout">
 	<div class="layout-form layout-form_align-left">
 		<form class="checkout__form" action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
-			<div class="checkout__section checkout__section_space-smallest">
+			<div class="checkout__section checkout__section_space-small">
 				@@include("blocks/widget-order-short/widget-order-short.html", {
 				"totalPrice": "666 руб.",
 				"countProducts": "10"
@@ -235,7 +235,15 @@
 									<div class="form-list__li">
 										<label class="form-radio">
 											<input class="form-radio__input" type="radio" name="delivery-date" checked>
-											<span class="form-radio__label">06.02.2020 [*]</span>
+											<span class="form-radio__label">
+												<span class="datepicker-inline js-datepicker">
+													<input class="datepicker-inline__input" type="text" placeholder="Выбрать дату..." data-input>
+
+													<a class="datepicker-inline__icon" title="toggle" data-toggle>
+														<i class="icon icon_calendar"></i>
+													</a>
+												</span>
+											</span>
 										</label>
 									</div>
 								</div>
@@ -279,7 +287,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="checkout__divider checkout__divider_space-small"></div>
+			<div class="checkout__divider checkout__divider_space-smallest"></div>
 			<div class="checkout__section">
 				<div class="checkout__cols">
 					<div class="checkout__cols-col">

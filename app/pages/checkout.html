@@ -1,19 +1,31 @@
 @@include("blocks/head/head.html", {"title": "Lenalin - Оформление заказа"})
 @@include("blocks/header/header.html", {"currentItem": "Home"})
 <div class="main">
-	<div class="page-cabinet">
-		<div class="layout-page">
-			<div class="layout-content">
-				<div class="page-cabinet__breadcrumbs">
+	<div class="page">
+		<div class="page__breadcrumbs">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "checkout.html", "text": "Оформление заказа"}], "current": "Профиль" })
 				</div>
-				<div class="page-cabinet__heading">
-					<h1 class="page-cabinet__title">Оформление заказа</h1>
+			</div>
+		</div>
+		<div class="page__heading">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("blocks/heading/heading.html", {"title": "Оформление заказа"})
 				</div>
-				<div class="page-cabinet__section page-cabinet__section_space-smallest">
+			</div>
+		</div>
+		<div class="page__section page__section_space-smallest reset-line-height">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/btn-control/btn-control.html", { "href": "cart.html", "mods": ["small", "arrow-left"], "text": "Вернуться в корзину" })
 				</div>
-				<div class="page-cabinet__section">
+			</div>
+		</div>
+		<div class="page__section">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/checkout/checkout.html")
 				</div>
 			</div>

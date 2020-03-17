@@ -54,51 +54,53 @@
 		}
 
 		&-arrow {
-			$size: 2.8rem;
+			$size: 3.2rem;
 
 			position: absolute;
-			right: 0;
-			top: 0;
+			right: -0.8rem;
+			top: 0.1rem;
 			height: $size;
 			width: $size;
 			font-size: 0;
 			line-height: 0;
+			border-radius: $size;
 			cursor: pointer;
+			transition: background-color $animation-speed;
 
-			@include below($lg) {
-				$size: 4rem;
-
-				height: $size;
-				width: $size;
-				top: -0.6rem;
-				right: -1.3rem;
+			&:hover {
+				background-color: $highlight-color;
 			}
 
-			@at-root {
-				#{$li}.is-open & {
-					transform: rotate(0.5turn);
-				}
-			}
-
-			&::before {
-				$size: 1.6rem;
-
+			&::before,
+			&::after {
 				content: "";
 				display: block;
 				position: absolute;
 				right: 50%;
 				top: 50%;
-				height: $size;
-				width: $size;
-				margin: -#{round-float($size / 2, 1)};
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTEuOTk5OCAxMy4xNzIyTDE2Ljk0OTggOC4yMjIxN0wxOC4zNjM4IDkuNjM2MTdMMTEuOTk5OCAxNi4wMDAyTDUuNjM1NzcgOS42MzYxN0w3LjA0OTc3IDguMjIyMTdMMTEuOTk5OCAxMy4xNzIyWiIvPjwvc3ZnPg==);
+				height: 0.1rem;
+				width: 0.7rem;
+				margin: 0 -0.3rem;
+				background: #000;
+				transition: transform $animation-speed;
+			}
+
+			&::after {
+				transform: rotate(0.25turn);
+			}
+
+			@at-root {
+				#{$li}.is-open & {
+					&::after {
+						transform: rotate(0);
+					}
+				}
 			}
 		}
 
 		&-drop {
+			padding: 0.9rem 0 0;
+
 			@at-root {
 				#{$li}.has-drop:not(.hide-arrow) & {
 					margin-right: -#{$arrow-space};
@@ -133,7 +135,6 @@
 	$arrow-space: 2.4rem;
 
 	display: block;
-	padding: 1rem 0 0;
 	font-size: 1.6rem;
 	line-height: 2.4rem;
 
@@ -188,52 +189,53 @@
 		}
 
 		&-arrow {
-			$size: 2.8rem;
+			$size: 3.2rem;
 
 			position: absolute;
-			right: 0;
-			top: 0.3rem;
+			right: -0.8rem;
+			top: 0.1rem;
 			height: $size;
 			width: $size;
 			font-size: 0;
 			line-height: 0;
+			border-radius: $size;
 			cursor: pointer;
+			transition: background-color $animation-speed;
 
-			@include below($lg) {
-				$size: 4rem;
-
-				height: $size;
-				width: $size;
-				top: -0.6rem;
-				right: -1.3rem;
+			&:hover {
+				background-color: $highlight-color;
 			}
 
-			@at-root {
-				#{$li}.is-open & {
-					transform: rotate(0.5turn);
-				}
-			}
-
-			&::before {
-				$size: 1.6rem;
-
+			&::before,
+			&::after {
 				content: "";
 				display: block;
 				position: absolute;
 				right: 50%;
 				top: 50%;
-				height: $size;
-				width: $size;
-				margin: -#{round-float($size / 2, 1)};
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTEuOTk5OCAxMy4xNzIyTDE2Ljk0OTggOC4yMjIxN0wxOC4zNjM4IDkuNjM2MTdMMTEuOTk5OCAxNi4wMDAyTDUuNjM1NzcgOS42MzYxN0w3LjA0OTc3IDguMjIyMTdMMTEuOTk5OCAxMy4xNzIyWiIvPjwvc3ZnPg==);
+				height: 0.1rem;
+				width: 0.7rem;
+				margin: 0 -0.3rem;
+				background: #000;
+				transition: transform $animation-speed;
+			}
+
+			&::after {
+				transform: rotate(0.25turn);
+			}
+
+			@at-root {
+				#{$li}.is-open & {
+					&::after {
+						transform: rotate(0);
+					}
+				}
 			}
 		}
 
 		&-drop {
 			display: none;
+			padding: 0.4rem 0 0;
 
 			@at-root {
 				#{$li}.has-drop:not(.hide-arrow) & {
@@ -293,7 +295,7 @@
 			font-weight: 300;
 			color: inherit;
 			user-select: none;
-			padding: 0.5rem 1.5rem;
+			padding: 0.5rem 0 0.5rem 1.7rem;
 
 			@at-root {
 				// if link
@@ -323,47 +325,47 @@
 		}
 
 		&-arrow {
-			$size: 2.8rem;
+			$size: 3.2rem;
 
 			position: absolute;
-			right: 0;
-			top: 0.3rem;
+			right: -0.8rem;
+			top: -0.1rem;
 			height: $size;
 			width: $size;
 			font-size: 0;
 			line-height: 0;
+			border-radius: $size;
 			cursor: pointer;
+			transition: background-color $animation-speed;
 
-			@include below($lg) {
-				$size: 4rem;
-
-				height: $size;
-				width: $size;
-				top: -0.6rem;
-				right: -1.3rem;
+			&:hover {
+				background-color: $highlight-color;
 			}
 
-			@at-root {
-				#{$li}.is-open & {
-					transform: rotate(0.5turn);
-				}
-			}
-
-			&::before {
-				$size: 1.6rem;
-
+			&::before,
+			&::after {
 				content: "";
 				display: block;
 				position: absolute;
 				right: 50%;
 				top: 50%;
-				height: $size;
-				width: $size;
-				margin: -#{round-float($size / 2, 1)};
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTEuOTk5OCAxMy4xNzIyTDE2Ljk0OTggOC4yMjIxN0wxOC4zNjM4IDkuNjM2MTdMMTEuOTk5OCAxNi4wMDAyTDUuNjM1NzcgOS42MzYxN0w3LjA0OTc3IDguMjIyMTdMMTEuOTk5OCAxMy4xNzIyWiIvPjwvc3ZnPg==);
+				height: 0.1rem;
+				width: 0.7rem;
+				margin: 0 -0.3rem;
+				background: #000;
+				transition: transform $animation-speed;
+			}
+
+			&::after {
+				transform: rotate(0.25turn);
+			}
+
+			@at-root {
+				#{$li}.is-open & {
+					&::after {
+						transform: rotate(0);
+					}
+				}
 			}
 		}
 
@@ -400,7 +402,7 @@
 
 	&__set {
 		position: relative;
-		padding: 2rem 1.5rem;
+		padding: 2.5rem 1.5rem;
 
 		&::before,
 		&::after {
@@ -414,11 +416,11 @@
 		}
 
 		&::before {
-			top: 0.5rem;
+			top: 0.9rem;
 		}
 
 		&::after {
-			bottom: 0.5rem;
+			bottom: 0.9rem;
 		}
 	}
 }

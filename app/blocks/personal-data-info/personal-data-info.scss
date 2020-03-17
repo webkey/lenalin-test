@@ -4,7 +4,7 @@
 		font-size: 1.8rem;
 		line-height: 2.2rem;
 		color: $title-color;
-		margin-bottom: 2rem;
+		margin-bottom: 2.1rem;
 	}
 
 	&__list {
@@ -26,7 +26,7 @@
 		display: inline-block;
 		vertical-align: top;
 		line-height: 0;
-		min-width: 28rem;
+		min-width: 29.3rem;
 
 		&_edit {
 			padding-right: 4.3rem;
@@ -40,6 +40,7 @@
 			font-size: 1.8rem;
 			line-height: 2.2rem;
 			color: inherit;
+			margin-right: 0.5rem;
 		}
 
 		&-text {
@@ -58,8 +59,9 @@
 			font-size: 2.4rem;
 			line-height: 2.4rem;
 			color: $form-def-placeholder-color;
-			margin: 0.7rem 0 -1rem;
-			padding-left: 0.5rem;
+			margin: 0.9rem 0 -1.2rem;
+			padding-left: 0.8rem;
+			letter-spacing: 0.13em;
 		}
 
 		&-edit {

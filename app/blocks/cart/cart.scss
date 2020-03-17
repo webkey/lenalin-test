@@ -1,7 +1,7 @@
 .cart {
 	$width-main: 57.2%;
-	$space-h: 3rem;
-	$padding-top: 6.8rem;
+	$space-h: 3.8rem;
+	$padding-top: 14rem;
 
 	overflow: hidden;
 	position: relative;
@@ -41,16 +41,7 @@
 
 	&__products {
 		overflow: hidden;
-		padding-right: 6rem;
-	}
-
-	&__heading {
-		float: right;
-		clear: right;
-		width: calc(100% - #{$width-main});
-		padding-left: $space-h;
-		min-height: 1rem;
-		margin-bottom: 2rem;
+		padding-right: 4rem;
 	}
 
 	&__aside {
@@ -58,11 +49,15 @@
 
 		flex: 1 0 $width;
 		max-width: $width;
-		padding: #{$padding-top} 0 0 #{$space-h};
+		padding: #{$padding-top} 0 3.4rem #{$space-h};
 		min-height: 1rem;
 
 		&-section {
-			margin-bottom: 5rem;
+			margin-bottom: 4.4rem;
+
+			&_space-large {
+				margin-bottom: 5.1rem;
+			}
 
 			&_last,
 			&_no-space,

@@ -17,7 +17,7 @@
 		width: 100% - $width-main;
 		padding-left: $space-h;
 		min-height: 1rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1.7rem;
 	}
 
 	&__aside {
@@ -28,7 +28,11 @@
 		min-height: 1rem;
 
 		&-section {
-			margin-bottom: 3rem;
+			margin-bottom: 2rem;
+
+			&_space-large {
+				margin-bottom: 3.8rem;
+			}
 
 			&_last,
 			&_no-space,

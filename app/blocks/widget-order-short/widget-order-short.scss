@@ -1,23 +1,23 @@
 .widget-order-short {
-	padding: 2rem 1.5rem;
+	padding: 2.2rem 1.5rem 1.1rem 2.3rem;
 	background-color: $bg-color-alt;
 
 	&__title {
 		font-size: 1.8rem;
 		line-height: 2.4rem;
 		font-weight: bold;
-		margin-bottom: 1rem;
+		margin-bottom: 0.7rem;
 	}
 
 	&__body {
-		padding-bottom: 1.5rem;
+		padding-bottom: 4.2rem;
 		margin-bottom: 1.5rem;
 		border-bottom: 1px solid $border-color;
 	}
 
 	&__contain {
 		max-height: 6rem;
-		padding-right: 3rem;
+		padding-right: 4.6rem;
 	}
 
 	&__products {
@@ -32,5 +32,6 @@
 		font-size: 1.8rem;
 		line-height: 2.4rem;
 		font-weight: bold;
+		padding-right: 4.8rem;
 	}
 }

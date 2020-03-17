@@ -1,29 +1,45 @@
 @@include("blocks/head/head.html", {"title": "Lenalin - Личный кабинет. Избранное"})
 @@include("blocks/header/header.html", {"currentItem": "Cabinet"})
 <div class="main">
-	<div class="page-cabinet">
-		<div class="layout-page">
-			<div class="layout-content">
-				<div class="page-cabinet__breadcrumbs">
+	<div class="page">
+		<div class="page__breadcrumbs">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "cabinet-profile.html", "text": "Личный кабинет"}], "current": "Избранное" })
 				</div>
-				<div class="page-cabinet__heading">
-					<h1 class="page-cabinet__title">Личный кабинет</h1>
+			</div>
+		</div>
+		<div class="page__heading">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("blocks/heading/heading.html", {"title": "Личный кабинет"})
 				</div>
-				<div class="page-cabinet__nav">
+			</div>
+		</div>
+		<div class="page__section">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/pseudo-tabs/pseudo-tabs.html", {
-						"items": [
-							{"href": "cabinet-profile.html", "text": "Профиль", "class": ""},
-							{"href": "javascript:;", "text": "Избранное", "class": "current"},
-							{"href": "cabinet-history.html", "text": "История заказов", "class": ""}
-						]
+					"items": [
+					{"href": "cabinet-profile.html", "text": "Профиль", "class": ""},
+					{"href": "javascript:;", "text": "Избранное", "class": "current"},
+					{"href": "cabinet-history.html", "text": "История заказов", "class": ""}
+					]
 					})
 				</div>
-				<div class="page-cabinet__section">
+			</div>
+		</div>
+		<div class="page__section">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/favorites/favorites.html")
-					<div class="no-item-warning" style="display: none"><strong>Избранных товаров еще нет. Сюда попадают товары, отмеченные сердечком. <a href="catalog.html">Перейти в каталог</a>.</strong></div>
+					<div class="no-item-warning" style="display: none;"><strong>Избранных товаров еще нет. Сюда попадают товары, отмеченные сердечком. <a href="catalog.html">Перейти в каталог</a>.</strong></div>
 				</div>
-				<div class="page-cabinet__section page-cabinet__section_center">
+			</div>
+		</div>
+		<div class="page__section page__section_align-center">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/pagination/pagination.html")
 				</div>
 			</div>

@@ -9,23 +9,30 @@
 				</div>
 			</div>
 		</div>
-		<div class="page__section page__section_cart">
-			@@include("blocks/cart/cart.html")
-		</div>
-	</div>
-	<div class="aside-bottom">
-		<div class="bar">
-			<div class="bar__heading">
-				<div class="layout-page">
-					<div class="layout-content">
-						<h2 class="bar__heading-title">Популярные товары</h2>
-					</div>
+		<div class="page__heading">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("blocks/heading/heading.html", {"title": "Корзина"})
 				</div>
 			</div>
-			<div class="bar__content">
-				<div class="layout-page">
-					<div class="layout-content">
-						@@include("blocks/popular-slider/popular-slider.html")
+		</div>
+		<div class="page__section page__section_space-large">
+			@@include("blocks/cart/cart.html")
+		</div>
+		<div class="page__section">
+			<div class="bar">
+				<div class="bar__heading">
+					<div class="layout-page">
+						<div class="layout-content">
+							<h2 class="bar__heading-title">Добавить к заказу</h2>
+						</div>
+					</div>
+				</div>
+				<div class="bar__content">
+					<div class="layout-page">
+						<div class="layout-content">
+							@@include("blocks/popular-slider/popular-slider.html")
+						</div>
 					</div>
 				</div>
 			</div>

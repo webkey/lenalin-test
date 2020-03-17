@@ -6,7 +6,7 @@
 		@@include("blocks/product-card-gallery/product-card-gallery.html")
 	</div>
 	<div class="product-card__aside">
-		<div class="product-card__aside-section">
+		<div class="product-card__aside-section product-card__aside-section_space-large">
 			<div class="features">
 				<div class="features__list">
 					<div class="features__li">
@@ -76,19 +76,20 @@
 					</div>
 					<div class="product-card-controls__col product-card-controls__col_6">
 						@@include("blocks/product-card-price/product-card-price.html")
+
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="product-card__aside-section">
+		<div class="product-card__aside-section product-card__aside-section_space-large">
 			<div class="product-card-controls">
 				<div class="product-card-controls__cols product-card-controls__cols_align-bottom">
 					<div class="product-card-controls__col product-card-controls__col_6">
 						@@include("blocks/btn-def/btn-def.html", {"mods": ["full-width"], "text": "В корзину"})
 					</div>
 					<div class="product-card-controls__col product-card-controls__col_6">
-						@@include("blocks/btn-def/btn-def.html", {"mods": ["invert", "full-width"], "text": "В избранное"})
+						@@include("blocks/btn-def/btn-def.html", {"mods": ["invert", "full-width"], "icon": "@@include('svg/icon-favorites_small.svg')", "text": "В избранное"})
 					</div>
 					<div class="product-card-controls__col">
 						@@include("blocks/btn-special/btn-special.html", {"mods": ["full-width"], "text": "Купить в один клик"})

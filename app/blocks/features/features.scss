@@ -1,6 +1,6 @@
 .features {
 	$space-h: 3rem;
-	$space-v: 2rem;
+	$space-v: 1.1rem;
 
 	&__list {
 		display: flex;
@@ -32,6 +32,7 @@
 		display: inline-block;
 		vertical-align: top;
 		font-weight: 300;
+		margin-right: 0.4rem;
 	}
 
 	&__descr {

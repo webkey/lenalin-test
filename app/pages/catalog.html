@@ -1,48 +1,50 @@
 @@include("blocks/head/head.html", {"title": "Lenalin - Каталог"})
 @@include("blocks/header/header.html", {"currentItem": "Catalog"})
 <div class="main">
-	<div class="page-catalog">
-		<div class="layout-page">
-			<div class="layout-content">
-				<div class="page-catalog__breadcrumbs">
+	<div class="page">
+		<div class="page__breadcrumbs">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Каталог" })
 				</div>
-				<div class="page-catalog__heading">
-					<h1 class="page-catalog__title">Каталог</h1>
+			</div>
+		</div>
+		<div class="page__heading">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("blocks/heading/heading.html", {"title": "Каталог"})
 				</div>
-				<div class="page-catalog__content">
-					<div class="page-catalog__layout">
-						<aside class="page-catalog__layout-aside">
+			</div>
+		</div>
+		<div class="page__section">
+			<div class="layout-page">
+				<div class="layout-content">
+					<div class="layout-filters">
+						<aside class="layout-filters__aside">
 							@@include("blocks/filters-panel/filters-panel.html")
 						</aside>
-						<div class="page-catalog__layout-content">
-							<div class="controls-panel">
-								<div class="controls-panel__sorting">
-									<div class="form-unit-inline__input">
-										@@include("blocks/form-select-inline/form-select-inline.html", {
-										"id": "sort-by",
-										"required": false,
-										"options": [{"val": "", "text": "Сортировать по"}, {"val": "price", "text": "Сортировать по цене"}, {"val": "date", "text": "Сортировать по дате"}, {"val": "popular", "text": "Сортировать по популярности"}]
-										})
+						<div class="layout-filters__content">
+							<div class="page__section page__section_space-smallest">
+								<div class="controls-panel">
+									<div class="controls-panel__sorting">
+										<div class="form-unit-inline__input">
+											@@include("blocks/form-select-inline/form-select-inline.html", { "id": "sort-by", "required": false, "options": [{"val": "", "text": "Сортировать по"}, {"val": "price", "text": "Сортировать по цене"}, {"val": "date", "text": "Сортировать по дате"}, {"val": "popular", "text": "Сортировать по популярности"}] })
+										</div>
 									</div>
-								</div>
-								<div class="controls-panel__show">
-									<div class="form-unit-inline__label">
-										<label for="show-count">Показывать по:</label>
-									</div>
-									<div class="form-unit-inline__input">
-										@@include("blocks/form-select-inline/form-select-inline.html", {
-										"id": "show-count",
-										"required": false,
-										"options": [{"val": "9", "text": "9"}, {"val": "12", "text": "12"}, {"val": "25", "text": "25"}]
-										})
+									<div class="controls-panel__show">
+										<div class="form-unit-inline__label">
+											<label for="show-count">Показывать по:</label>
+										</div>
+										<div class="form-unit-inline__input">
+											@@include("blocks/form-select-inline/form-select-inline.html", { "id": "show-count", "required": false, "options": [{"val": "9", "text": "9"}, {"val": "12", "text": "12"}, {"val": "25", "text": "25"}] })
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="page-catalog__main edit-content">
+							<div class="page__section">
 								@@include("blocks/catalog/catalog.html")
 							</div>
-							<div class="page-catalog__pagination page-catalog__pagination_center">
+							<div class="page__section page__section_align-center">
 								@@include("blocks/pagination/pagination.html")
 							</div>
 						</div>

@@ -1,36 +1,42 @@
 @@include("blocks/head/head.html", {"title": "Lenalin - Карточка продукта"})
 @@include("blocks/header/header.html", {"currentItem": "Catalog"})
 <div class="main">
-	<div class="page-product-card">
-		<div class="layout-page">
-			<div class="layout-content">
-				<div class="page-product-card__breadcrumbs">
+	<div class="page">
+		<div class="page__breadcrumbs">
+			<div class="layout-page">
+				<div class="layout-content">
 					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}, {"href": "catalog.html", "text": "Каталог"}], "current": "Постельное белье" })
-				</div>
-				<div class="page-product-card__control-panel">
-					@@include("blocks/btn-control/btn-control.html", { "mods": ["arrow-left"], "href": "javascript:;", "attr": "onclick='window.history.go(-1); return false;'", "text": "Вернуться назад" })
-				</div>
-				<div class="page-product-card__content">
-					<div class="page-product-card__section">
-						@@include("blocks/product-card/product-card.html")
-					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="aside-bottom">
-		<div class="bar">
-			<div class="bar__heading">
-				<div class="layout-page">
-					<div class="layout-content">
-						<h2 class="bar__heading-title">Популярные товары</h2>
-					</div>
+		<div class="page__section page__section_space-small">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("blocks/btn-control/btn-control.html", { "mods": ["arrow-left"], "href": "javascript:;", "attr": "onclick='window.history.go(-1); return false;'", "text": "Вернуться назад" })
 				</div>
 			</div>
-			<div class="bar__content">
-				<div class="layout-page">
-					<div class="layout-content">
-						@@include("blocks/popular-slider/popular-slider.html")
+		</div>
+		<div class="page__section page__section_space-largest">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("blocks/product-card/product-card.html")
+				</div>
+			</div>
+		</div>
+		<div class="page__section">
+			<div class="bar">
+				<div class="bar__heading">
+					<div class="layout-page">
+						<div class="layout-content">
+							<h2 class="bar__heading-title">Вам может понравиться</h2>
+						</div>
+					</div>
+				</div>
+				<div class="bar__content">
+					<div class="layout-page">
+						<div class="layout-content">
+							@@include("blocks/popular-slider/popular-slider.html")
+						</div>
 					</div>
 				</div>
 			</div>

@@ -20,6 +20,7 @@ app.formSpinner.init();
 app.headerMob.init();
 app.flipOfferBgDescr.init();
 app.flipOfferImgDescr.init();
+app.datepickerInline.init();
 
 app.formPopup.init();
 

@@ -1,0 +1,4 @@
+<label class="form-radio">
+	<input class="form-radio__input@@if(context.classes){@@for(var i = 0; i < classes.length; i++){ `+classes[i]+`}}" type="radio" name="@@name"@@if(context.checked){ checked}@@if(context.disabled){ disabled}@@if(context.attrs){@@for (var i = 0; i < attrs.length; i++){ `+attrs[i].attr+`="`+attrs[i].value+`"}}>
+	<span class="form-radio__label">@@label</span>
+</label>

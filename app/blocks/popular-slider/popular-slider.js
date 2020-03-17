@@ -67,7 +67,7 @@ app.popularSlider = {
 				});
 
 				sliderInstance.init();
-			})
+			});
 		}
 	}
 };

@@ -10,6 +10,8 @@
 	}
 
 	&__heading {
+		position: relative;
+		z-index: 2;
 		margin-bottom: 2.7rem;
 
 		&_space-large {
@@ -25,7 +27,7 @@
 		}
 
 		&_space-small {
-			margin-bottom: 4rem;
+			margin-bottom: 3.5rem;
 		}
 
 		&_space-large {

@@ -1,6 +1,4 @@
 .order-list-short {
-	$space-v: 0.6rem;
-
 	&__list {
 		border-collapse: collapse;
 		border-spacing: 0;
@@ -8,7 +6,7 @@
 	}
 
 	&__el {
-		padding: #{floor-float($space-v / 2, 1)} 0;
+		padding: 0.5rem 0 0.6rem;
 		vertical-align: top;
 
 		&_title {
@@ -42,6 +40,7 @@
 		font-size: 1.7rem;
 		line-height: 2.4rem;
 		overflow: hidden;
+		text-align: right;
 
 		&-els {
 			margin: -#{$space-v} -#{$space-h};

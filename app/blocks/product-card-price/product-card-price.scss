@@ -13,11 +13,15 @@
 		text-align: right;
 
 		&_old {
-			text-decoration: line-through;
+			padding: 0 0.6rem;
 			margin-bottom: 0.5rem;
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			text-decoration: line-through;
 		}
 
 		&_new {
+			padding: 0 0.2rem;
 			font-size: 2.4rem;
 			line-height: 3.2rem;
 			font-weight: bold;

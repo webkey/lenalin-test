@@ -7,10 +7,14 @@
 	}
 
 	&__label {
-		margin-right: 0.5rem;
+		margin-right: 0.8rem;
 
 		label {
 			font: inherit;
 		}
+	}
+
+	&__input {
+		min-width: 4rem;
 	}
 }
