@@ -4,12 +4,20 @@
 	align-items: flex-start;
 
 	&__sorting {
+		$width: 50%;
+
+		max-width: $width;
 		font-size: 1.4rem;
 		line-height: 1.8rem;
+		padding-right: 1.5rem;
 	}
 
 	&__show {
+		$width: 50%;
+
+		max-width: $width;
 		font-size: 1.4rem;
 		line-height: 1.8rem;
+		padding-left: 1.5rem;
 	}
 }

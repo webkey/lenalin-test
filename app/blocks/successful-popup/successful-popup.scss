@@ -1,0 +1,97 @@
+@import '../../styles/helpers/variables';
+@import '../../styles/helpers/mixins';
+
+.successful-popup {
+	$popup: &;
+
+	padding: 0;
+	width: 58.8rem;
+	max-width: 100%;
+	text-align: center;
+	background: #eae6e7 url(../images/img-success.png) no-repeat 0 100%;
+	box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+
+	&__bg {
+		margin-bottom: 1rem;
+	}
+
+	&__layout {
+		position: relative;
+		padding: 9.1rem 4rem 10.2rem;
+
+		@include below($sm) {
+			padding: 7rem 3rem;
+		}
+	}
+
+	&__align {
+		max-width: 38rem;
+		margin: 0 auto;
+	}
+
+	&__content {
+		display: block;
+		margin-bottom: 2.2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		font-size: 2.8rem;
+		line-height: 3.6rem;
+		font-weight: bold;
+		margin-bottom: 0.8rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		font-size: 1.2rem;
+		line-height: 2rem;
+		color: #222;
+		margin-bottom: 1.2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include below($sm) {
+			font-size: 1.6rem;
+		}
+	}
+
+	&__footer {
+		&-btn {
+			max-width: 100%;
+			width: 26.4rem;
+			margin: 0 auto;
+		}
+	}
+}
+
+.fancybox-successful-popup {
+	.fancybox-bg {
+		background-color: white;
+	}
+
+	&.fancybox-is-open .fancybox-bg {
+		opacity: 0.5;
+	}
+
+	.fancybox-slide--html .fancybox-close-small {
+		right: 0.5rem;
+		top: 0.7rem;
+		outline: none;
+		color: #000;
+		transition: color $animation-speed;
+		opacity: 1;
+
+		&:hover {
+			color: $highlight-color;
+		}
+	}
+}

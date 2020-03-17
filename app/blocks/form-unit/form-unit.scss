@@ -1,6 +1,6 @@
 .form-unit {
 	&__label {
-		margin-bottom: 0.2rem;
+		margin-bottom: 0.4rem;
 		line-height: 1;
 	}
 
@@ -27,7 +27,7 @@
 			&_show-pass {
 				&::before,
 				&::after {
-					$size: 1.8rem;
+					$size: 1.6rem;
 
 					height: $size;
 					width: $size;
@@ -86,7 +86,7 @@
 
 	&__note {
 		position: relative;
-		padding-top: 0.7rem;
+		padding-top: 0.8rem;
 		font-size: 1.2rem;
 		line-height: 1.4rem;
 		color: #4f4f4f;

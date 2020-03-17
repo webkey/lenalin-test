@@ -1,13 +1,31 @@
 .layout-aside-right {
 	$space-h: 9.8rem;
+	$space-h_lg: 3rem;
 
 	display: flex;
 	align-items: flex-start;
 	margin: 0 -#{round-float($space-h / 2, 1)};
 
+	@include below($lg) {
+		margin: 0;
+	}
+
+	@include below($sm) {
+		display: block;
+		margin: 0;
+	}
+
 	&__content {
 		flex: 1 0;
 		padding: 0 #{round-float($space-h / 2, 1)};
+
+		@include below($lg) {
+			padding: 0 #{round-float($space-h_lg / 2, 1)};
+		}
+
+		@include below($sm) {
+			padding: 0 0 4rem;
+		}
 	}
 
 	&__aside {
@@ -16,5 +34,14 @@
 		flex: 1 0 $width;
 		max-width: $width;
 		padding: 0.2rem #{round-float($space-h / 2, 1)};
+
+		@include below($lg) {
+			padding: 0.2rem #{round-float($space-h_lg / 2, 1)};
+		}
+
+		@include below($sm) {
+			padding: 0;
+			max-width: none;
+		}
 	}
 }

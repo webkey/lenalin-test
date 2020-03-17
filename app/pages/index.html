@@ -1,31 +1,50 @@
 @@include("blocks/head/head.html", {"title": "Lenalin - Site map"})
 @@include("blocks/header/header.html", {"currentItem": "Site map"})
 <div class="main">
-	<div class="edit-content">
-		<div class="layout-page">
-			<div class="layout-content">
-				<ol class="list-of-pages">
-					<li><a href="home.html">Home - Главная</a></li>
-					<!--<li><a href="inner.html">Inner - Внутренняя текстовая</a></li>-->
-					<li><a href="about.html">About - О компании</a></li>
-					<li><a href="news.html">News - Список новостей</a></li>
-					<li><a href="news-one.html">News One - Внутренняя новостная</a></li>
-					<li><a href="contacts.html">Contacts - Контакты</a></li>
-					<li><a href="catalog.html">Catalog - Каталог</a></li>
-					<li><a href="product-card.html">Product card - Карточка продукта</a></li>
-					<li><a href="cart.html">Cart - Корзина</a></li>
-					<li><a href="checkout.html">Checkout - Оформление заказа</a></li>
-					<li><a href="cabinet-profile.html">Cabinet. Profile - Личный кабинет. Профиль</a></li>
-					<li><a href="cabinet-favorites.html">Cabinet. Favorites - Личный кабинет. Избранное</a></li>
-					<li><a href="cabinet-history.html">Cabinet. History - Личный кабинет. История заказов</a></li>
-					<li><a href="404.html">404 - Страница не найдена</a></li>
-					<li><a href="typography.html">Typography - Элементы</a></li>
-				</ol>
-				<style>
-					.list-of-pages li a::after {
-						content: ' (' attr(href) ')';
-					}
-				</style>
+	<div class="page">
+		<div class="page__breadcrumbs">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("blocks/breadcrumbs/breadcrumbs.html", { "items": [{"href": "home.html", "text": "Главная"}], "current": "Список страниц" })
+				</div>
+			</div>
+		</div>
+		<div class="page__heading">
+			<div class="layout-page">
+				<div class="layout-content">
+					@@include("blocks/heading/heading.html", {"title": "Список страниц"})
+				</div>
+			</div>
+		</div>
+		<div class="page__section">
+			<div class="layout-page">
+				<div class="layout-content edit-content">
+					<ol class="list-of-pages">
+						<li><a href="home.html">Home - Главная</a></li>
+						<!--<li><a href="inner.html">Inner - Внутренняя текстовая</a></li>-->
+						<li><a href="about.html">About - О компании</a></li>
+						<li><a href="news.html">News - Список новостей</a></li>
+						<li><a href="news-one.html">News One - Внутренняя новостная</a></li>
+						<li><a href="contacts.html">Contacts - Контакты</a></li>
+						<li><a href="catalog.html">Catalog - Каталог</a></li>
+						<li><a href="product-card.html">Product card - Карточка продукта</a></li>
+						<li><a href="cart.html">Cart - Корзина</a></li>
+						<li><a href="checkout.html">Checkout - Оформление заказа</a></li>
+						<li><a href="cabinet-profile.html">Cabinet. Profile - Личный кабинет. Профиль</a></li>
+						<li><a href="cabinet-favorites.html">Cabinet. Favorites - Личный кабинет. Избранное</a></li>
+						<li><a href="cabinet-history.html">Cabinet. History - Личный кабинет. История заказов</a></li>
+						<li><a href="404.html">404 - Страница не найдена</a></li>
+						<li><a href="typography.html">Typography - Элементы</a></li>
+					</ol>
+					<style>
+						.list-of-pages li a {
+							color: inherit;
+						}
+						.list-of-pages li a::after {
+							content: ' (' attr(href) ')';
+						}
+					</style>
+				</div>
 			</div>
 		</div>
 	</div>

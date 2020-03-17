@@ -3,5 +3,10 @@
 		font-weight: bold;
 		font-size: 4.2rem;
 		line-height: 5rem;
+
+		@include below($md) {
+			font-size: 2.8rem;
+			line-height: 4.2rem;
+		}
 	}
 }

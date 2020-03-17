@@ -1,0 +1,16 @@
+<div style="display: none" class="successful-popup" id="@@id">
+	<div class="successful-popup__layout">
+		<div class="successful-popup__align">
+			<div class="successful-popup__content">
+				<div class="successful-popup__title">Благодарим за покупку!</div>
+				<div class="successful-popup__text">Если вы хотите продолжить, перейдите в каталог</div>
+			</div>
+			@@if(context.btn) {
+			<div class="successful-popup__footer">
+				<div class="successful-popup__footer-btn">
+					@@include("blocks/btn-def/btn-def.html", {"href": "catalog.html", "mods": ["small", "full-width"], "text": "В каталог"})
+				</div>
+			</div>}
+		</div>
+	</div>
+</div>

@@ -3,8 +3,17 @@
 
 	&__content {
 		width: 50%;
-		padding-right: 10rem;
+		padding-right: 8.7%;
 		padding-bottom: 9.4rem;
+
+		@include below($lg) {
+			padding-bottom: 6rem;
+		}
+
+		@include below($md) {
+			width: auto;
+			padding: 0 0 4rem;
+		}
 	}
 
 	&__breadcrumbs {
@@ -15,15 +24,28 @@
 	&__heading {
 		margin-bottom: 2.9rem;
 
+		@include below($md) {
+			margin-bottom: 2rem;
+		}
+
 		&-title {
 			font-weight: bold;
 			font-size: 4.2rem;
 			line-height: 5rem;
+
+			@include below($md) {
+				font-size: 2.8rem;
+				line-height: 4.2rem;
+			}
 		}
 	}
 
 	&__entry {
 		margin-bottom: 4rem;
+
+		@include below($md) {
+			margin-bottom: 2rem;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -44,5 +66,13 @@
 		top: 0;
 		width: 50%;
 		height: 100%;
+
+		@include below($md) {
+			position: relative;
+			right: auto;
+			top: auto;
+			width: auto;
+			height: 32rem;
+		}
 	}
 }

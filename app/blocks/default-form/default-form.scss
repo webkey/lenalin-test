@@ -1,6 +1,10 @@
 .default-form {
 	&__heading {
 		margin-bottom: 1.9rem;
+
+		&_space-small {
+			margin-bottom: 0.9rem;
+		}
 	}
 
 	&__title {
@@ -9,6 +13,11 @@
 		line-height: 2.4rem;
 		color: $title-color;
 		margin: 0;
+
+		&_large {
+			font-size: 2.4rem;
+			line-height: 3.2rem;
+		}
 	}
 
 	&__section {

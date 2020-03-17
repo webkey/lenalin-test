@@ -7,11 +7,10 @@ export const libsJsLink = [
 	'app/libs/js/jquery.accordion-simple.js',
 	'app/libs/js/jquery.nav.js',
 	'node_modules/select2/dist/js/select2.full.min.js',
-	'node_modules/select2/dist/js/i18n/ru.js',
 	'node_modules/swiper/dist/js/swiper.min.js',
 	'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 	'node_modules/flatpickr/dist/flatpickr.min.js',
-	'node_modules/flatpickr/dist/l10n/ru.js'
+	'node_modules/jquery-validation/dist/jquery.validate.min.js'
 ];
 
 export const libsCssLink = [

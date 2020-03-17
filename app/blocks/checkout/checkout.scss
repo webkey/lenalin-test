@@ -43,6 +43,10 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
+
+		&_card {
+			display: none;
+		}
 	}
 
 	&__cols {
@@ -95,6 +99,37 @@
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+
+	&__btn-pay {
+		display: none;
+	}
+
+	&__feedback-success {
+		position: relative;
+		padding-left: 3rem;
+		margin-top: 2rem;
+		font-weight: normal;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		color: rgba(#000, 0.7);
+		text-align: left;
+
+		&::before {
+			$size: 2.4rem;
+
+			content: "";
+			display: block;
+			position: absolute;
+			left: -0.4rem;
+			top: -0.2rem;
+			height: 2.4rem;
+			width: 2.4rem;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAuMDAwNyAxNS4xNzJMMTkuMTkyNyA1Ljk3OUwyMC42MDc3IDcuMzkzTDEwLjAwMDcgMThMMy42MzY3MiAxMS42MzZMNS4wNTA3MiAxMC4yMjJMMTAuMDAwNyAxNS4xNzJaIiBmaWxsPSJibGFjayIvPjwvc3ZnPg==);
+			background-size: contain;
 		}
 	}
 }

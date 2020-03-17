@@ -21,7 +21,9 @@ app.headerMob.init();
 app.flipOfferBgDescr.init();
 app.flipOfferImgDescr.init();
 app.datepickerInline.init();
+app.checkout.init();
 
 app.formPopup.init();
+// app.successPopup.init(); // Show popup on page start
 
 app.headerSearchResultTest.init();

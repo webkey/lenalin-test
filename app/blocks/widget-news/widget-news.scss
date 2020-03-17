@@ -11,6 +11,10 @@
 		background-size: cover;
 		margin-bottom: 3.8rem;
 
+		@include below($md) {
+			margin-bottom: 2rem;
+		}
+
 		&::before {
 			content: "";
 			display: block;
@@ -21,6 +25,10 @@
 
 	&__content {
 		margin-bottom: 2.9rem;
+
+		@include below($md) {
+			margin-bottom: 2rem;
+		}
 
 		&:last-child {
 			margin-bottom: 0;

@@ -125,6 +125,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "flatpickr": "^4.6.3",
     "jquery": "^2.1.4",
+    "jquery-validation": "^1.19.1",
     "select2": "^4.0.13",
     "simplebar": "^5.1.0",
     "svg4everybody": "^2.0.0",

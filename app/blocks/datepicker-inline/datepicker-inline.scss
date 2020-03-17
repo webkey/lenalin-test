@@ -4,10 +4,22 @@
 
 	&__input {
 		width: 14rem;
-		margin: 0;
+		margin: 0 1.5rem 0 0;
 		font: inherit;
 		box-shadow: none;
 		background: none;
 		border: none;
+
+		@include input-placeholder() {
+			color: $form-def-placeholder-color;
+		}
+
+		@include input-placeholder-hover() {
+			color: $form-def-placeholder-color;
+		}
+
+		@include input-placeholder-focus() {
+			color: $form-def-placeholder-color;
+		}
 	}
 }

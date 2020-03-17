@@ -1,6 +1,6 @@
 <div class="checkout">
 	<div class="layout-form layout-form_align-left">
-		<form class="checkout__form" action="#" method="post" onsubmit="alert('Форма находится в тестовом режиме. Чтобы закрыть окно, нажмите ОК.'); return false;">
+		<form class="checkout__form js-checkout-from" action="#" method="post">
 			<div class="checkout__section checkout__section_space-small">
 				@@include("blocks/widget-order-short/widget-order-short.html", {
 				"totalPrice": "666 руб.",
@@ -234,9 +234,9 @@
 									</div>
 									<div class="form-list__li">
 										<label class="form-radio">
-											<input class="form-radio__input" type="radio" name="delivery-date" checked>
+											<input class="form-radio__input js-choose-date" type="radio" name="delivery-date" checked>
 											<span class="form-radio__label">
-												<span class="datepicker-inline js-datepicker">
+												<span class="datepicker-inline js-checkout-datepicker">
 													<input class="datepicker-inline__input" type="text" placeholder="Выбрать дату..." data-input>
 
 													<a class="datepicker-inline__icon" title="toggle" data-toggle>
@@ -298,11 +298,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="checkout__section">
+			<div class="checkout__section checkout__section_space-small checkout__section_card js-checkout-card">
 				<div class="checkout__cols">
 					<div class="checkout__cols-col">
-						<div class="default-form__heading">
-							<div class="default-form__title">Оплата картой</div>
+						<div class="default-form__heading default-form__heading_space-small">
+							<div class="default-form__title default-form__title_large">Оплата картой</div>
 						</div>
 						<div class="default-form__section">
 							<div class="form-grid">
@@ -408,13 +408,20 @@
 			<div class="checkout__section checkout__section_align-right">
 				<div class="checkout__cols">
 					<div class="checkout__cols-col">
-						@@include("blocks/btn-def/btn-def_button-submit.html", {"mods": ["full-width"], "text": "Оплатить"})
+						@@include("blocks/btn-def/btn-def_button-submit.html", {"mods": ["full-width"], "class": "checkout__btn-pay js-btn-pay", "text": "Оплатить"})
+						<div class="checkout__feedback-success" style="display: none">Оплата успешно произведена</div>
 					</div>
 					<div class="checkout__cols-col">
-						@@include("blocks/btn-def/btn-def_button-submit.html", {"text": "Оформить заказ", "mods": ["full-width"]})
+						@@include("blocks/btn-def/btn-def.html", {"text": "Оформить заказ", "class": "js-btn-order", "mods": ["full-width"]})
 					</div>
 				</div>
 			</div>
+			@@include("blocks/successful-popup/successful-popup.html", {
+			"id": "successful-popup",
+			"title": "Благодарим за покупку!",
+			"text": "Если вы хотите продолжить, перейдите в каталог",
+			"btn": "Your application has been sent successfully"
+			})
 		</form>
 	</div>
 </div>

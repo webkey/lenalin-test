@@ -32,7 +32,7 @@
 	pre {
 		margin-bottom: $bottom-space;
 
-		@include below($lg) {
+		@include below($md) {
 			margin-bottom: $bottom-space_mob;
 		}
 
@@ -49,7 +49,7 @@
 		color: $title-color;
 		margin: #{$bottom-space * 1.5} 0 $bottom-space;
 
-		@include below($lg) {
+		@include below($md) {
 			font-size: 2.8rem;
 			line-height: 4.2rem;
 			margin: #{$bottom-space_mob * 1.5} 0 $bottom-space_mob;
@@ -68,7 +68,7 @@
 		color: $title-color;
 		margin: #{round-float($bottom-space * 1.69, 1)} 0 #{round-float($bottom-space * 0.71, 1)};
 
-		@include below($lg) {
+		@include below($md) {
 			font-size: 2rem;
 			line-height: 2.8rem;
 			margin: #{round-float($bottom-space_mob * 1.69, 1)} 0 #{round-float($bottom-space_mob * 0.71, 1)};
@@ -87,7 +87,7 @@
 		color: $title-color;
 		margin: #{round-float($bottom-space * 1.69, 1)} 0 #{round-float($bottom-space * 0.71, 1)};
 
-		@include below($lg) {
+		@include below($md) {
 			font-size: 1.8rem;
 			line-height: 2.4rem;
 			margin: #{round-float($bottom-space_mob * 1.69, 1)} 0 #{round-float($bottom-space_mob * 0.71, 1)};
@@ -181,9 +181,8 @@
 		text-align: center;
 		clear: both;
 
-		@include below($lg) {
-			margin-top: #{round-float($bottom-space_mob * 1.25, 1)};
-			margin-bottom: #{round-float($bottom-space_mob * 1.69, 1)};
+		@include below($md) {
+			margin: #{round-float($bottom-space_mob * 1.25, 1)} auto #{round-float($bottom-space_mob * 1.69, 1)};
 		}
 
 		&:first-child {
@@ -198,7 +197,7 @@
 			max-width: 55%;
 			margin: 0 3rem #{$bottom-space} 0;
 
-			@include below($lg) {
+			@include below($md) {
 				float: none;
 				max-width: 100%;
 				margin: #{round-float($bottom-space_mob * 1.25, 1)} 0 #{round-float($bottom-space_mob * 1.69, 1)};
@@ -214,7 +213,7 @@
 			max-width: 55%;
 			margin: 0 0 3rem #{round-float($bottom-space * 1.25, 1)};
 
-			@include below($lg) {
+			@include below($md) {
 				float: none;
 				max-width: 100%;
 				margin: #{round-float($bottom-space_mob * 1.25, 1)} 0 #{round-float($bottom-space_mob * 1.69, 1)};
@@ -228,7 +227,7 @@
 		position: relative;
 		margin: #{round-float($bottom-space * 1.25, 1)} 0 #{round-float($bottom-space * 1.69, 1)};
 
-		@include below($lg) {
+		@include below($md) {
 			margin-top: #{round-float($bottom-space_mob * 1.25, 1)};
 			margin-bottom: #{round-float($bottom-space_mob * 1.69, 1)};
 		}

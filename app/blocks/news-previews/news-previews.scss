@@ -1,6 +1,7 @@
 .news-previews {
 	$space-h: 3rem;
 	$space-v: 7.7rem;
+	$space-v--md: 4rem;
 	$space-v--sm: 4rem;
 
 	overflow: hidden;
@@ -11,18 +12,32 @@
 		align-items: flex-start;
 		flex-wrap: wrap;
 
-		@include below($lg) {
+		@include below($md) {
+			margin-bottom: -#{$space-v--md};
+		}
+
+		@include below($sm) {
 			display: block;
 			margin: 0 0 -#{$space-v--sm};
 		}
 	}
 
 	&__item {
-		flex: 1 0 33.33%;
-		max-width: 33.33%;
+		$width: 33.33%;
+
+		flex: 1 0 $width;
+		max-width: $width;
 		padding: 0 #{round-float($space-h / 2, 1)} #{$space-v};
 
-		@include below($lg) {
+		@include below($md) {
+			$width: 50%;
+
+			flex-basis: $width;
+			max-width: $width;
+			padding-bottom: $space-v--md;
+		}
+
+		@include below($sm) {
 			max-width: none;
 			padding: 0 0 #{$space-v--sm};
 		}
