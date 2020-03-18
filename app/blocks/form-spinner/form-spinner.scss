@@ -19,9 +19,18 @@
 		color: inherit;
 		cursor: pointer;
 		display: flex;
+		background: none;
 		align-items: center;
 		justify-content: center;
 		transition: all 0.1s;
+
+		@include below($lg) {
+			$size: 2.4rem;
+
+			height: $size;
+			width: $size;
+			border-radius: $size;
+		}
 
 		&-icon {
 			position: relative;

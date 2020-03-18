@@ -1,6 +1,7 @@
 .form-list {
 	$space-v: 2rem;
 	$space-v_small: 0.6rem;
+	$space-v_small_md: 1rem;
 
 	//overflow: hidden; // Cut horizontal negative intends
 
@@ -10,6 +11,10 @@
 
 		&_space-small {
 			margin-bottom: -#{$space-v_small};
+
+			@include below($md) {
+				margin-bottom: -#{$space-v_small_md};
+			}
 		}
 
 		@for $i from 2 through 5 {
@@ -25,6 +30,10 @@
 
 		&_space-small {
 			margin-bottom: #{$space-v_small};
+
+			@include below($md) {
+				margin-bottom: #{$space-v_small_md};
+			}
 		}
 	}
 }

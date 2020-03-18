@@ -5,9 +5,18 @@
 		justify-content: space-between;
 		margin-bottom: 3.8rem;
 
+		@include below($sm) {
+			display: block;
+			margin-bottom: 3rem;
+		}
+
 		&-body {
 			flex-grow: 1;
 			margin-right: 2rem;
+
+			@include below($sm) {
+				margin: 0 0 2rem;
+			}
 		}
 
 		&-footer {
@@ -32,9 +41,11 @@
 	}
 
 	&__info {
-		margin-bottom: -1rem;
+		&-holder {
+			margin-bottom: -1rem;
 
-		@include clearfix;
+			@include clearfix;
+		}
 	}
 
 	&__date {
@@ -62,6 +73,10 @@
 	&__contain {
 		max-height: 56rem;
 		padding-right: 3rem;
+
+		@include below($sm) {
+			padding-right: 2rem;
+		}
 	}
 
 	&__products {

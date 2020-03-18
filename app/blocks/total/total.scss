@@ -2,6 +2,8 @@
 	$space-h: 3rem;
 	$space-v: 2rem;
 
+	overflow: hidden;
+
 	&__title {
 		font-size: 3.2rem;
 		line-height: 4rem;
@@ -20,6 +22,10 @@
 		&_align-bottom {
 			align-items: flex-end;
 		}
+
+		@include below($sm) {
+			display: block;
+		}
 	}
 
 	&__col {
@@ -28,15 +34,20 @@
 		max-width: 50%;
 		margin-bottom: #{$space-v};
 		padding: 0 #{round-float($space-h / 2, 1)};
+
+		@include below($sm) {
+			max-width: none;
+		}
 	}
 
 	&__count {
 		font-weight: bold;
 		font-size: 2.2rem;
 		line-height: 3.2rem;
+		padding-top: 0.9rem;
 
-		&_top-space {
-			padding-top: 0.9rem;
+		@include below($sm) {
+			padding-top: 0;
 		}
 	}
 
@@ -45,6 +56,20 @@
 		font-size: 3.7rem;
 		line-height: 4.2rem;
 		text-align: right;
+
+		@include below($lg) {
+			font-size: 3.2rem;
+			line-height: 4rem;
+		}
+
+		@include below($md) {
+			font-size: 2.8rem;
+			line-height: 3.2rem;
+		}
+
+		@include below($sm) {
+			text-align: left;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
@@ -56,5 +81,9 @@
 		line-height: 2.4rem;
 		text-align: right;
 		color: rgba(#000, 0.5);
+
+		@include below($sm) {
+			text-align: left;
+		}
 	}
 }

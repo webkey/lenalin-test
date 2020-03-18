@@ -4,13 +4,15 @@
 			<div class="widget-order-history__status">@@include("blocks/sticker-status/sticker-status.html", {"mods": ["@@status.mod"], "text": "@@status.text"})</div>
 			<div class="widget-order-history__number">Заказ: №@@number</div>
 			<div class="widget-order-history__info">
-				<div class="widget-order-history__date">@@date</div>
-				<div class="widget-order-history__price">Сумма: @@price</div>
-				<div class="widget-order-history__payment">@@payment</div>
+				<div class="widget-order-history__info-holder">
+					<div class="widget-order-history__date">@@date</div>
+					<div class="widget-order-history__price">Сумма: @@price</div>
+					<div class="widget-order-history__payment">@@payment</div>
+				</div>
 			</div>
 		</div>
 		<div class="widget-order-history__common-footer">
-			@@include("blocks/btn-def/btn-def.html", {"href": "order.html", "text": "Повторить заказ"})
+			@@include("blocks/btn-def/btn-def.html", {"href": "checkout.html", "text": "Повторить заказ"})
 		</div>
 	</div>
 	@@if(context.countProducts){

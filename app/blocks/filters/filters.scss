@@ -78,9 +78,9 @@
 				position: absolute;
 				right: 50%;
 				top: 50%;
-				height: 0.1rem;
-				width: 0.7rem;
-				margin: 0 -0.3rem;
+				height: 0.2rem;
+				width: 1rem;
+				margin: -0.1rem -0.5rem;
 				background: #000;
 				transition: transform $animation-speed;
 			}
@@ -105,20 +105,6 @@
 				#{$li}.has-drop:not(.hide-arrow) & {
 					margin-right: -#{$arrow-space};
 				}
-			}
-
-			@include below($lg) {
-				min-width: 0;
-				margin-right: -2.8rem;
-				margin-left: auto;
-				padding: 0;
-				position: relative;
-				left: auto;
-				top: auto;
-				opacity: 1;
-				pointer-events: auto;
-				transform: translate3d(0, 0, 0);
-				display: none;
 			}
 
 			@at-root {
@@ -213,9 +199,9 @@
 				position: absolute;
 				right: 50%;
 				top: 50%;
-				height: 0.1rem;
-				width: 0.7rem;
-				margin: 0 -0.3rem;
+				height: 0.2rem;
+				width: 1rem;
+				margin: -0.1rem -0.5rem;
 				background: #000;
 				transition: transform $animation-speed;
 			}
@@ -241,20 +227,6 @@
 				#{$li}.has-drop:not(.hide-arrow) & {
 					margin-right: -#{$arrow-space};
 				}
-			}
-
-			@include below($lg) {
-				min-width: 0;
-				margin-right: -2.8rem;
-				margin-left: auto;
-				padding: 0;
-				position: relative;
-				left: auto;
-				top: auto;
-				opacity: 1;
-				pointer-events: auto;
-				transform: translate3d(0, 0, 0);
-				display: none;
 			}
 
 			@at-root {
@@ -349,9 +321,9 @@
 				position: absolute;
 				right: 50%;
 				top: 50%;
-				height: 0.1rem;
-				width: 0.7rem;
-				margin: 0 -0.3rem;
+				height: 0.2rem;
+				width: 1rem;
+				margin: -0.1rem -0.5rem;
 				background: #000;
 				transition: transform $animation-speed;
 			}
@@ -376,20 +348,6 @@
 				#{$li}.has-drop:not(.hide-arrow) & {
 					margin-right: -#{$arrow-space};
 				}
-			}
-
-			@include below($lg) {
-				min-width: 0;
-				margin-right: -2.8rem;
-				margin-left: auto;
-				padding: 0;
-				position: relative;
-				left: auto;
-				top: auto;
-				opacity: 1;
-				pointer-events: auto;
-				transform: translate3d(0, 0, 0);
-				display: none;
 			}
 
 			@at-root {

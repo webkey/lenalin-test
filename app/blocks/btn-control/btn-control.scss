@@ -23,6 +23,11 @@
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
 
+	@include below($md) {
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+	}
+
 	@at-root {
 		#{$btn},
 		input#{$btn} {

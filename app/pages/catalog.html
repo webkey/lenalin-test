@@ -20,10 +20,16 @@
 			<div class="layout-page">
 				<div class="layout-content">
 					<div class="layout-filters">
-						<aside class="layout-filters__aside">
-							@@include("blocks/filters-panel/filters-panel.html")
+						<div class="filters-menu-overlay js-filters-menu-overlay"></div>
+						<aside class="layout-filters__aside js-filters-menu js-prevent-hide">
+							@@include("blocks/filters-menu/filters-menu.html")
 						</aside>
 						<div class="layout-filters__content">
+							<div class="page__section page__section_space-smallest page__section_hide page__section_show-lg reset-line-height">
+								<a href="#" class="filters-menu-switcher js-filters-menu-switcher" title="Открыть/закрыть панель с фильтрами">
+									<span>Открыть фильтры</span>
+								</a>
+							</div>
 							<div class="page__section page__section_space-smallest">
 								<div class="controls-panel">
 									<div class="controls-panel__sorting">

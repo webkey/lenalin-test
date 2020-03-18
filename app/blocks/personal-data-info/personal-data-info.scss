@@ -28,6 +28,10 @@
 		line-height: 0;
 		min-width: 29.3rem;
 
+		@include below($sm) {
+			display: block;
+		}
+
 		&_edit {
 			padding-right: 4.3rem;
 		}

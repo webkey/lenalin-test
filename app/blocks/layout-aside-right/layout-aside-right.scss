@@ -7,7 +7,7 @@
 	margin: 0 -#{round-float($space-h / 2, 1)};
 
 	@include below($lg) {
-		margin: 0;
+		margin: 0 -#{round-float($space-h_lg / 2, 1)};
 	}
 
 	@include below($sm) {

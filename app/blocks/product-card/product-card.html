@@ -71,12 +71,11 @@
 		<div class="product-card__aside-section">
 			<div class="product-card-controls">
 				<div class="product-card-controls__cols product-card-controls__cols_align-bottom">
-					<div class="product-card-controls__col product-card-controls__col_6">
+					<div class="product-card-controls__col product-card-controls__col_6 product-card-controls__col-sm_12">
 						@@include("blocks/product-card-quantity/product-card-quantity.html")
 					</div>
-					<div class="product-card-controls__col product-card-controls__col_6">
+					<div class="product-card-controls__col product-card-controls__col_6 product-card-controls__col-sm_12">
 						@@include("blocks/product-card-price/product-card-price.html")
-
 					</div>
 				</div>
 			</div>
@@ -85,14 +84,14 @@
 		<div class="product-card__aside-section product-card__aside-section_space-large">
 			<div class="product-card-controls">
 				<div class="product-card-controls__cols product-card-controls__cols_align-bottom">
-					<div class="product-card-controls__col product-card-controls__col_6">
-						@@include("blocks/btn-def/btn-def.html", {"mods": ["full-width"], "text": "В корзину"})
+					<div class="product-card-controls__col product-card-controls__col_6 product-card-controls__col-sm_12">
+						@@include("blocks/btn-def/btn-def.html", {"href": "cart.html", "mods": ["full-width"], "text": "В корзину"})
 					</div>
-					<div class="product-card-controls__col product-card-controls__col_6">
+					<div class="product-card-controls__col product-card-controls__col_6 product-card-controls__col-sm_12">
 						@@include("blocks/btn-def/btn-def.html", {"mods": ["invert", "full-width"], "icon": "@@include('svg/icon-favorites_small.svg')", "text": "В избранное"})
 					</div>
 					<div class="product-card-controls__col">
-						@@include("blocks/btn-special/btn-special.html", {"mods": ["full-width"], "text": "Купить в один клик"})
+						@@include("blocks/btn-special/btn-special.html", {"href": "cart.html", "mods": ["full-width"], "text": "Купить в один клик"})
 					</div>
 				</div>
 			</div>

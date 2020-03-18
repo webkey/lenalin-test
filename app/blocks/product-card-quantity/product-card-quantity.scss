@@ -3,14 +3,19 @@
 	align-items: center;
 	font-size: 1.4rem;
 	line-height: 1.8rem;
+	padding-bottom: 1.1rem;
 
-	&_bottom-space {
-		padding-bottom: 1.1rem;
+	@include below($lg) {
+		display: inline-flex;
+	}
+
+	@include below($sm) {
+		padding-bottom: 0;
 	}
 
 	&__title {
 		font-weight: 300;
-		margin-right: 0.5rem;
+		margin-right: 1.5rem;
 	}
 
 	&__spinner {

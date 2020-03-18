@@ -1,56 +1,69 @@
 app.filters = {
-	initElement: '.js-filters',
-	filtersItemElement: '.js-filters-li',
-	filtersPanelElement: '.js-filters-drop',
-	filtersSwitcherElement: '.js-filters-arrow',
-	filterElement: '.js-filter',
+	initEl: '.js-filters',
+	filtersItemEl: '.js-filters-li',
+	filtersPanelEl: '.js-filters-drop',
+	filtersSwitcherEl: '.js-filters-arrow',
+	filterEl: '.js-filter',
+	switcherFiltersEl: '.js-filters-menu-switcher',
 	init() {
 		app.common.initScript('jquery.accordion-simple', 'accordionSimple', () => {
-			if ($(this.initElement).length) {
-				this.runNavigation();
+			if ($(this.initEl).length) {
+				this.events();
+			}
+		});
+
+		app.common.initScript('jquery.switch-class', 'switchClass', () => {
+			const $switcherEl = $(this.switcherFiltersEl);
+			if ($switcherEl.length) {
+				this.toggleFilterPanel(this.switcherFiltersEl);
 			}
 		});
 	},
-	runNavigation() {
+	events() {
 		const self = this;
-		const $filters = $(this.initElement);
+		const $filters = $(this.initEl);
 		const filtersAccordion = $filters.accordionSimple({
 			// Elements
-			block: self.filtersItemElement,
-			panel: self.filtersPanelElement,
-			switcher: self.filtersSwitcherElement,
+			block: self.filtersItemEl,
+			panel: self.filtersPanelEl,
+			switcher: self.filtersSwitcherEl,
 			// Additional settings
 			collapsed: false,
 			duration: 200,
 		});
 
-		$filters.on('click', self.filtersItemElement + ' > a', function (e) {
+		$filters.on('click', self.filtersItemEl + ' > a', function (e) {
 			// Prevent click if need
 			e.preventDefault();
 			const $curEl = $(this);
-			const $curItem = $curEl.closest(self.filtersItemElement);
+			const $curItem = $curEl.closest(self.filtersItemEl);
 
 			// Show preloader
-			app.preloader.show($curEl.closest(self.initElement).parent(), 'fit', 'small');
+			app.preloader.show($curEl.closest(self.initEl).parent(), 'fit', 'small');
 
 			// setTimeout for example
 			setTimeout(() => {
 				if ($curItem.hasClass('current')) {
-					$(self.filterElement, $curItem).prop('checked', false);
+					$(self.filterEl, $curItem).prop('checked', false);
 
 					// Filtered...
 
 					$curItem
 						.removeClass('current')
-						.find(self.filtersItemElement)
+						.find(self.filtersItemEl)
 						.removeClass('current');
 				} else {
 					// Filtered...
 
 					// Then show filters
-					filtersAccordion.accordionSimple('open', $curEl.siblings(self.filtersPanelElement), function () {
+					const $drop = $curEl.siblings(self.filtersPanelEl);
+					if ($drop.length) {
+						filtersAccordion.accordionSimple('open', $drop, function () {
+							$curItem.addClass('current');
+						});
+					} else {
 						$curItem.addClass('current');
-					});
+					}
 				}
 
 				// Hide preloader
@@ -58,19 +71,39 @@ app.filters = {
 			}, 500);
 		});
 
-		$filters.on('change', self.filterElement, function () {
+		$filters.on('change', self.filterEl, function () {
 			const $curEl = $(this);
 
 			// Show preloader
-			app.preloader.show($curEl.closest(self.initElement).parent(), 'fit', 'small');
+			app.preloader.show($curEl.closest(self.initEl).parent(), 'fit', 'small');
 
 			// setTimeout for example
 			setTimeout(() => {
-				$curEl.parentsUntil(self.initElement).filter(self.filtersItemElement).addClass('current');
+				$curEl.parentsUntil(self.initEl).filter(self.filtersItemEl).addClass('current');
 
 				// Hide preloader
 				app.preloader.hide();
 			}, 500);
 		});
-	}
+	},
+	toggleFilterPanel(el) {
+		const $switcherEl = $(el);
+		const $html = $('html');
+		$switcherEl.switchClass({
+			removeExisting: true,
+			switchClassTo: $('.js-filters-menu').add('.js-filters-menu-overlay'),
+			removeEl: $('.js-filters-menu-close').add('.js-filters-menu-overlay'),
+			cssScrollFixed: true,
+			preventRemoveClass: 'js-prevent-hide',
+			modifiers: {
+				activeClass: 'filters-menu-is-open'
+			},
+			afterAdd() {
+				$html.addClass('open-only-mob');
+			},
+			afterRemove() {
+				$html.removeClass('open-only-mob');
+			}
+		});
+	},
 };

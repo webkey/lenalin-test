@@ -4,23 +4,34 @@
 	display: flex;
 	align-items: flex-start;
 
-	&__photo {
-		$width: 20.6rem;
+	@include below($sm) {
+		display: block;
+	}
 
-		padding-right: 5.7rem;
+	&__photo {
+		$width: 14.9rem;
+
+		margin-right: 5.7rem;
 		flex-shrink: 1;
 		flex-basis: $width;
 		max-width: $width;
 
+		@include below($lg) {
+			margin-right: 3rem;
+		}
+
 		@include below($sm) {
 			max-width: none;
-			padding: 0;
-			margin-bottom: 2rem;
+			margin: 0 0 3rem;
 		}
 	}
 
 	&__info {
 		flex-grow: 1;
 		padding: 0.2rem 0 0;
+
+		@include below($sm) {
+			padding-top: 0;
+		}
 	}
 }

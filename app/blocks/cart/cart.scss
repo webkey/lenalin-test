@@ -1,16 +1,27 @@
 .cart {
 	$width-main: 57.2%;
+	$width-main_lg: 50%;
 	$space-h: 3.8rem;
-	$padding-top: 14rem;
+	$space-h_lg: 3rem;
+	$indent-top: 14rem;
+	$indent-top_md: 11.5rem;
 
 	overflow: hidden;
 	position: relative;
-	margin-top: -$padding-top;
+	margin-top: -#{$indent-top};
 	z-index: 1;
+
+	@include below($md) {
+		margin-top: -#{$indent-top_md};
+	}
 
 	&__layout {
 		display: flex;
 		align-items: flex-end;
+
+		@include below($md) {
+			display: block;
+		}
 	}
 
 	&__main {
@@ -18,9 +29,22 @@
 
 		flex: 1 0 $width;
 		max-width: $width;
-		padding: #{$padding-top} 1.8rem 3.4rem 0;
+		padding: #{$indent-top} 1.8rem 3.4rem 0;
 		min-height: 1rem;
 		position: relative;
+
+		@include below($lg) {
+			$width: $width-main_lg;
+
+			flex: 1 0 $width;
+			max-width: $width;
+		}
+
+		@include below($md) {
+			max-width: none;
+			padding: #{$indent-top_md} 0 3rem;
+			margin-bottom: 4rem;
+		}
 
 		&::before {
 			content: "";
@@ -32,6 +56,14 @@
 			display: block;
 			background-color: $bg-color-alt;
 			z-index: -1;
+
+			@include below($md) {
+				max-width: none;
+				width: auto;
+				top: 0;
+				left: -5rem;
+				right: -5rem;
+			}
 		}
 	}
 
@@ -42,6 +74,14 @@
 	&__products {
 		overflow: hidden;
 		padding-right: 4rem;
+
+		@include below($md) {
+			padding-right: 3rem;
+		}
+
+		@include below($sm) {
+			padding-right: 2rem;
+		}
 	}
 
 	&__aside {
@@ -49,14 +89,35 @@
 
 		flex: 1 0 $width;
 		max-width: $width;
-		padding: #{$padding-top} 0 3.4rem #{$space-h};
+		padding: #{$indent-top} 0 3.4rem #{$space-h};
 		min-height: 1rem;
+
+		@include below($lg) {
+			$width: 100% - $width-main_lg;
+
+			flex: 1 0 $width;
+			max-width: $width;
+			padding-left: $space-h_lg;
+		}
+
+		@include below($md) {
+			max-width: none;
+			padding: 0;
+		}
 
 		&-section {
 			margin-bottom: 4.4rem;
 
+			@include below($md) {
+				margin-bottom: 3rem;
+			}
+
 			&_space-large {
 				margin-bottom: 5.1rem;
+
+				@include below($md) {
+					margin-bottom: 4rem;
+				}
 			}
 
 			&_last,

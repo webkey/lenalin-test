@@ -9,6 +9,11 @@
 		margin: 0 -#{floor-float($space-h / 2, 1)} -#{$space-v};
 		font-size: 1.4rem;
 		line-height: 1.7rem;
+
+		@include below($md) {
+			font-size: inherit;
+			line-height: inherit;
+		}
 	}
 
 	&__li {

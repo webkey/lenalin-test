@@ -40,8 +40,26 @@
 			background-size: contain;
 			background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTEuOTk5OCAxMy4xNzIyTDE2Ljk0OTggOC4yMjIxN0wxOC4zNjM4IDkuNjM2MTdMMTEuOTk5OCAxNi4wMDAyTDUuNjM1NzcgOS42MzYxN0w3LjA0OTc3IDguMjIyMTdMMTEuOTk5OCAxMy4xNzIyWiIvPjwvc3ZnPg==);
 
+			@include below($lg) {
+				display: none;
+			}
+
 			&.drop-is-open {
 				transform: rotate(0.5turn);
+			}
+
+			&::before {
+				$size: 4rem;
+
+				content: "";
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				height: $size;
+				width: $size;
+				margin: -#{floor-float($size / 2, 1)};
+				background: url(../images/empty.png);
 			}
 		}
 	}
@@ -55,6 +73,15 @@
 		pointer-events: none;
 		transform: translate3d(0, -1rem, 0);
 		transition: opacity $animation-speed, transform $animation-speed;
+
+		@include below($lg) {
+			position: relative;
+			right: auto;
+			top: auto;
+			opacity: 1;
+			pointer-events: auto;
+			transform: none;
+		}
 
 		&.drop-is-open {
 			opacity: 1;
@@ -72,9 +99,8 @@
 			background-color: white;
 
 			@include below($lg) {
-				font-size: 1.6rem;
-				line-height: 2.4rem;
-				padding: 1rem 1.8rem 0.6rem;
+				box-shadow: none;
+				padding: 0;
 			}
 		}
 

@@ -1,6 +1,7 @@
 .product-card {
 	$width-main: 51.31%;
 	$space-h: 9.8rem;
+	$space-h_lg: 3rem;
 
 	@include clearfix;
 
@@ -9,6 +10,12 @@
 		clear: left;
 		width: $width-main;
 		min-height: 1rem;
+
+		@include below($md) {
+			float: none;
+			width: auto;
+			margin-bottom: 4rem;
+		}
 	}
 
 	&__heading {
@@ -18,6 +25,17 @@
 		padding-left: $space-h;
 		min-height: 1rem;
 		margin-bottom: 1.7rem;
+
+		@include below($lg) {
+			padding-left: $space-h_lg;
+		}
+
+		@include below($md) {
+			float: none;
+			width: auto;
+			padding-left: 0;
+			margin-bottom: 3rem;
+		}
 	}
 
 	&__aside {
@@ -26,6 +44,16 @@
 		width: 100% - $width-main;
 		padding-left: $space-h;
 		min-height: 1rem;
+
+		@include below($lg) {
+			padding-left: $space-h_lg;
+		}
+
+		@include below($md) {
+			float: none;
+			width: auto;
+			padding-left: 0;
+		}
 
 		&-section {
 			margin-bottom: 2rem;
@@ -53,6 +81,11 @@
 			font-size: 1.4rem;
 			line-height: 2rem;
 			color: inherit;
+
+			@include below($sm) {
+				font-size: inherit;
+				line-height: inherit;
+			}
 		}
 	}
 
@@ -60,5 +93,10 @@
 		font-size: 2.4rem;
 		line-height: 3rem;
 		margin: 0;
+
+		@include below($lg) {
+			font-size: 2.8rem;
+			line-height: 3.6rem;
+		}
 	}
 }

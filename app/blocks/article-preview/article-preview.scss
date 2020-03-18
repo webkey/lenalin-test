@@ -30,7 +30,11 @@
 		padding-right: 6.7rem;
 
 		@include below($lg) {
-			padding-right: 4rem;
+			padding-right: 3rem;
+		}
+
+		@include below($md) {
+			padding-right: 2rem;
 		}
 
 		@include below($sm) {

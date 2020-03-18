@@ -1,8 +1,8 @@
 .news-previews {
 	$space-h: 3rem;
+	$space-h_lg: 2rem;
 	$space-v: 7.7rem;
-	$space-v--md: 4rem;
-	$space-v--sm: 4rem;
+	$space-v_lg: 4rem;
 
 	overflow: hidden;
 
@@ -12,13 +12,12 @@
 		align-items: flex-start;
 		flex-wrap: wrap;
 
-		@include below($md) {
-			margin-bottom: -#{$space-v--md};
+		@include below($lg) {
+			margin: 0 -#{round-float($space-h_lg / 2, 1)} -#{$space-v_lg};
 		}
 
 		@include below($sm) {
 			display: block;
-			margin: 0 0 -#{$space-v--sm};
 		}
 	}
 
@@ -29,17 +28,19 @@
 		max-width: $width;
 		padding: 0 #{round-float($space-h / 2, 1)} #{$space-v};
 
+		@include below($lg) {
+			padding: 0 #{round-float($space-h_lg / 2, 1)} #{$space-v_lg};
+		}
+
 		@include below($md) {
 			$width: 50%;
 
-			flex-basis: $width;
+			flex: 1 0 $width;
 			max-width: $width;
-			padding-bottom: $space-v--md;
 		}
 
 		@include below($sm) {
 			max-width: none;
-			padding: 0 0 #{$space-v--sm};
 		}
 	}
 }

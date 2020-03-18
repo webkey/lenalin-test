@@ -4,8 +4,12 @@
 	font-size: 1.4rem;
 	line-height: 1.8rem;
 
+	@include below($sm) {
+		display: inline-flex;
+	}
+
 	&__title {
-		margin-right: 0.5rem;
+		margin-right: 1.5rem;
 	}
 
 	&__spinner {

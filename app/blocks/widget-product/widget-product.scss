@@ -6,11 +6,28 @@
 	align-items: flex-start;
 	-webkit-tap-highlight-color: transparent;
 
+	@include below($sm) {
+		display: block;
+	}
+
 	&__figure {
 		$width: 20rem;
 
 		flex: 1 0 $width;
 		max-width: $width;
+
+		@include below($lg) {
+			$width: 16rem;
+
+			flex: 1 0 $width;
+			max-width: $width;
+		}
+
+		@include below($sm) {
+			max-width: 20rem;
+			padding-right: 3rem;
+			margin-bottom: 2rem;
+		}
 
 		&-link {
 			display: block;
@@ -26,6 +43,15 @@
 	&__content {
 		flex-grow: 1;
 		padding: 0.8rem 0 0 3.5rem;
+
+		@include below($lg) {
+			padding-left: 3rem;
+		}
+
+		@include below($sm) {
+			max-width: none;
+			padding: 0;
+		}
 	}
 
 	&__title {
@@ -40,6 +66,11 @@
 		word-break: break-word;
 		color: inherit;
 		margin: 0 0 1.2rem;
+
+		@include below($sm) {
+			max-width: none;
+			padding-right: 3rem;
+		}
 
 		a {
 			text-decoration: none;

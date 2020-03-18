@@ -1,11 +1,68 @@
 .page-error {
 	overflow: hidden;
 
+	&__layout {
+		position: relative;
+		display: flex;
+	}
+
+	&__align {
+		position: relative;
+		width: 100%;
+		min-height: 64.2rem;
+		display: flex;
+		align-items: center;
+
+		@include below($lg) {
+			min-height: 50rem;
+		}
+
+		@include below($sm) {
+			display: block;
+			padding: 85% 0 4rem;
+			min-height: 0;
+		}
+	}
+
+	&__content {
+		$width: 50%;
+
+		flex: 1 0 $width;
+		max-width: $width;
+		padding: 2.8rem 0 0;
+		position: relative;
+		z-index: 2;
+
+		@include below($lg) {
+			$width: 80%;
+
+			flex: 1 0 $width;
+			max-width: $width;
+		}
+
+		@include below($sm) {
+			max-width: none;
+			padding: 0;
+			text-align: center;
+		}
+	}
+
 	&__title {
 		font-weight: bold;
 		font-size: 4.8rem;
 		line-height: 5rem;
 		margin-bottom: 2.8rem;
+
+		@include below($md) {
+			font-size: 3.6rem;
+			line-height: 4.2rem;
+		}
+
+		@include below($sm) {
+			font-size: 2.8rem;
+			line-height: 3.6rem;
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__text {
@@ -13,41 +70,34 @@
 		line-height: 2.8rem;
 		margin-bottom: 5.8rem;
 		max-width: 45rem;
-	}
 
-	&__layout {
-		display: flex;
-		align-items: center;
-		min-height: 64.2rem;
-
-		&-text {
-			$width: 50%;
-
-			flex: 1 0 $width;
-			max-width: $width;
-			padding: 2.8rem 0 0;
-			position: relative;
-			z-index: 2;
-		}
-
-		&-figure {
-			$width: 50%;
-
-			flex: 1 0 $width;
-			max-width: $width;
-			position: relative;
+		@include below($sm) {
+			font-size: 2rem;
+			line-height: 2.6rem;
+			margin-bottom: 4rem;
 		}
 	}
 
 	&__figure {
 		position: absolute;
-		left: 50%;
 		top: 50%;
-		width: 136.4%;
+		right: 0;
+		width: 68.4%;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-		transform: translate(-45.4%, -52.4%);
+		transform: translate(18%, -52.4%);
+
+		@include below($lg) {
+			width: 90%;
+		}
+
+		@include below($sm) {
+			top: 0;
+			right: 50%;
+			width: 110%;
+			transform: translate(50%, -10%);
+		}
 
 		&::before {
 			content: "";

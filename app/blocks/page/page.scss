@@ -55,7 +55,7 @@
 			margin-bottom: 3.5rem;
 
 			@include below($md) {
-				margin-bottom: 3rem;
+				margin-bottom: 2.5rem;
 			}
 		}
 
@@ -63,7 +63,7 @@
 			margin-bottom: 8rem;
 
 			@include below($md) {
-				margin-bottom: 6rem;
+				margin-bottom: 5rem;
 			}
 		}
 
@@ -71,7 +71,7 @@
 			margin-bottom: 10rem;
 
 			@include below($md) {
-				margin-bottom: 7rem;
+				margin-bottom: 6rem;
 			}
 		}
 
@@ -114,6 +114,50 @@
 
 				@include below($xxl) {
 					margin-right: $intend_xxl;
+				}
+			}
+		}
+
+		&_hide {
+			display: none;
+
+			&-lg {
+				@include below($lg) {
+					display: none;
+				}
+			}
+
+			&-md {
+				@include below($md) {
+					display: none;
+				}
+			}
+
+			&-sm {
+				@include below($sm) {
+					display: none;
+				}
+			}
+		}
+
+		&_show {
+			display: block;
+
+			&-lg {
+				@include below($lg) {
+					display: block;
+				}
+			}
+
+			&-md {
+				@include below($md) {
+					display: block;
+				}
+			}
+
+			&-sm {
+				@include below($sm) {
+					display: block;
 				}
 			}
 		}

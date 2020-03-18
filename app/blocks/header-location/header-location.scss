@@ -3,6 +3,10 @@
 	display: inline-block;
 	vertical-align: top;
 
+	@include below($lg) {
+		display: block;
+	}
+
 	.header-main & {
 		@include below($lg) {
 			display: none;
@@ -23,6 +27,10 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		transition: opacity $animation-speed;
+
+		@include below($lg) {
+			display: inline-block;
+		}
 
 		&:hover {
 			opacity: 0.7;
@@ -49,6 +57,8 @@
 	}
 
 	&__drop {
+		$drop: &;
+
 		padding: 0.6rem 0 0;
 		position: absolute;
 		right: 0;
@@ -58,10 +68,22 @@
 		transform: translate3d(0, -1rem, 0);
 		transition: opacity $animation-speed, transform $animation-speed;
 
+		@include below($lg) {
+			position: relative;
+			right: auto;
+			top: auto;
+			display: none;
+			transform: none;
+		}
+
 		&.drop-is-open {
 			opacity: 1;
 			pointer-events: auto;
 			transform: translate3d(0, 0, 0);
+
+			@include below($lg) {
+				display: block;
+			}
 		}
 
 		&-list {
@@ -74,14 +96,19 @@
 			background-color: white;
 
 			@include below($lg) {
-				font-size: 1.6rem;
-				line-height: 2.4rem;
-				padding: 1rem 1.8rem 0.6rem;
+				box-shadow: none;
+				border: 1px solid $border-color;
+				font-size: inherit;
+				line-height: inherit;
 			}
 		}
 
 		&-item {
 			padding: 0.3rem 0;
+
+			@include below($lg) {
+				padding: 0.5rem 0;
+			}
 
 			a,
 			span {

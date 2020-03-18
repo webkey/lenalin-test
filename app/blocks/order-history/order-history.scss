@@ -1,7 +1,4 @@
 .order-history {
-	$space-v: 4.5rem;
-	$space-v_lg: 3rem;
-
 	overflow: hidden;
 
 	&__list {
@@ -9,12 +6,8 @@
 	}
 
 	&__item {
-		margin-bottom: $space-v;
+		margin-bottom: 4.5rem;
 		border-bottom: 1px solid #000;
-
-		@include below($lg) {
-			margin-bottom: $space-v_lg;
-		}
 
 		&:last-child {
 			margin-bottom: 0;

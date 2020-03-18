@@ -12,7 +12,7 @@ app.headerLocation = {
 	runToggleHeaderLocation() {
 		const self = this;
 		$(self.controlElement).switchClass({
-			removeExisting: true,
+			removeExisting: window.innerWidth >= 992,
 			switchClassTo: $(self.arrowElement).add(self.dropElement),
 			modifiers: {
 				activeClass: 'drop-is-open'

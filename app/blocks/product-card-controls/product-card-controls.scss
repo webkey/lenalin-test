@@ -1,12 +1,18 @@
 .product-card-controls {
 	$space-h: 6rem;
+	$space-h__lg: 3rem;
 	$space-v: 2rem;
+	$space-v__lg: 2rem;
 
 	&__cols {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-start;
 		margin: 0 -#{round-float($space-h / 2, 1)} -#{$space-v};
+
+		@include below($lg) {
+			margin: 0 -#{round-float($space-h__lg / 2, 1)} -#{$space-v__lg};
+		}
 
 		&_align-bottom {
 			align-items: flex-end;
@@ -20,12 +26,30 @@
 		margin-bottom: #{$space-v};
 		padding: 0 #{round-float($space-h / 2, 1)};
 
+		@include below($lg) {
+			margin-bottom: #{$space-v__lg};
+			padding: 0 #{round-float($space-h__lg / 2, 1)};
+		}
+
 		@for $i from 1 through 12 {
 			&_#{$i} {
 				$width: floor-float(100% / 12 * $i, 2);
 
 				flex-basis: $width;
 				max-width: $width;
+			}
+		}
+
+		&-sm {
+			@include below($sm) {
+				@for $i from 1 through 12 {
+					&_#{$i} {
+						$width: floor-float(100% / 12 * $i, 2);
+
+						flex-basis: $width;
+						max-width: $width;
+					}
+				}
 			}
 		}
 	}
