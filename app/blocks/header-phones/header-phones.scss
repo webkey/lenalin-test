@@ -101,6 +101,7 @@
 			@include below($lg) {
 				box-shadow: none;
 				padding: 0;
+				background-repeat: no-repeat;
 			}
 		}
 

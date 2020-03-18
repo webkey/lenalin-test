@@ -11,6 +11,14 @@
 		border-radius: 1rem;
 		margin: 0 0 1.5rem;
 
+		@include below($sm) {
+			$size: 12rem;
+
+			height: $size;
+			width: $size;
+			margin: 0 auto 1.5rem;
+		}
+
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -25,10 +33,6 @@
 		font-size: 1.6rem;
 		line-height: 2rem;
 		text-align: center;
-
-		@include below($sm) {
-			text-align: left;
-		}
 	}
 
 	&__photo-upload {

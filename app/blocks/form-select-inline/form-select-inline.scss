@@ -1,11 +1,15 @@
 .form-select-inline {
-	$el: &;
-	$select-arrow-width: 2.1rem;
+	$select-arrow-width: 1.6rem;
 
 	// Селект, который будет кастомизироваться, необходимо скрыть, пока на нем не отработает скрипт
 	html:not(.no-js) & {
-		opacity: 0;
-		height: 4rem;
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: $form-def-height;
+		overflow: hidden;
+		padding: 0;
+		margin-left: -1px;
+		width: 1px;
 	}
 
 	// Select selection
@@ -20,7 +24,7 @@
 			position: relative;
 			height: auto;
 			width: auto;
-			padding: 0 #{$select-arrow-width} 0 0;
+			padding: 0 #{$select-arrow-width + 0.5} 0 0;
 			margin: 0;
 			background: none;
 			box-shadow: none;
@@ -29,9 +33,7 @@
 			font: inherit;
 			color: inherit;
 			transition: color $animation-speed;
-
-			// ------ mob -----------------------------------------
-			// Set style for mobile
+			// Set style for mobile if need
 
 			// .select2-selection__rendered лежит внутри .select2-selection
 			// Служит для обрезания текста и добавления троеточия
@@ -70,9 +72,12 @@
 			height: auto;
 			background: none;
 			z-index: 5;
+			// Set style for mobile if need
 
-			// ------ mob -----------------------------------------
-			// Set style for mobile
+			.select2-container--open & {
+				transform: rotate(0.5turn);
+			}
+			// Set style for mobile if need
 
 			b {
 				$size: 1.6rem;
@@ -89,11 +94,6 @@
 				background-repeat: no-repeat;
 				background-position: center;
 				background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC4wMDA0OCA5Ljc4MTQ1TDExLjMwMDUgNi40ODE0NUwxMi4yNDMxIDcuNDI0MTFMOC4wMDA0OCAxMS42NjY4TDMuNzU3ODEgNy40MjQxMUw0LjcwMDQ4IDYuNDgxNDVMOC4wMDA0OCA5Ljc4MTQ1WiIgZmlsbD0iYmxhY2siPjwvcGF0aD48L3N2Zz4=);
-
-				.select2-container--open & {
-					transform: rotate(0.5turn);
-					margin-top: -0.7rem;
-				}
 			}
 		}
 
@@ -143,9 +143,7 @@
 			border-radius: 0;
 			background-color: $form-def-bg-color;
 			z-index: 5; // Поднять выше стрелок соседних селектов
-
-			// ------ mob -----------------------------------------
-			// Set style for mobile
+			// Set style for mobile if need
 		}
 
 		.select2-container--open & {
@@ -229,18 +227,14 @@
 				font-size: 1.2rem;
 				line-height: 2rem;
 				color: $form-def-text-color;
-
-				// ------ mob -----------------------------------------
-				// Set style for mobile
+				// Set style for mobile if need
 			}
 		}
 
 		// Опшин
 		.select2-results__option {
 			padding: 0.5rem 0.8rem;
-
-			// ------ mob -----------------------------------------
-			// Set style for mobile
+			// Set style for mobile if need
 
 			&[role=group] {
 				padding: 0;

@@ -25,6 +25,10 @@
 			padding-right: 1.5rem;
 		}
 
+		@include below($sm) {
+			padding-right: 0.8rem;
+		}
+
 		&::after {
 			display: inline-block;
 			content: "";
@@ -36,6 +40,10 @@
 
 			@include below($md) {
 				margin-left: 2rem;
+			}
+
+			@include below($sm) {
+				margin-left: 1rem;
 			}
 		}
 

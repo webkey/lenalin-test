@@ -181,12 +181,12 @@ em strong {
 	margin-right: auto;
 
 	&_align-left {
-		margin-left: initial;
-		margin-right: initial;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	&_align-right {
-		margin-right: initial;
+		margin-right: 0;
 	}
 }
 

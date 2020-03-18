@@ -70,7 +70,6 @@ $base-color: #cab3b1;
 			&-holder {
 				display: flex;
 				width: 100%;
-				flex: 1 0 100%;
 				align-items: center;
 				justify-content: center;
 				padding: 1rem 4.8rem;
@@ -166,7 +165,7 @@ $base-color: #cab3b1;
 			align-items: center;
 		}
 
-		&__item {
+		&__item.swiper-slide {
 			$size: 11.6rem;
 
 			position: relative;
